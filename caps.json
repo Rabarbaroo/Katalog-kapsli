@@ -1,21 +1,21 @@
 [
   {
-    "name": "Lech",
+    "name": "Żubr",
     "country": "Polska",
-    "image": "lech.jpg",
+    "image": "żubr1.jpg",
     "description": "Zielony kapsel z napisem LECH",
     "date": "2025-06-21"
   },
   {
-    "name": "Heineken",
-    "country": "Holandia",
-    "image": "heineken.jpg",
+    "name": "Żubr",
+    "country": "Polska",
+    "image": "żubr3.jpg",
     "description": "Zielony kapsel z czerwoną gwiazdą",
     "date": "2025-06-22"
   },
   {
     "name": "Żywiec",
-    "country": "Polska",
+    "country": "Niemcy",
     "image": "zywiec.jpg",
     "description": "Czerwono-biały kapsel z logo browaru",
     "date": "2025-06-23"
