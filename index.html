@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog kapsli</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .country {
+      margin-top: 40px;
+    }
+    .caps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .cap {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 10px;
+      text-align: center;
+    }
+    .cap img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .cap-description {
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Moja kolekcja kapsli</h1>
+  <div id="catalog"></div>
+
+  <script>
+    const caps = [
+      {
+        name: "Lech",
+        country: "Polska",
+        image: "lech.jpg",
+        description: "Zielony kapsel z napisem LECH."
+      },
+      {
+        name: "Heineken",
+        country: "Holandia",
+        image: "heineken.jpg",
+        description: "Zielony kapsel z czerwoną gwiazdą."
+      },
+      {
+        name: "Żywiec",
+        country: "Polska",
+        image: "zywiec.jpg",
+        description: "Czerwono-biały kapsel z logo browaru."
+      }
+    ];
+
+    const catalog = document.getElementById("catalog");
+
+    const grouped = caps.reduce((acc, cap) => {
+      if (!acc[cap.country]) acc[cap.country] = [];
+      acc[cap.country].push(cap);
+      return acc;
+    }, {});
+
+    for (const country in grouped) {
+      const section = document.createElement("div");
+      section.classList.add("country");
+
+      const header = document.createElement("h2");
+      header.textContent = country;
+      section.appendChild(header);
+
+      const container = document.createElement("div");
+      container.classList.add("caps-container");
+
+      grouped[country].forEach(cap => {
+        const capDiv = document.createElement("div");
+        capDiv.classList.add("cap");
+
+        const img = document.createElement("img");
+        img.src = cap.image;
+        img.alt = cap.name;
+
+        const desc = document.createElement("div");
+        desc.classList.add("cap-description");
+        desc.textContent = cap.description;
+
+        capDiv.appendChild(img);
+        capDiv.appendChild(desc);
+        container.appendChild(capDiv);
+      });
+
+      section.appendChild(container);
+      catalog.appendChild(section);
+    }
+  </script>
+</body>
+</html>
