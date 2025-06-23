@@ -18,15 +18,14 @@
       margin: 20px 0;
     }
     .caps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      display: block;
     }
     .cap {
       background: white;
       padding: 10px;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
     }
     .gallery {
       display: flex;
@@ -54,18 +53,25 @@
     <select id="country-select">
       <option value="all">Wszystkie</option>
     </select>
+    <br/><br/>
+    <label for="search-input">Szukaj po nazwie lub opisie:</label>
+    <input type="text" id="search-input" placeholder="Wpisz szukaną frazę..."/>
   </div>
   <div id="counter"></div>
   <div class="caps" id="caps-container"></div>
 
   <script>
+    let caps = [];
+
     async function loadCaps() {
       const response = await fetch('caps.json');
-      const caps = await response.json();
+      caps = await response.json(); // Wczytanie danych kapsli
       const container = document.getElementById('caps-container');
       const select = document.getElementById('country-select');
       const counter = document.getElementById('counter');
+      const searchInput = document.getElementById('search-input');
 
+      // Uzupełnienie listy krajów
       const countries = Array.from(new Set(caps.map(c => c.country)));
       countries.forEach(c => {
         const opt = document.createElement('option');
@@ -74,32 +80,34 @@
         select.appendChild(opt);
       });
 
-      function render(selectedCountry = 'all') {
+      // Funkcja renderująca kapsle
+      function render(selectedCountry = 'all', searchTerm = '') {
         container.innerHTML = '';
-        let filtered = selectedCountry === 'all' ? caps : caps.filter(c => c.country === selectedCountry);
+
+        let filtered = caps;
+
+        // Filtruj po kraju
+        if (selectedCountry !== 'all') {
+          filtered = filtered.filter(c => c.country === selectedCountry);
+        }
+
+        // Filtruj po wyszukiwaniu
+        if (searchTerm.trim() !== '') {
+          const lowerSearchTerm = searchTerm.toLowerCase();
+          filtered = filtered.filter(c => 
+            c.name.toLowerCase().includes(lowerSearchTerm) ||
+            c.description.toLowerCase().includes(lowerSearchTerm)
+          );
+        }
+
         counter.textContent = `Łącznie kapsli: ${filtered.length}`;
-        filtered.sort((a, b) =>  a.name.localeCompare(b.name));
-        filtered.forEach(c => {
-          const div = document.createElement('div');
-          div.className = 'cap';
 
-          const gallery = c.images.map(img => `<img src="images/${img}" alt="${c.name}">`).join('');
+        // Unikalne nazwy kapli
+        const uniqueNames = Array.from(new Set(filtered.map(c => c.name)));
 
-          div.innerHTML = `
-            <div class="gallery">${gallery}</div>
-            <h3>${c.name}</h3>
-            <small>${c.country} — ${c.date}</small>
-            <p>${c.description}</p>
-          `;
-          container.appendChild(div);
-        });
-      }
-
-      select.addEventListener('change', () => render(select.value));
-      render();
-    }
-
-    loadCaps();
-  </script>
-</body>
-</html>
+        // Dla każdej unikalnej nazwy wyświetlamy sekcję
+        uniqueNames.sort((a, b) => a.localeCompare(b)).forEach(name => {
+          const section = document.createElement('div');
+          
+          // Nagłówek nazwy kapsla
+          const header = document.createElement('
