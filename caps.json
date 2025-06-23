@@ -2,28 +2,28 @@
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr1.jpg", "żubr2.jpg"],
+    "images": ["żubr1.jpg"],
     "description": "ŻUBR-czerwony",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr3.jpg", "żubr4.jpg"],
+    "images": ["żubr3.jpg"],
     "description": "ŻUBR-pomarańczowy",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr5.jpeg", "żubr6.jpeg"],
+    "images": ["żubr5.jpeg"],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr7.jpeg", "żubr8.jpeg"],
+    "images": ["żubr7.jpeg"],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
