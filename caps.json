@@ -2,22 +2,15 @@
   {
     "name": "Żubr",
     "country": "Polska",
-    "image": "żubr1.jpg",
-    "description": "Zielony kapsel z napisem LECH",
+    "images": ["żubr1.jpg", "żubr2.jpg"],
+    "description": "Zielony kapsel z napisem ŻUBR-czerwony",
     "date": "2025-06-21"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "image": "żubr3.jpg",
-    "description": "Zielony kapsel z czerwoną gwiazdą",
+    "images": ["żubr3.jpg", "żubr4.jpg"],
+    "description": "Zielony kapsel z napisem ŻUBR-pomarańczowy",
     "date": "2025-06-22"
-  },
-  {
-    "name": "Żywiec",
-    "country": "Niemcy",
-    "image": "zywiec.jpg",
-    "description": "Czerwono-biały kapsel z logo browaru",
-    "date": "2025-06-23"
   }
 ]
