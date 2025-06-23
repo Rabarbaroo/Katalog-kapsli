@@ -146,14 +146,7 @@
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
-  {
-    "name": "Żubr",
-    "country": "Polska",
-    "images": ["Żubr25.jpg"],
-    "description": "ŻUBR",
-    "date": "2025-06-23"
-  },
-  {
+    {
     "name": "Żubr",
     "country": "Polska",
     "images": ["Żubr26.jpg"],
