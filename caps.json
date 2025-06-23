@@ -54,5 +54,33 @@
     "images": ["żubr13.jpeg"],
     "description": "ŻUBR",
     "date": "2025-06-23"
+  },
+   {
+    "name": "Miłosław",
+    "country": "Polska",
+    "images": ["Miłosław.jpeg"],
+    "description": "Miłosław Witbier",
+    "date": "2025-06-23"
+  },
+   {
+    "name": "Żubr",
+    "country": "Polska",
+    "images": ["Prażubr.jpeg"],
+    "description": "PraŻubr",
+    "date": "2025-06-23"
+  },
+   {
+    "name": "Żubr",
+    "country": "Polska",
+    "images": ["żubr14.jpeg"],
+    "description": "ŻUBR-Smakuje z natury",
+    "date": "2025-06-23"
+  },
+   {
+    "name": "Żubr",
+    "country": "Polska",
+    "images": ["żubr15.jpeg"],
+    "description": "ŻUBR",
+    "date": "2025-06-23"
   }
 ]
