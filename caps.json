@@ -3,14 +3,27 @@
     "name": "Żubr",
     "country": "Polska",
     "images": ["żubr1.jpg", "żubr2.jpg"],
-    "description": "Zielony kapsel z napisem ŻUBR-czerwony",
-    "date": "2025-06-21"
+    "description": "ŻUBR-czerwony",
+    "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
     "images": ["żubr3.jpg", "żubr4.jpg"],
-    "description": "Zielony kapsel z napisem ŻUBR-pomarańczowy",
-    "date": "2025-06-22"
-  }
+    "description": "ŻUBR-pomarańczowy",
+    "date": "2025-06-23"
+  },
+  {
+    "name": "Żubr",
+    "country": "Polska",
+    "images": ["żubr5.jpeg", "żubr6.jpeg"],
+    "description": "ŻUBR",
+    "date": "2025-06-23"
+  },
+  {
+    "name": "Żubr",
+    "country": "Polska",
+    "images": ["żubr7.jpeg", "żubr8.jpeg"],
+    "description": "ŻUBR",
+    "date": "2025-06-23"
 ]
