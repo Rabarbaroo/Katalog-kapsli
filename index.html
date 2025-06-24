@@ -17,33 +17,29 @@
       text-align: center;
       margin: 20px 0;
     }
-    .caps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .cap {
+    .group {
       background: white;
-      padding: 10px;
+      margin-bottom: 30px;
+      padding: 15px;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+    .group-title {
+      margin: 0 0 10px;
+      font-size: 1.2em;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
     .gallery {
       display: flex;
-      gap: 5px;
+      flex-wrap: wrap;
+      gap: 10px;
       overflow-x: auto;
-      padding-bottom: 5px;
     }
     .gallery img {
       height: 100px;
       border-radius: 4px;
       border: 1px solid #ccc;
-    }
-    .cap h3 {
-      margin: 10px 0 5px;
-    }
-    .cap small {
-      color: gray;
     }
   </style>
 </head>
@@ -56,7 +52,7 @@
     </select>
   </div>
   <div id="counter"></div>
-  <div class="caps" id="caps-container"></div>
+  <div id="caps-container"></div>
 
   <script>
     async function loadCaps() {
@@ -78,20 +74,34 @@
         container.innerHTML = '';
         let filtered = selectedCountry === 'all' ? caps : caps.filter(c => c.country === selectedCountry);
         counter.textContent = `Łącznie kapsli: ${filtered.length}`;
-        filtered.sort((a, b) =>  a.name.localeCompare(b.name));
+
+        // Grupowanie po nazwie
+        const grouped = {};
         filtered.forEach(c => {
-          const div = document.createElement('div');
-          div.className = 'cap';
+          if (!grouped[c.name]) grouped[c.name] = [];
+          grouped[c.name].push(...c.images.map(img => ({ img, name: c.name })));
+        });
 
-          const gallery = c.images.map(img => `<img src="images/${img}" alt="${c.name}">`).join('');
+        Object.keys(grouped).sort().forEach(name => {
+          const groupDiv = document.createElement('div');
+          groupDiv.className = 'group';
 
-          div.innerHTML = `
-            <div class="gallery">${gallery}</div>
-            <h3>${c.name}</h3>
-            <small>${c.country} — ${c.date}</small>
-            <p>${c.description}</p>
-          `;
-          container.appendChild(div);
+          const title = document.createElement('h2');
+          title.className = 'group-title';
+          title.textContent = name;
+
+          const gallery = document.createElement('div');
+          gallery.className = 'gallery';
+          grouped[name].forEach(item => {
+            const img = document.createElement('img');
+            img.src = `images/${item.img}`;
+            img.alt = item.name;
+            gallery.appendChild(img);
+          });
+
+          groupDiv.appendChild(title);
+          groupDiv.appendChild(gallery);
+          container.appendChild(groupDiv);
         });
       }
 
