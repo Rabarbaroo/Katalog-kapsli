@@ -3,8 +3,7 @@
     "name": "Żubr",
     "country": "Polska",
     "images": [
-      { "src": "images/żubr1.jpg", "link": "images/żubr3.jpg" }
-    ],
+      { "src": "images/żubr1.jpg", "link": "images/żubr3.jpg" }],
     "description": "ŻUBR-czerwony",
     "date": "2025-06-23"
   },
@@ -12,8 +11,7 @@
     "name": "Żubr",
     "country": "Polska",
     "images": [
-      { "src": "images/żubr3.jpg" }
-    ],
+      { "src": "images/żubr3.jpg" }],
     "description": "ŻUBR-pomarańczowy",
     "date": "2025-06-23"
   },
