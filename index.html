@@ -11,6 +11,7 @@
       background: #f2f2f2;
     }
     h1 { text-align: center; }
+
     .filters {
       display: flex;
       justify-content: center;
@@ -22,11 +23,6 @@
     .filter-select {
       padding: 5px;
       font-size: 1em;
-    }
-
-    #letter-filter {
-      width: 50px;
-      text-align: center;
     }
 
     .group {
@@ -62,6 +58,7 @@
 </head>
 <body>
   <h1>Kolekcja Kapsli</h1>
+
   <div class="filters">
     <div>
       <label for="country-select">Kraj:</label>
@@ -76,6 +73,7 @@
       </select>
     </div>
   </div>
+
   <div id="counter"></div>
   <div id="caps-container"></div>
 
@@ -88,15 +86,26 @@
       const selectLetter = document.getElementById('letter-filter');
       const counter = document.getElementById('counter');
 
-      // Wypełnianie krajów
+      function getEffectiveLetter(name) {
+        const words = name.trim().split(/\s+/);
+        if (words[0].toLowerCase() === 'browar' && words.length > 1) {
+          return words[1][0].toUpperCase();
+        }
+        return words[0][0].toUpperCase();
+      }
+
+      // KRAJE
       [...new Set(caps.map(c => c.country))].sort().forEach(c => {
         const o = document.createElement('option');
         o.value = c;
         o.textContent = c;
         selectCountry.appendChild(o);
       });
-      // Wypełnianie liter
-      [...new Set(caps.map(c => c.name[0].toUpperCase()))].sort().forEach(l => {
+
+      // LITERY
+      const lettersSet = new Set();
+      caps.forEach(c => lettersSet.add(getEffectiveLetter(c.name)));
+      [...lettersSet].sort().forEach(l => {
         const o = document.createElement('option');
         o.value = l;
         o.textContent = l;
@@ -110,11 +119,12 @@
 
         let filtered = caps;
         if (country !== 'all') filtered = filtered.filter(c => c.country === country);
-        if (letter !== 'all') filtered = filtered.filter(c => c.name[0].toUpperCase() === letter);
+        if (letter !== 'all') filtered = filtered.filter(c => getEffectiveLetter(c.name) === letter);
 
-        counter.textContent = `Łącznie kapsli: ${filtered.length}`;
+        const total = filtered.reduce((sum, c) => sum + c.images.length, 0);
+        counter.textContent = `Łącznie kapsli: ${total}`;
 
-        // Grupowanie po nazwie
+        // GRUPOWANIE
         const grouped = {};
         filtered.forEach(c => {
           if (!grouped[c.name]) grouped[c.name] = [];
