@@ -69,20 +69,22 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-    }
-
-    .gallery img {
-      height: 120px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      display: block;
-      margin: 0 auto;
+      grid-template-columns: repeat(5, auto);
+      gap: 5px;
+      justify-content: center;
     }
 
     .image-wrapper {
       position: relative;
+      display: inline-block;
+    }
+
+    .gallery img {
+      height: 120px;
+      width: auto;
+      display: block;
+      border-radius: 6px;
+      border: 1px solid #ccc;
     }
 
     .image-link-indicator {
@@ -92,12 +94,11 @@
       background: gold;
       color: black;
       font-size: 10px;
-      padding: 1px 3px;
+      padding: 1px 4px;
       border-radius: 3px;
-      pointer-events: none;
       font-weight: bold;
-      z-index: 2;
-      opacity: 0.9;
+      opacity: 0.85;
+      pointer-events: none;
     }
   </style>
 </head>
