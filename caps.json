@@ -3,7 +3,7 @@
     "name": "Żubr",
     "country": "Polska",
     "images": [
-       { "src": "images/żubr1.jpg" },
+      { "src": "images/żubr1.jpg" },
       { "src": "images/żubr3.jpg", "link": "images/żubr3.jpg" }
     ],
     "description": "ŻUBR-czerwony",
@@ -12,182 +12,184 @@
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr3.jpg"],
+    "images": [
+      { "src": "images/żubr3.jpg" }
+    ],
     "description": "ŻUBR-pomarańczowy",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr5.jpeg"],
+    "images": [{ "src": "images/żubr5.jpeg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr7.jpeg"],
+    "images": [{ "src": "images/żubr7.jpeg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
-   {
+  {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr9.jpeg"],
+    "images": [{ "src": "images/żubr9.jpeg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
-   {
+  {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr11.jpeg"],
+    "images": [{ "src": "images/żubr11.jpeg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
-   {
+  {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr12.jpeg"],
+    "images": [{ "src": "images/żubr12.jpeg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
-   {
+  {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr13.jpeg"],
+    "images": [{ "src": "images/żubr13.jpeg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
-   {
+  {
     "name": "Miłosław",
     "country": "Polska",
-    "images": ["Miłosław.jpeg"],
+    "images": [{ "src": "images/Miłosław.jpeg" }],
     "description": "Miłosław Witbier",
     "date": "2025-06-23"
   },
-   {
+  {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Prażubr.jpeg"],
+    "images": [{ "src": "images/Prażubr.jpeg" }],
     "description": "PraŻubr",
     "date": "2025-06-23"
   },
-   {
+  {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr14.jpeg"],
+    "images": [{ "src": "images/Żubr14.jpeg" }],
     "description": "ŻUBR-Smakuje z natury",
     "date": "2025-06-23"
   },
-   {
+  {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr15.jpeg"],
+    "images": [{ "src": "images/Żubr15.jpeg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr16.jpg"],
+    "images": [{ "src": "images/Żubr16.jpg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr17.jpg"],
+    "images": [{ "src": "images/Żubr17.jpg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr18.jpg"],
+    "images": [{ "src": "images/Żubr18.jpg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr20.jpg"],
+    "images": [{ "src": "images/Żubr20.jpg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr21.jpg"],
+    "images": [{ "src": "images/Żubr21.jpg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr22.jpg"],
+    "images": [{ "src": "images/Żubr22.jpg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr23.jpg"],
+    "images": [{ "src": "images/Żubr23.jpg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr24.jpg"],
+    "images": [{ "src": "images/Żubr24.jpg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr25.jpg"],
-    "description": "ŻUBR",
-    "date": "2025-06-23"
-  },
-    {
-    "name": "Żubr",
-    "country": "Polska",
-    "images": ["Żubr26.jpg"],
+    "images": [{ "src": "images/Żubr25.jpg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["Żubr27.jpg"],
+    "images": [{ "src": "images/Żubr26.jpg" }],
+    "description": "ŻUBR",
+    "date": "2025-06-23"
+  },
+  {
+    "name": "Żubr",
+    "country": "Polska",
+    "images": [{ "src": "images/Żubr27.jpg" }],
     "description": "ŻUBR",
     "date": "2025-06-23"
   },
   {
     "name": "Browar Czarnków",
     "country": "Polska",
-    "images": ["Notecki.jpg"],
+    "images": [{ "src": "images/Notecki.jpg" }],
     "description": "Noteckie",
     "date": "2025-06-23"
   },
-   {
+  {
     "name": "Browar Czarnków",
     "country": "Polska",
-    "images": ["Notecki1.jpg"],
+    "images": [{ "src": "images/Notecki1.jpg" }],
     "description": "Noteckie",
     "date": "2025-06-23"
   },
-   {
+  {
     "name": "Browar Czarnków",
     "country": "Polska",
-    "images": ["Notecki2.jpg"],
+    "images": [{ "src": "images/Notecki2.jpg" }],
     "description": "Noteckie",
     "date": "2025-06-23"
   },
-   {
+  {
     "name": "Miłosław",
     "country": "Polska",
-    "images": ["Miłosław1.jpg"],
+    "images": [{ "src": "images/Miłosław1.jpg" }],
     "description": "Napisy",
     "date": "2025-06-23"
   }
