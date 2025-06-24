@@ -85,6 +85,10 @@
       border: 1px solid #ccc;
     }
 
+    .gallery a {
+      display: block;
+    }
+
     @media (max-width: 768px) {
       .gallery {
         grid-template-columns: repeat(2, 1fr);
@@ -136,7 +140,7 @@
         return words[0][0].toUpperCase();
       }
 
-      // KRAJE
+      // Wypełnianie filtrów
       [...new Set(caps.map(c => c.country))].sort().forEach(c => {
         const o = document.createElement('option');
         o.value = c;
@@ -144,7 +148,6 @@
         selectCountry.appendChild(o);
       });
 
-      // BROWARY (litery)
       const lettersSet = new Set();
       caps.forEach(c => lettersSet.add(getEffectiveLetter(c.name)));
       [...lettersSet].sort().forEach(l => {
@@ -166,11 +169,10 @@
         const total = filtered.reduce((sum, c) => sum + c.images.length, 0);
         counter.textContent = `Łącznie kapsli: ${total}`;
 
-        // GRUPOWANIE
         const grouped = {};
         filtered.forEach(c => {
           if (!grouped[c.name]) grouped[c.name] = [];
-          grouped[c.name].push(...c.images.map(img => `images/${img}`));
+          grouped[c.name].push(...c.images);
         });
 
         Object.keys(grouped).sort().forEach(name => {
@@ -184,11 +186,21 @@
 
           const gal = document.createElement('div');
           gal.className = 'gallery';
-          imgs.forEach(src => {
+
+          imgs.forEach(imgData => {
             const img = document.createElement('img');
-            img.src = src;
+            img.src = imgData.src;
             img.alt = name;
-            gal.appendChild(img);
+
+            if (imgData.link) {
+              const a = document.createElement('a');
+              a.href = imgData.link;
+              a.target = '_blank';
+              a.appendChild(img);
+              gal.appendChild(a);
+            } else {
+              gal.appendChild(img);
+            }
           });
 
           g.appendChild(title);
