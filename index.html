@@ -9,6 +9,7 @@
       font-family: sans-serif;
       padding: 20px;
       background: #d2f5d2;
+      margin: 0;
     }
 
     h1 {
@@ -69,19 +70,17 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(5, auto);
+      grid-template-columns: repeat(5, 1fr);
       gap: 5px;
-      justify-content: center;
     }
 
     .image-wrapper {
       position: relative;
-      display: inline-block;
     }
 
     .gallery img {
-      height: 120px;
-      width: auto;
+      width: 100%;
+      height: auto;
       display: block;
       border-radius: 6px;
       border: 1px solid #ccc;
@@ -99,6 +98,7 @@
       font-weight: bold;
       opacity: 0.85;
       pointer-events: none;
+      z-index: 2;
     }
   </style>
 </head>
