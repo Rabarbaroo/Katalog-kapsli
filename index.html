@@ -4,213 +4,218 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Katalog Kapsli</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: sans-serif;
       padding: 20px;
-      background: #e0f2e0;
-      margin: 0;
+      background: #d2f5d2; /* jasna zieleń */
     }
 
     h1 {
       text-align: center;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Georgia', serif;
+      font-size: 2.5em;
       background: white;
-      border: 2px solid #2d6699;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+
+    .filter {
+      background: white;
+      padding: 15px;
       border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 30px;
-      color: #2d6699;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
     }
 
-    .filters {
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 15px;
-      border-radius: 8px;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .filters label {
-      margin-right: 5px;
+    .filter label {
+      margin-right: 10px;
       font-weight: bold;
     }
 
-    .filter-select {
+    .filter select {
       padding: 5px;
-      font-size: 1em;
+      margin-right: 15px;
     }
 
     #counter {
       text-align: center;
-      margin-bottom: 20px;
       font-weight: bold;
+      margin: 10px 0 20px;
     }
 
-    .group {
-      background: #fff;
-      margin-bottom: 25px;
+    .caps {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .cap {
+      background: white;
       padding: 15px;
-      border-left: 6px solid #2d6699;
-      border-radius: 4px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .group-title {
-      margin: 0 0 15px;
+    .cap h3 {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
       font-size: 1.2em;
-      color: #2d6699;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       gap: 10px;
     }
 
     .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
+      height: 120px;
+      width: auto;
+      border-radius: 6px;
       border: 1px solid #ccc;
     }
 
-    .gallery a {
-      display: block;
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
     }
 
-    @media (max-width: 768px) {
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .gallery {
-        grid-template-columns: 1fr;
-      }
+    .image-link-indicator {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      background: gold;
+      color: black;
+      font-size: 14px;
+      padding: 2px 5px;
+      border-radius: 4px;
+      pointer-events: none;
+      font-weight: bold;
+      box-shadow: 0 0 3px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
-  <h1>Kolekcja Kapsli</h1>
+  <h1>Kolekcja kapsli</h1>
 
-  <div class="filters">
-    <div>
-      <label for="country-select">Kraj:</label>
-      <select id="country-select" class="filter-select">
-        <option value="all">Wszystkie</option>
-      </select>
-    </div>
-    <div>
-      <label for="letter-filter">Browar:</label>
-      <select id="letter-filter" class="filter-select">
-        <option value="all">Wszystkie</option>
-      </select>
-    </div>
+  <div class="filter">
+    <label for="country-select">Kraj:</label>
+    <select id="country-select">
+      <option value="all">Wszystkie</option>
+    </select>
+
+    <label for="letter-filter">Browar:</label>
+    <select id="letter-filter">
+      <option value="all">Wszystkie</option>
+    </select>
   </div>
 
   <div id="counter"></div>
-  <div id="caps-container"></div>
+  <div class="caps" id="caps-container"></div>
 
   <script>
     async function loadCaps() {
-      const resp = await fetch('caps.json');
-      const caps = await resp.json();
+      const response = await fetch('caps.json');
+      const caps = await response.json();
       const container = document.getElementById('caps-container');
-      const selectCountry = document.getElementById('country-select');
-      const selectLetter = document.getElementById('letter-filter');
+      const select = document.getElementById('country-select');
+      const letterFilter = document.getElementById('letter-filter');
       const counter = document.getElementById('counter');
 
-      function getEffectiveLetter(name) {
+      const countries = Array.from(new Set(caps.map(c => c.country)));
+      countries.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c;
+        opt.textContent = c;
+        select.appendChild(opt);
+      });
+
+      const letters = Array.from(new Set(caps.map(c => {
+        const words = c.name.trim().split(/\s+/);
+        return (words[0].toLowerCase() === "browar" && words[1]) ? words[1][0].toUpperCase() : words[0][0].toUpperCase();
+      }))).sort();
+
+      letters.forEach(l => {
+        const opt = document.createElement('option');
+        opt.value = l;
+        opt.textContent = l;
+        letterFilter.appendChild(opt);
+      });
+
+      function getGroupName(name) {
         const words = name.trim().split(/\s+/);
-        if (words[0].toLowerCase() === 'browar' && words.length > 1) {
-          return words[1][0].toUpperCase();
-        }
-        return words[0][0].toUpperCase();
+        return (words[0].toLowerCase() === "browar" && words[1]) ? words[1][0].toUpperCase() : words[0][0].toUpperCase();
       }
 
-      // Wypełnianie filtrów
-      [...new Set(caps.map(c => c.country))].sort().forEach(c => {
-        const o = document.createElement('option');
-        o.value = c;
-        o.textContent = c;
-        selectCountry.appendChild(o);
-      });
-
-      const lettersSet = new Set();
-      caps.forEach(c => lettersSet.add(getEffectiveLetter(c.name)));
-      [...lettersSet].sort().forEach(l => {
-        const o = document.createElement('option');
-        o.value = l;
-        o.textContent = l;
-        selectLetter.appendChild(o);
-      });
-
-      function render() {
-        const country = selectCountry.value;
-        const letter = selectLetter.value;
+      function render(selectedCountry = 'all', selectedLetter = 'all') {
         container.innerHTML = '';
+        let filtered = selectedCountry === 'all' ? caps : caps.filter(c => c.country === selectedCountry);
+        if (selectedLetter !== 'all') {
+          filtered = filtered.filter(c => getGroupName(c.name) === selectedLetter);
+        }
 
-        let filtered = caps;
-        if (country !== 'all') filtered = filtered.filter(c => c.country === country);
-        if (letter !== 'all') filtered = filtered.filter(c => getEffectiveLetter(c.name) === letter);
+        counter.textContent = `Łącznie kapsli: ${filtered.length}`;
 
-        const total = filtered.reduce((sum, c) => sum + c.images.length, 0);
-        counter.textContent = `Łącznie kapsli: ${total}`;
-
-        const grouped = {};
+        const groups = {};
         filtered.forEach(c => {
-          if (!grouped[c.name]) grouped[c.name] = [];
-          grouped[c.name].push(...c.images);
+          const key = c.name;
+          if (!groups[key]) groups[key] = [];
+          groups[key].push(c);
         });
 
-        Object.keys(grouped).sort().forEach(name => {
-          const imgs = grouped[name];
-          const g = document.createElement('div');
-          g.className = 'group';
+        Object.keys(groups).sort().forEach(group => {
+          const groupDiv = document.createElement('div');
+          groupDiv.className = 'cap';
 
-          const title = document.createElement('h2');
-          title.className = 'group-title';
-          title.textContent = `${name} (${imgs.length})`;
+          const header = document.createElement('h3');
+          header.textContent = `${group} (${groups[group].length})`;
+          groupDiv.appendChild(header);
 
-          const gal = document.createElement('div');
-          gal.className = 'gallery';
+          const galleryDiv = document.createElement('div');
+          galleryDiv.className = 'gallery';
 
-          imgs.forEach(imgData => {
-            const img = document.createElement('img');
-            img.src = imgData.src;
-            img.alt = name;
+          groups[group].forEach(c => {
+            c.images.forEach(img => {
+              const wrapper = document.createElement('div');
+              wrapper.className = 'image-wrapper';
 
-            if (imgData.link) {
-              const a = document.createElement('a');
-              a.href = imgData.link;
-              a.target = '_blank';
-              a.appendChild(img);
-              gal.appendChild(a);
-            } else {
-              gal.appendChild(img);
-            }
+              const image = document.createElement('img');
+              image.src = img.src;
+              image.alt = c.name;
+
+              if (img.link) {
+                const a = document.createElement('a');
+                a.href = img.link;
+                a.target = "_blank";
+                a.appendChild(image);
+
+                const star = document.createElement('span');
+                star.className = 'image-link-indicator';
+                star.textContent = '⭐';
+
+                wrapper.appendChild(a);
+                wrapper.appendChild(star);
+              } else {
+                wrapper.appendChild(image);
+              }
+
+              galleryDiv.appendChild(wrapper);
+            });
           });
 
-          g.appendChild(title);
-          g.appendChild(gal);
-          container.appendChild(g);
+          groupDiv.appendChild(galleryDiv);
+          container.appendChild(groupDiv);
         });
       }
 
-      selectCountry.addEventListener('change', render);
-      selectLetter.addEventListener('change', render);
+      select.addEventListener('change', () => render(select.value, letterFilter.value));
+      letterFilter.addEventListener('change', () => render(select.value, letterFilter.value));
+
       render();
     }
 
