@@ -8,7 +8,7 @@
     body {
       font-family: sans-serif;
       padding: 20px;
-      background: #d2f5d2; /* zielone tło */
+      background: #d2f5d2;
     }
 
     h1 {
@@ -75,11 +75,10 @@
 
     .gallery img {
       height: 120px;
-      width: 100%;
-      object-fit: contain;
       border-radius: 6px;
       border: 1px solid #ccc;
       display: block;
+      margin: 0 auto;
     }
 
     .image-wrapper {
@@ -88,16 +87,17 @@
 
     .image-link-indicator {
       position: absolute;
-      top: 4px;
-      right: 4px;
-      background: rgba(255, 215, 0, 0.85); /* półprzezroczyste złoto */
+      top: 2px;
+      right: 2px;
+      background: gold;
       color: black;
-      font-size: 12px;
-      padding: 1px 4px;
-      border-radius: 4px;
+      font-size: 10px;
+      padding: 1px 3px;
+      border-radius: 3px;
       pointer-events: none;
       font-weight: bold;
       z-index: 2;
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -186,7 +186,7 @@
               wrapper.className = 'image-wrapper';
 
               const image = document.createElement('img');
-              image.src = img.src || img; // dla uproszczenia, jeśli `img` to string
+              image.src = img.src || img;
               image.alt = c.name;
 
               if (img.link) {
