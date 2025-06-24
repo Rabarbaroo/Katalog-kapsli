@@ -2,7 +2,9 @@
   {
     "name": "Żubr",
     "country": "Polska",
-    "images": ["żubr1.jpg"],
+    "images": [
+      { "src": "żubr1.jpg", "link": "images/żubr3.jpg" }
+    ],
     "description": "ŻUBR-czerwony",
     "date": "2025-06-23"
   },
