@@ -2,31 +2,34 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>10 najnowszych kapsli</title>
   <style>
     body {
       font-family: sans-serif;
-      background: #e0f7ff;
-      text-align: center;
-      padding: 40px;
+      padding: 20px;
+      background: #f0f0f0;
       margin: 0;
+      text-align: center;
     }
     h1 {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+      font-family: 'Georgia', serif;
+      font-size: 2em;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
       gap: 15px;
-      max-width: 1000px;
+      max-width: 900px;
       margin: 0 auto;
     }
     .gallery img {
       width: 100%;
+      height: auto;
       border-radius: 8px;
       border: 1px solid #ccc;
-      object-fit: cover;
-      height: 120px;
+      object-fit: contain;
     }
   </style>
 </head>
@@ -38,16 +41,33 @@
     async function loadLatestCaps() {
       try {
         const response = await fetch('caps.json');
-        if (!response.ok) throw new Error('Nie udało się załadować pliku caps.json');
-
+        if (!response.ok) throw new Error(`Błąd ładowania: ${response.status}`);
         const caps = await response.json();
+
+        // Weź ostatnie 10 elementów tablicy
+        const lastTen = caps.slice(-10);
+
         const gallery = document.getElementById('gallery');
+        gallery.innerHTML = '';
 
-        // Pobierz ostatnie 10 pozycji (lub mniej, jeśli mniej w pliku)
-        const lastTenCaps = caps.slice(-10);
+        lastTen.forEach(cap => {
+          if (cap.images && cap.images.length > 0) {
+            const img = document.createElement('img');
+            img.src = cap.images[0].src;
+            img.alt = cap.name;
+            img.onerror = () => {
+              img.style.border = '2px solid red';
+              img.title = 'Nie udało się załadować obrazka';
+            };
+            gallery.appendChild(img);
+          }
+        });
+      } catch (error) {
+        document.body.innerHTML = `<p style="color:red; font-weight:bold;">Błąd: ${error.message}</p>`;
+      }
+    }
 
-        lastTenCaps.forEach(cap => {
-          cap.images.forEach(img => {
-            const imageElem = document.createElement('img');
-            imageElem.src = img.src || img;
-            imageElem.alt = cap.nam
+    loadLatestCaps();
+  </script>
+</body>
+</html>
