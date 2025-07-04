@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>10 najnowszych kapsli</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #e0f7ff;
+      text-align: center;
+      padding: 40px;
+      margin: 0;
+    }
+    h1 {
+      margin-bottom: 40px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      object-fit: cover;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+  <h1>10 najnowszych kapsli</h1>
+  <div class="gallery" id="gallery"></div>
+
+  <script>
+    async function loadLatestCaps() {
+      try {
+        const response = await fetch('caps.json');
+        if (!response.ok) throw new Error('Nie udało się załadować pliku caps.json');
+
+        const caps = await response.json();
+        const gallery = document.getElementById('gallery');
+
+        // Pobierz ostatnie 10 pozycji (lub mniej, jeśli mniej w pliku)
+        const lastTenCaps = caps.slice(-10);
+
+        lastTenCaps.forEach(cap => {
+          cap.images.forEach(img => {
+            const imageElem = document.createElement('img');
+            imageElem.src = img.src || img;
+            imageElem.alt = cap.nam
