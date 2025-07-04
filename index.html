@@ -100,10 +100,22 @@
       pointer-events: none;
       z-index: 2;
     }
+
+    #error-log {
+      background: #ffdada;
+      border: 1px solid red;
+      padding: 10px;
+      border-radius: 5px;
+      color: #900;
+      display: none;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
   <h1>Kolekcja kapsli</h1>
+
+  <div id="error-log"></div>
 
   <div class="filter">
     <label for="country-select">Kraj:</label>
@@ -122,12 +134,30 @@
 
   <script>
     async function loadCaps() {
-      const response = await fetch('caps.json');
-      const caps = await response.json();
       const container = document.getElementById('caps-container');
       const select = document.getElementById('country-select');
       const letterFilter = document.getElementById('letter-filter');
       const counter = document.getElementById('counter');
+      const errorLog = document.getElementById('error-log');
+
+      const showError = (msg) => {
+        errorLog.style.display = 'block';
+        errorLog.innerHTML += `<div>⚠️ ${msg}</div>`;
+      };
+
+      window.onerror = function (message, source, lineno, colno, error) {
+        showError(`Błąd JS: ${message} (${source}:${lineno}:${colno})`);
+      };
+
+      let caps;
+      try {
+        const response = await fetch('caps.json');
+        if (!response.ok) throw new Error(`Nie udało się załadować caps.json: ${response.status}`);
+        caps = await response.json();
+      } catch (err) {
+        showError(`Błąd wczytywania danych: ${err.message}`);
+        return;
+      }
 
       const countries = Array.from(new Set(caps.map(c => c.country)));
       countries.forEach(c => {
@@ -189,6 +219,11 @@
               const image = document.createElement('img');
               image.src = img.src || img;
               image.alt = c.name;
+              image.onerror = () => {
+                showError(`Brakujący obraz: ${image.src}`);
+                image.style.border = '2px solid red';
+                image.title = "Nie udało się załadować obrazka";
+              };
 
               if (img.link) {
                 const a = document.createElement('a');
