@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Witamy w katalogu kapsli</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #87ceeb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .menu-top {
+      margin-bottom: 20px;
+    }
+
+    .menu-block {
+      background: white;
+      color: #333;
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .menu-block:hover {
+      transform: scale(1.05);
+    }
+
+    .menu-triangle {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .slider {
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slider img.active {
+      opacity: 1;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Witamy w katalogu kapsli</h1>
+
+  <div class="menu">
+    <div class="menu-top">
+      <a href="kapsle.html" class="menu-block">Kapsle</a>
+    </div>
+
+    <div class="menu-triangle">
+      <a href="#o-kolekcji" class="menu-block">O kolekcji</a>
+
+      <div class="slider-wrapper">
+        <div class="slider" id="slider">
+          <!-- Obrazy będą ładowane tutaj przez JS -->
+        </div>
+      </div>
+
+      <a href="#nowe" class="menu-block">Nowe</a>
+    </div>
+  </div>
+
+  <script>
+    const imageList = [
+      'images/Lech1.jpg',
+      'images/Tatra2.jpg',
+      'images/Perła3.jpg',
+      'images/Łomża4.jpg',
+      'images/Fortuna1.jpg',
+      'images/Bosman2.jpg'
+    ];
+
+    const slider = document.getElementById('slider');
+
+    // Dodaj obrazy do slidera
+    imageList.forEach((src, index) => {
+      const img = document.createElement('img');
+      img.src = src;
+      if (index === 0) img.classList.add('active');
+      slider.appendChild(img);
+    });
+
+    let current = 0;
+    const images = slider.querySelectorAll('img');
+
+    setInterval(() => {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }, 4000);
+  </script>
+
+</body>
+</html>
