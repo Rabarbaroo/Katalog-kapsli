@@ -3,7 +3,7 @@
     "name": "Żubr",
     "country": "Polska",
     "images": [
-      { "src": "images/żubr1.jpg", "link": "images/żubr3.jpg" }],
+      { "src": "images/żubr1.jpg"}],
     "description": "ŻUBR-czerwony",
     "date": "2025-06-23"
   },
@@ -1459,6 +1459,13 @@
   "name": "Grimbergen",
   "country": "Belgia",
   "images": [{ "src": "images/Grimbergen1.jpg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+   {
+  "name": "Kasztelan",
+  "country": "Polska",
+  "images": [{ "src": "images/Kasztelan1.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 }
