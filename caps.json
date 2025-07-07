@@ -1855,6 +1855,13 @@
     "date": "2025-06-23"
   },
   {
+    "name": "Browar Kormoran",
+    "country": "Polska",
+    "images": [{ "src": "images/Kormoran6.jpg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
     "name": "Browar Kościerzyna",
     "country": "Polska",
     "images": [{ "src": "images/Kościerzyna1.jpg" }],
