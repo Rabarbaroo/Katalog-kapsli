@@ -2205,6 +2205,11 @@
   {
     "name": "Browar Piast (kiedyś Wrocław)",
     "country": "Polska",
+    "images": [{ "src": "images/Piast1.jpg" }]
+  },
+  {
+    "name": "Browar Piast (kiedyś Wrocław)",
+    "country": "Polska",
     "images": [{ "src": "images/Piast2.jpg" }]
   },
   {
