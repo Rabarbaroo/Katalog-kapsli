@@ -491,7 +491,7 @@
   {
   "name": "Tychy",
   "country": "Polska",
-  "images": [{ "src": "images/Książęce11.jpeg" }]
+  "images": [{ "src": "images/Ksiażęce11.jpeg" }]
 },
   {
   "name": "Tychy",
@@ -2318,7 +2318,7 @@
   {
     "name": "Browar Na Jurze (Zawiercie)",
     "country": "Polska",
-    "images": [{ "src": "images/Najurze1.jpg" }],
+    "images": [{ "src": "images/Najurze1.jpeg" }],
     "description": "Napisy",
     "date": "2025-06-23"
   },
@@ -2692,7 +2692,7 @@
   {
     "name": "Van Pur",
     "country": "Polska",
-    "images": [{ "src": "images/Strzelec1.jpg" }]
+    "images": [{ "src": "images/Strzelec1.jpeg" }]
   },
    {
     "name": "Browar Witnica",
@@ -2722,12 +2722,12 @@
   {
     "name": "Browar JAKO",
     "country": "Polska",
-    "images": [{ "src": "images/Złotyłan2.jpg" }]
+    "images": [{ "src": "images/Złotyłan2.jpeg" }]
   },
   {
     "name": "Browar JAKO",
     "country": "Polska",
-    "images": [{ "src": "images/Celtyckie1.jpg" }]
+    "images": [{ "src": "images/Celtyckie1.jpeg" }]
   },
    {
     "name": "Browar Zwierzyniec",
@@ -2882,12 +2882,12 @@
   {
     "name": "Browar Wielka Sowa (Bielawa)",
     "country": "Polska",
-    "images": [{ "src": "images/Sowie.jpeg" }]
+    "images": [{ "src": "images/Sowie1.jpeg" }]
   },
   {
     "name": "Browar Wiślany",
     "country": "Polska",
-    "images": [{ "src": "images/Wiślany1.jpeg" }]
+    "images": [{ "src": "images/WIślany1.jpeg" }]
   },
   {
     "name": "Zofmar-Bis (Łódź)",
