@@ -4,23 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Katalog Kapsli</title>
+
+  <!-- Czcionki Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: sans-serif;
+      font-family: 'Poppins', sans-serif;
       padding: 20px;
       background: #d2f5d2;
       margin: 0;
     }
 
-    h1 {
-      text-align: center;
-      font-family: 'Georgia', serif;
-      font-size: 2.5em;
+    /* 🏠 Ikona powrotu */
+    .home-icon {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 1.6em;
+      text-decoration: none;
+      color: #333;
       background: white;
+      padding: 6px 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+
+    .home-icon:hover {
+      background: #eee;
+    }
+
+    /* 🎀 Nagłówek */
+    h1 {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      font-size: 2.8em;
+      background: linear-gradient(to right, #ffffffcc, #ffffffcc);
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
-      margin-bottom: 30px;
+      border-radius: 25px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+      margin: 40px 0 30px;
+      color: #2e2e2e;
     }
 
     .filter {
@@ -70,7 +99,7 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
       gap: 5px;
     }
 
@@ -113,6 +142,10 @@
   </style>
 </head>
 <body>
+
+  <!-- 🏠 Ikona powrotu -->
+  <a href="index.html" class="home-icon" title="Powrót do strony głównej">🏠</a>
+
   <h1>Kolekcja kapsli</h1>
 
   <div id="error-log"></div>
@@ -167,11 +200,7 @@
         select.appendChild(opt);
       });
 
-      const letters = Array.from(new Set(caps.map(c => {
-        const words = c.name.trim().split(/\s+/);
-        return (words[0].toLowerCase() === "browar" && words[1]) ? words[1][0].toUpperCase() : words[0][0].toUpperCase();
-      }))).sort();
-
+      const letters = Array.from(new Set(caps.map(c => getGroupLetter(c.name)))).sort();
       letters.forEach(l => {
         const opt = document.createElement('option');
         opt.value = l;
@@ -179,16 +208,23 @@
         letterFilter.appendChild(opt);
       });
 
-      function getGroupName(name) {
+      function getGroupLetter(name) {
         const words = name.trim().split(/\s+/);
-        return (words[0].toLowerCase() === "browar" && words[1]) ? words[1][0].toUpperCase() : words[0][0].toUpperCase();
+        let index = 0;
+
+        // Pomijamy „Browar” i „Browary”
+        if (words[0].toLowerCase() === "browar" || words[0].toLowerCase() === "browary") {
+          index = 1;
+        }
+
+        return words[index]?.[0]?.toUpperCase() || '?';
       }
 
       function render(selectedCountry = 'all', selectedLetter = 'all') {
         container.innerHTML = '';
         let filtered = selectedCountry === 'all' ? caps : caps.filter(c => c.country === selectedCountry);
         if (selectedLetter !== 'all') {
-          filtered = filtered.filter(c => getGroupName(c.name) === selectedLetter);
+          filtered = filtered.filter(c => getGroupLetter(c.name) === selectedLetter);
         }
 
         counter.textContent = `Łącznie kapsli: ${filtered.length}`;
