@@ -24,7 +24,7 @@
     /* 🏠 Ikona powrotu */
     .home-icon {
       position: absolute;
-      top: 55px; /* Wyśrodkowane względem nagłówka */
+      top: 55px;
       left: 25px;
       font-size: 1.6em;
       text-decoration: none;
@@ -100,10 +100,14 @@
       font-size: 1.2em;
     }
 
+    /* Galeria z max 5 zdjęciami, każda po 150px, nie rozciągamy na całą szerokość */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-      gap: 5px;
+      grid-template-columns: repeat(5, 150px);
+      gap: 10px;
+      justify-content: start;
+      max-width: 780px; /* 5*150 + 4*10px gap */
+      margin: 0 auto;
     }
 
     .image-wrapper {
@@ -111,11 +115,13 @@
     }
 
     .gallery img {
-      width: 100%;
+      width: 150px;
       height: auto;
       display: block;
       border-radius: 6px;
       border: 1px solid #ccc;
+      object-fit: contain;
+      background: white;
     }
 
     .image-link-indicator {
