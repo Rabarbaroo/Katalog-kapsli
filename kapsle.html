@@ -18,13 +18,14 @@
       padding: 20px;
       background: #d2f5d2;
       margin: 0;
+      position: relative;
     }
 
     /* 🏠 Ikona powrotu */
     .home-icon {
       position: absolute;
-      top: 15px;
-      left: 15px;
+      top: 55px; /* Wyśrodkowane względem nagłówka */
+      left: 25px;
       font-size: 1.6em;
       text-decoration: none;
       color: #333;
@@ -33,6 +34,7 @@
       border-radius: 8px;
       box-shadow: 0 0 6px rgba(0,0,0,0.2);
       transition: background 0.3s;
+      z-index: 10;
     }
 
     .home-icon:hover {
@@ -45,11 +47,12 @@
       text-align: center;
       font-size: 2.8em;
       background: linear-gradient(to right, #ffffffcc, #ffffffcc);
-      padding: 20px;
+      padding: 40px 20px;
       border-radius: 25px;
       box-shadow: 0 0 15px rgba(0,0,0,0.15);
       margin: 40px 0 30px;
       color: #2e2e2e;
+      position: relative;
     }
 
     .filter {
