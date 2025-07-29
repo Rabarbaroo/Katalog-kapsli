@@ -4,26 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>10 najnowszych kapsli</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: sans-serif;
+      font-family: 'Poppins', sans-serif;
       padding: 20px;
       background: #f0f0f0;
       margin: 0;
       text-align: center;
     }
+
     h1 {
-      margin-bottom: 30px;
-      font-family: 'Georgia', serif;
-      font-size: 2em;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5em;
+      background: linear-gradient(to right, #ffffffcc, #ffffffcc);
+      padding: 30px 20px;
+      border-radius: 25px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      color: #2e2e2e;
+      margin: 40px auto 30px;
+      max-width: 600px;
     }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 15px;
       max-width: 900px;
       margin: 0 auto;
     }
+
     .gallery img {
       width: 100%;
       height: auto;
@@ -34,6 +51,7 @@
   </style>
 </head>
 <body>
+
   <h1>10 najnowszych kapsli</h1>
   <div class="gallery" id="gallery"></div>
 
@@ -44,16 +62,14 @@
         if (!response.ok) throw new Error(`Błąd ładowania: ${response.status}`);
         const caps = await response.json();
 
-        // Weź ostatnie 10 elementów tablicy
         const lastTen = caps.slice(-10);
-
         const gallery = document.getElementById('gallery');
         gallery.innerHTML = '';
 
         lastTen.forEach(cap => {
           if (cap.images && cap.images.length > 0) {
             const img = document.createElement('img');
-            img.src = cap.images[0].src;
+            img.src = cap.images[0].src || cap.images[0];
             img.alt = cap.name;
             img.onerror = () => {
               img.style.border = '2px solid red';
