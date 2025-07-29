@@ -100,13 +100,13 @@
       font-size: 1.2em;
     }
 
-    /* Galeria z max 5 zdjęciami, każda po 150px, nie rozciągamy na całą szerokość */
+    /* Galeria z max 5 zdjęciami w rzędzie, równa szerokość */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(5, 150px);
+      grid-template-columns: repeat(5, 1fr);
       gap: 10px;
-      justify-content: start;
-      max-width: 780px; /* 5*150 + 4*10px gap */
+      justify-content: center;
+      max-width: 780px; /* 5 zdjęć szerokości max */
       margin: 0 auto;
     }
 
@@ -115,7 +115,7 @@
     }
 
     .gallery img {
-      width: 150px;
+      width: 100%;
       height: auto;
       display: block;
       border-radius: 6px;
