@@ -825,13 +825,6 @@
     "description": "Napisy",
     "date": "2025-06-23"
   },
-  {
-    "name": "Żywiec",
-    "country": "Polska",
-    "images": [{ "src": "images/Żywiec21.jpeg" }],
-    "description": "Napisy",
-    "date": "2025-06-23"
-  },
    {
     "name": "Okocim",
     "country": "Polska",
@@ -1642,13 +1635,6 @@
   "name": "Bosman",
   "country": "Polska",
   "images": [{ "src": "images/Bosman7.jpeg" }],
-  "description": "Napisy",
-  "date": "2025-06-23"
-},
-  {
-  "name": "Bosman",
-  "country": "Polska",
-  "images": [{ "src": "images/Bosman8.jpeg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
