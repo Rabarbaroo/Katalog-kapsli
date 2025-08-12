@@ -3044,7 +3044,6 @@
   "country": "Czechy",
   "images": [{ "src": "images/Chipper.jpg" }]
 },
-  [
   {
     "name": "Browar Náchod",
     "country": "Czechy",
@@ -3140,7 +3139,6 @@
   "country": "Łotwa",
   "images": [{ "src": "images/Ilgezeem1.jpg" }]
 },
-  [
   {
     "name": "Carlsberg Polska",
     "country": "Polska",
@@ -3171,7 +3169,6 @@
     "country": "Polska",
     "images": [{ "src": "images/Karmi6.jpg" }]
   },
-    [
   {
     "name": "Berliner Kindl",
     "country": "Niemcy",
