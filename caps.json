@@ -1351,6 +1351,13 @@
   "date": "2025-06-23"
 },
   {
+  "name": "Perła",
+  "country": "Polska",
+  "images": [{ "src": "images/Fox1.jpg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
   "name": "Łomża",
   "country": "Polska",
   "images": [{ "src": "images/Łomża1.jpg" }],
@@ -1832,6 +1839,11 @@
     "country": "Polska",
     "images": [{ "src": "images/Amber13.jpeg" }]
   },
+  {
+    "name": "Browar Amber",
+    "country": "Polska",
+    "images": [{ "src": "images/Amber14.jpg" }]
+  },
    {
     "name": "Browar Amber",
     "country": "Polska",
@@ -2137,6 +2149,13 @@
     "name": "Van Pur",
     "country": "Polska",
     "images": [{ "src": "images/Tesco.jpeg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+   {
+    "name": "Van Pur",
+    "country": "Polska",
+    "images": [{ "src": "images/VanPur.jpg" }],
     "description": "Napisy",
     "date": "2025-06-23"
   },
@@ -2570,6 +2589,11 @@
     "images": [{ "src": "images/Lwówek1.jpg" }]
   },
   {
+    "name": "Browar Lwówek",
+    "country": "Polska",
+    "images": [{ "src": "images/Lwówek2.jpg" }]
+  },
+  {
     "name": "Browar Niechanowo",
     "country": "Polska",
     "images": [{ "src": "images/Niechanowo1.jpg" }]
@@ -2933,5 +2957,304 @@
     "name": "Niepiwne",
     "country": "Polska",
     "images": [{ "src": "images/Cydrowski1.jpeg" }]
+  },
+  {
+  "name": "Beck's (Brema)",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Becks1.jpg" }]
+},
+{
+  "name": "Beck's (Brema)",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Becks2.jpg" }]
+},
+{
+  "name": "Beck's (Brema)",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Becks3.jpg" }]
+},
+{
+  "name": "Beck's (Brema)",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Becks4.jpg" }]
+},
+{
+  "name": "Beck's (Brema)",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Becks5.jpg" }]
+},
+{
+  "name": "Beck's (Brema)",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Becks6.jpg" }]
+},
+{
+  "name": "Beck's (Brema)",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Becks7.jpg" }]
+},
+{
+  "name": "Beck's (Brema)",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Becks8.jpg" }]
+},
+  {
+  "name": "Berliner Pilsner",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Berliner1.jpg" }]
+},
+{
+  "name": "Berliner Pilsner",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Berliner2.jpg" }]
+},
+ {
+  "name": "Bernard (Humpolec)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Bernard1.jpg" }]
+},
+{
+  "name": "Bernard (Humpolec)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Bernard2.jpg" }]
+},
+{
+  "name": "Bernard (Humpolec)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Bernard3.jpg" }]
+},
+{
+  "name": "Bernard (Humpolec)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Bernard4.jpg" }]
+},
+{
+  "name": "Bernard (Humpolec)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Bernard5.jpg" }]
+},
+  {
+  "name": "Breznak (Velké Březno)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Breznak1.jpg" }]
+},
+{
+  "name": "Breznak (Velké Březno)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Breznak2.jpg" }]
+},
+  {
+  "name": "Carlsberg",
+  "country": "Dania",
+  "images": [{ "src": "images/Carlsberg1.jpg" }]
+},
+{
+  "name": "Carlsberg",
+  "country": "Dania",
+  "images": [{ "src": "images/Carlsberg2.jpg" }]
+},
+  {
+  "name": "Browar Náchod",
+  "country": "Czechy",
+  "images": [{ "src": "images/Chipper.jpg" }]
+},
+  [
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator1.jpg" }]
+  },
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator2.jpg" }]
+  },
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator3.jpg" }]
+  },
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator4.jpg" }]
+  },
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator5.jpg" }]
+  },
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator6.jpg" }]
+  },
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator7.jpg" }]
+  },
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator8.jpg" }]
+  },
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator9.jpg" }]
+  },
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator10.jpg" }]
+  },
+  {
+  "name": "Kompania Piwowarska",
+  "country": "Polska",
+  "images": [{ "src": "images/Gingers1.jpg" }]
+},
+{
+  "name": "Kompania Piwowarska",
+  "country": "Polska",
+  "images": [{ "src": "images/Gingers2.jpg" }]
+},
+{
+  "name": "Kompania Piwowarska",
+  "country": "Polska",
+  "images": [{ "src": "images/Gingers3.jpg" }]
+},
+  {
+    "name": "Kompania Piwowarska",
+    "country": "Polska",
+    "images": [{ "src": "images/Redds1.jpg" }]
+  },
+  {
+    "name": "Kompania Piwowarska",
+    "country": "Polska",
+    "images": [{ "src": "images/Redds2.jpg" }]
+  },
+  {
+    "name": "Kompania Piwowarska",
+    "country": "Polska",
+    "images": [{ "src": "images/Redds3.jpg" }]
+  },
+  {
+    "name": "Kompania Piwowarska",
+    "country": "Polska",
+    "images": [{ "src": "images/Redds4.jpg" }]
+  },
+  {
+    "name": "Kompania Piwowarska",
+    "country": "Polska",
+    "images": [{ "src": "images/Redds5.jpg" }]
+  },
+  {
+  "name": "Ilgezeem",
+  "country": "Łotwa",
+  "images": [{ "src": "images/Ilgezeem1.jpg" }]
+},
+  [
+  {
+    "name": "Carlsberg Polska",
+    "country": "Polska",
+    "images": [{ "src": "images/Karmi1.jpg" }]
+  },
+  {
+    "name": "Carlsberg Polska",
+    "country": "Polska",
+    "images": [{ "src": "images/Karmi2.jpg" }]
+  },
+  {
+    "name": "Carlsberg Polska",
+    "country": "Polska",
+    "images": [{ "src": "images/Karmi3.jpg" }]
+  },
+  {
+    "name": "Carlsberg Polska",
+    "country": "Polska",
+    "images": [{ "src": "images/Karmi4.jpg" }]
+  },
+  {
+    "name": "Carlsberg Polska",
+    "country": "Polska",
+    "images": [{ "src": "images/Karmi5.jpg" }]
+  },
+  {
+    "name": "Carlsberg Polska",
+    "country": "Polska",
+    "images": [{ "src": "images/Karmi6.jpg" }]
+  },
+    [
+  {
+    "name": "Berliner Kindl",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Kindl1.jpg" }]
+  },
+  {
+    "name": "Berliner Kindl",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Kindl2.jpg" }]
+  },
+  {
+    "name": "Berliner Kindl",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Kindl3.jpg" }]
+  },
+  {
+    "name": "Berliner Kindl",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Kindl4.jpg" }]
+  },
+  {
+    "name": "Berliner Kindl",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Kindl5.jpg" }]
+  },
+      {
+  "name": "Browar Lwowski",
+  "country": "Ukraina",
+  "images": [{ "src": "images/Lwów1.jpg" }]
+},
+  {
+    "name": "Smädný Mních",
+    "country": "Słowacja",
+    "images": [{ "src": "images/Mnich1.jpg" }]
+  },
+  {
+    "name": "Smädný Mních",
+    "country": "Słowacja",
+    "images": [{ "src": "images/Mnich2.jpg" }]
+  },
+      {
+  "name": "Niksicko",
+  "country": "Czarnogóra",
+  "images": [{ "src": "images/Niksicko1.jpg" }]
+},
+ {
+  "name": "Frankfurter Brauhaus",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Perlenbacher1.jpg" }]
+},
+      [
+  {
+    "name": "Browar Zubr (Přerov)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Zubr1.jpg" }]
+  },
+  {
+    "name": "Browar Zubr (Přerov)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Zubr2.jpg" }]
+  },
+  {
+    "name": "Browar Zubr (Přerov)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Zubr3.jpg" }]
+  },
+  {
+    "name": "Browar Zubr (Přerov)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Zubr4.jpg" }]
   }
 ]
