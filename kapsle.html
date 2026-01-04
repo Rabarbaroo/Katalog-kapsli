@@ -201,7 +201,8 @@
         return;
       }
 
-      const countries = Array.from(new Set(caps.map(c => c.country)));
+      // 🌟 Sortowanie krajów alfabetycznie
+      const countries = Array.from(new Set(caps.map(c => c.country))).sort();
       countries.forEach(c => {
         const opt = document.createElement('option');
         opt.value = c;
