@@ -2700,6 +2700,16 @@
     "images": [{ "src": "images/Trybunał6.jpeg" }]
   },
   {
+    "name": "Piotrków Trybunalski",
+    "country": "Polska",
+    "images": [{ "src": "images/Trybunał7.jpeg" }]
+  },
+  {
+    "name": "Piotrków Trybunalski",
+    "country": "Polska",
+    "images": [{ "src": "images/Trybunał8.jpeg" }]
+  },
+  {
     "name": "Van Pur",
     "country": "Polska",
     "images": [{ "src": "images/VanPur1.jpg" }]
@@ -3583,5 +3593,160 @@
   "name": "Browar Měšťanský Pivovar v Poličce",
   "country": "Czechy",
   "images": [{ "src": "images/Policka3.jpeg" }]
-}
+},
+  {
+  "name": "Browar Heller Bräu",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Schlenkerla1.jpeg" }]
+},
+  {
+  "name": "Browar G. Schneider & Sohn",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Schneider1.jpeg" }]
+},
+{
+  "name": "Browar G. Schneider & Sohn",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Schneider2.jpeg" }]
+},
+  {
+  "name": "Browar Shepherd Neame",
+  "country": "Anglia",
+  "images": [{ "src": "images/Shepherd Neame.jpeg" }]
+},
+  {
+    "name": "Carlsberg",
+    "country": "Polska",
+    "images": [{ "src": "images/Somersby2.jpeg" }]
+  },
+  {
+  "name": "Browar Smíchov (Praga)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Staropramen1.jpeg" }]
+},
+{
+  "name": "Browar Smíchov (Praga)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Staropramen2.jpeg" }]
+},
+{
+  "name": "Browar Smíchov (Praga)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Staropramen3.jpeg" }]
+},
+{
+  "name": "Browar Smíchov (Praga)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Staropramen4.jpeg" }]
+},
+{
+  "name": "Browar Smíchov (Praga)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Staropramen5.jpeg" }]
+},
+{
+  "name": "Browar Smíchov (Praga)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Staropramen6.jpeg" }]
+},
+{
+  "name": "Browar Smíchov (Praga)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Staropramen2_1.jpeg" }]
+},
+  {
+  "name": "Browar w Leuven",
+  "country": "Belgia",
+  "images": [{ "src": "images/Stella1.jpeg" }]
+},
+  {
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany1.jpeg" }]
+},
+{
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany2.jpeg" }]
+},
+{
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany3.jpeg" }]
+},
+{
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany4.jpeg" }]
+},
+{
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany5.jpeg" }]
+},
+{
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany6.jpeg" }]
+},
+{
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany7.jpeg" }]
+},
+{
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany8.jpeg" }]
+},
+  {
+  "name": "Browar Tsingtao",
+  "country": "Chiny",
+  "images": [{ "src": "images/Tsingtao.jpeg" }]
+},
+  {
+  "name": "Browar Tuborg",
+  "country": "Dania",
+  "images": [{ "src": "images/Tuborg1.jpeg" }]
+},
+  {
+  "name": "Browar Utenos",
+  "country": "Litwa",
+  "images": [{ "src": "images/Utenos.jpeg" }]
+},
+   {
+  "name": "Browar Vyškov",
+  "country": "Czechy",
+  "images": [{ "src": "images/Vyskovske.jpeg" }]
+},
+   {
+  "name": "Browar Warsteiner",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Warsteiner1.jpeg" }]
+},
+   {
+  "name": "Browar Warsteiner",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Warsteiner2.jpeg" }]
+},
+   {
+  "name": "Browar  Wernesgrüner",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Wersnesgruner1.jpeg" }]
+},
+  {
+  "name": "Browar  Wernesgrüner",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Wersnesgruner2.jpeg" }]
+},
+  {
+  "name": "Browar  Žatec",
+  "country": "Czechy",
+  "images": [{ "src": "images/Zatec.jpeg" }]
+},
+  {
+  "name": "Okocim",
+  "country": "Polska",
+  "images": [{ "src": "images/Zatecky1.jpeg" }]
+}   
 ]
