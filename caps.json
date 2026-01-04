@@ -3375,22 +3375,22 @@
     "images": [{ "src": "images/HB1.jpeg" }]
   },
  {
-  "name": "Heineken 1",
+  "name": "Heineken",
   "country": "Holandia",
   "images": [{ "src": "images/Heineken1.jpeg" }]
 },
 {
-  "name": "Heineken 2",
+  "name": "Heineken",
   "country": "Holandia",
   "images": [{ "src": "images/Heineken2.jpeg" }]
 },
 {
-  "name": "Heineken 3",
+  "name": "Heineken",
   "country": "Holandia",
   "images": [{ "src": "images/Heineken3.jpeg" }]
 },
 {
-  "name": "Heineken 4",
+  "name": "Heineken",
   "country": "Holandia",
   "images": [{ "src": "images/Heineken4.jpeg" }]
 },
@@ -3405,12 +3405,12 @@
   "images": [{ "src": "images/Holba2.jpeg" }]
 },
   {
-  "name": "Browar Friesisches Brauhaus ",
+  "name": "Browar Friesisches Brauhaus",
   "country": "Niemcy",
   "images": [{ "src": "images/Jever.jpeg" }]
 },
   {
-  "name": "Browar Jihlava ",
+  "name": "Browar Jihlava",
   "country": "Czechy",
   "images": [{ "src": "images/Jezek1.jpeg" }]
 },
@@ -3425,47 +3425,47 @@
   "images": [{ "src": "images/Kingpin1.jpeg" }]
 },
   {
-  "name": "Browar Velké Popovice – Kozel 1",
+  "name": "Browar Velké Popovice",
   "country": "Czechy",
   "images": [{ "src": "images/Kozel1.jpeg" }]
 },
 {
-  "name": "Browar Velké Popovice – Kozel 2",
+  "name": "Browar Velké Popovice",
   "country": "Czechy",
   "images": [{ "src": "images/Kozel2.jpeg" }]
 },
 {
-  "name": "Browar Velké Popovice – Kozel 3",
+  "name": "Browar Velké Popovice",
   "country": "Czechy",
   "images": [{ "src": "images/Kozel3.jpeg" }]
 },
 {
-  "name": "Browar Velké Popovice – Kozel 4",
+  "name": "Browar Velké Popovice",
   "country": "Czechy",
   "images": [{ "src": "images/Kozel4.jpeg" }]
 },
 {
-  "name": "Browar Velké Popovice – Kozel 5",
+  "name": "Browar Velké Popovice",
   "country": "Czechy",
   "images": [{ "src": "images/Kozel5.jpeg" }]
 },
 {
-  "name": "Browar Velké Popovice – Kozel 6",
+  "name": "Browar Velké Popovice",
   "country": "Czechy",
   "images": [{ "src": "images/Kozel6.jpeg" }]
 },
 {
-  "name": "Browar Velké Popovice – Kozel 7",
+  "name": "Browar Velké Popovice",
   "country": "Czechy",
   "images": [{ "src": "images/Kozel7.jpeg" }]
 },
 {
-  "name": "Browar Velké Popovice – Kozel 8",
+  "name": "Browar Velké Popovice",
   "country": "Czechy",
   "images": [{ "src": "images/Kozel8.jpeg" }]
 },
 {
-  "name": "Browar Velké Popovice – Kozel 9",
+  "name": "Browar Velké Popovice",
   "country": "Czechy",
   "images": [{ "src": "images/Kozel9.jpeg" }]
 },
@@ -3583,5 +3583,5 @@
   "name": "Browar Měšťanský Pivovar v Poličce",
   "country": "Czechy",
   "images": [{ "src": "images/Policka3.jpeg" }]
-},
+}
 ]
