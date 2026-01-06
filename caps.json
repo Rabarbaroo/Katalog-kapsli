@@ -3346,17 +3346,17 @@
    {
   "name": "Browar Lwowski",
   "country": "Ukraina",
-  "images": [{ "src": "images/Lwowskie1.jpg" }]
+  "images": [{ "src": "images/Lwowskie1.jpeg" }]
 },
   {
   "name": "Browar Lwowski",
   "country": "Ukraina",
-  "images": [{ "src": "images/Lwowskie2.jpg" }]
+  "images": [{ "src": "images/Lwowskie2.jpeg" }]
 },
   {
   "name": "Browar Lwowski",
   "country": "Ukraina",
-  "images": [{ "src": "images/Lwowskie3.jpg" }]
+  "images": [{ "src": "images/Lwowskie3.jpeg" }]
 },
   {
     "name": "Smädný Mních",
@@ -3901,7 +3901,7 @@
    {
   "name": "AleBrowar",
   "country": "Polska",
-  "images": [{ "src": "images/Alebrowar1.jpeg" }]
+  "images": [{ "src": "images/AleBrowar1.jpeg" }]
 },
   {
   "name": "Browar Amber",
