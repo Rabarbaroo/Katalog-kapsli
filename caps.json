@@ -3935,32 +3935,32 @@
   {
   "name": "Żywiec",
   "country": "Polska",
-  "images": [{ "src": "images/Desperados1.jpeg" }],
+  "images": [{ "src": "images/Desperados1.jpeg" }]
 },
    {
   "name": "Kompania Piwowarska",
   "country": "Polska",
-  "images": [{ "src": "images/Dog1.jpeg" }],
+  "images": [{ "src": "images/Dog1.jpeg" }]
 },
    {
   "name": "Browar Royal Unibrew",
   "country": "Dania",
-  "images": [{ "src": "images/Faxe1.jpeg" }],
+  "images": [{ "src": "images/Faxe1.jpeg" }]
 },
   {
   "name": "Browar Royal Unibrew",
   "country": "Dania",
-  "images": [{ "src": "images/Faxe2.jpeg" }],
+  "images": [{ "src": "images/Faxe2.jpeg" }]
 },
   {
   "name": "Browar Jedlinka",
   "country": "Polska",
-  "images": [{ "src": "images/Jedlinka.jpeg" }],
+  "images": [{ "src": "images/Jedlinka.jpeg" }]
 },
    {
   "name": "Miller Brewing",
   "country": "USA",
-  "images": [{ "src": "images/Miller.jpeg" }],
+  "images": [{ "src": "images/Miller.jpeg" }]
 }
 
   
