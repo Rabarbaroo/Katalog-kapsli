@@ -9,9 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       font-family: 'Poppins', sans-serif;
@@ -21,7 +19,6 @@
       position: relative;
     }
 
-    /* 🏠 Ikona powrotu */
     .home-icon {
       position: absolute;
       top: 55px;
@@ -33,26 +30,17 @@
       padding: 6px 10px;
       border-radius: 8px;
       box-shadow: 0 0 6px rgba(0,0,0,0.2);
-      transition: background 0.3s;
       z-index: 10;
     }
 
-    .home-icon:hover {
-      background: #eee;
-    }
-
-    /* 🎀 Nagłówek */
     h1 {
       font-family: 'Pacifico', cursive;
       text-align: center;
       font-size: 2.8em;
-      background: linear-gradient(to right, #ffffffcc, #ffffffcc);
       padding: 40px 20px;
       border-radius: 25px;
       box-shadow: 0 0 15px rgba(0,0,0,0.15);
       margin: 40px 0 30px;
-      color: #2e2e2e;
-      position: relative;
     }
 
     .filter {
@@ -62,22 +50,6 @@
       text-align: center;
       margin-bottom: 20px;
       box-shadow: 0 0 6px rgba(0,0,0,0.1);
-    }
-
-    .filter label {
-      margin-right: 10px;
-      font-weight: bold;
-    }
-
-    .filter select {
-      padding: 5px;
-      margin-right: 15px;
-    }
-
-    #counter {
-      text-align: center;
-      font-weight: bold;
-      margin: 10px 0 20px;
     }
 
     .caps {
@@ -97,46 +69,21 @@
       margin-bottom: 10px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 5px;
-      font-size: 1.2em;
     }
 
-    /* Galeria z max 5 zdjęciami w rzędzie, równa szerokość */
     .gallery {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 10px;
-      justify-content: center;
-      max-width: 780px; /* 5 zdjęć szerokości max */
+      max-width: 780px;
       margin: 0 auto;
-    }
-
-    .image-wrapper {
-      position: relative;
     }
 
     .gallery img {
       width: 100%;
-      height: auto;
-      display: block;
       border-radius: 6px;
       border: 1px solid #ccc;
-      object-fit: contain;
       background: white;
-    }
-
-    .image-link-indicator {
-      position: absolute;
-      top: 2px;
-      right: 2px;
-      background: gold;
-      color: black;
-      font-size: 10px;
-      padding: 1px 4px;
-      border-radius: 3px;
-      font-weight: bold;
-      opacity: 0.85;
-      pointer-events: none;
-      z-index: 2;
     }
 
     #error-log {
@@ -144,7 +91,6 @@
       border: 1px solid red;
       padding: 10px;
       border-radius: 5px;
-      color: #900;
       display: none;
       margin-bottom: 20px;
     }
@@ -152,157 +98,156 @@
 </head>
 <body>
 
-  <!-- 🏠 Ikona powrotu -->
-  <a href="index.html" class="home-icon" title="Powrót do strony głównej">🏠</a>
+<a href="index.html" class="home-icon">🏠</a>
+<h1>Kolekcja kapsli</h1>
 
-  <h1>Kolekcja kapsli</h1>
+<div id="error-log"></div>
 
-  <div id="error-log"></div>
+<div class="filter">
+  <label>Kraj:</label>
+  <select id="country-select">
+    <option value="all">Wszystkie</option>
+  </select>
 
-  <div class="filter">
-    <label for="country-select">Kraj:</label>
-    <select id="country-select">
-      <option value="all">Wszystkie</option>
-    </select>
+  <label>Browar:</label>
+  <select id="letter-filter">
+    <option value="all">Wszystkie</option>
+  </select>
+</div>
 
-    <label for="letter-filter">Browar:</label>
-    <select id="letter-filter">
-      <option value="all">Wszystkie</option>
-    </select>
-  </div>
+<div id="counter"></div>
+<div class="caps" id="caps-container"></div>
 
-  <div id="counter"></div>
-  <div class="caps" id="caps-container"></div>
+<script>
+/* ===== NORMALIZACJA NAZW BROWARÓW ===== */
+function normalizeBreweryName(name) {
+  const words = name.trim().split(/\s+/);
 
-  <script>
-    async function loadCaps() {
-      const container = document.getElementById('caps-container');
-      const select = document.getElementById('country-select');
-      const letterFilter = document.getElementById('letter-filter');
-      const counter = document.getElementById('counter');
-      const errorLog = document.getElementById('error-log');
+  if (
+    words[0].toLowerCase() === 'browar' ||
+    words[0].toLowerCase() === 'browary'
+  ) {
+    words.shift();
+  }
 
-      const showError = (msg) => {
-        errorLog.style.display = 'block';
-        errorLog.innerHTML += `<div>⚠️ ${msg}</div>`;
-      };
+  return words.join(' ');
+}
 
-      window.onerror = function (message, source, lineno, colno, error) {
-        showError(`Błąd JS: ${message} (${source}:${lineno}:${colno})`);
-      };
+/* ===== LITERA DO FILTRA ===== */
+function getGroupLetter(name) {
+  const normalized = normalizeBreweryName(name);
+  return normalized[0]?.toUpperCase() || '?';
+}
 
-      let caps;
-      try {
-        const response = await fetch('caps.json');
-        if (!response.ok) throw new Error(`Nie udało się załadować caps.json: ${response.status}`);
-        caps = await response.json();
-      } catch (err) {
-        showError(`Błąd wczytywania danych: ${err.message}`);
-        return;
-      }
+async function loadCaps() {
+  const container = document.getElementById('caps-container');
+  const countrySelect = document.getElementById('country-select');
+  const letterFilter = document.getElementById('letter-filter');
+  const counter = document.getElementById('counter');
+  const errorLog = document.getElementById('error-log');
 
-      // 🌟 Sortowanie krajów alfabetycznie
-      const countries = Array.from(new Set(caps.map(c => c.country))).sort();
-      countries.forEach(c => {
-        const opt = document.createElement('option');
-        opt.value = c;
-        opt.textContent = c;
-        select.appendChild(opt);
-      });
+  const showError = msg => {
+    errorLog.style.display = 'block';
+    errorLog.innerHTML += `<div>⚠️ ${msg}</div>`;
+  };
 
-      const letters = Array.from(new Set(caps.map(c => getGroupLetter(c.name)))).sort();
-      letters.forEach(l => {
-        const opt = document.createElement('option');
-        opt.value = l;
-        opt.textContent = l;
-        letterFilter.appendChild(opt);
-      });
+  let caps;
+  try {
+    const response = await fetch('caps.json');
+    caps = await response.json();
+  } catch {
+    showError('Nie udało się wczytać caps.json');
+    return;
+  }
 
-      function getGroupLetter(name) {
-        const words = name.trim().split(/\s+/);
-        let index = 0;
+  /* ===== KRAJE – SORT PL ===== */
+  const countries = [...new Set(caps.map(c => c.country))]
+    .sort((a, b) => a.localeCompare(b, 'pl'));
 
-        // Pomijamy „Browar” i „Browary”
-        if (words[0].toLowerCase() === "browar" || words[0].toLowerCase() === "browary") {
-          index = 1;
-        }
+  countries.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c;
+    countrySelect.appendChild(opt);
+  });
 
-        return words[index]?.[0]?.toUpperCase() || '?';
-      }
+  /* ===== LITERY – SORT PL, BEZ BROWAR ===== */
+  const letters = [...new Set(caps.map(c => getGroupLetter(c.name)))]
+    .sort((a, b) => a.localeCompare(b, 'pl'));
 
-      function render(selectedCountry = 'all', selectedLetter = 'all') {
-        container.innerHTML = '';
-        let filtered = selectedCountry === 'all' ? caps : caps.filter(c => c.country === selectedCountry);
-        if (selectedLetter !== 'all') {
-          filtered = filtered.filter(c => getGroupLetter(c.name) === selectedLetter);
-        }
+  letters.forEach(l => {
+    const opt = document.createElement('option');
+    opt.value = l;
+    opt.textContent = l;
+    letterFilter.appendChild(opt);
+  });
 
-        counter.textContent = `Łącznie kapsli: ${filtered.length}`;
+  function render(selectedCountry = 'all', selectedLetter = 'all') {
+    container.innerHTML = '';
 
-        const groups = {};
-        filtered.forEach(c => {
-          const key = c.name;
-          if (!groups[key]) groups[key] = [];
-          groups[key].push(c);
-        });
+    let filtered = selectedCountry === 'all'
+      ? caps
+      : caps.filter(c => c.country === selectedCountry);
 
-        Object.keys(groups).sort().forEach(group => {
-          const groupDiv = document.createElement('div');
-          groupDiv.className = 'cap';
-
-          const header = document.createElement('h3');
-          header.textContent = `${group} (${groups[group].length})`;
-          groupDiv.appendChild(header);
-
-          const galleryDiv = document.createElement('div');
-          galleryDiv.className = 'gallery';
-
-          groups[group].forEach(c => {
-            c.images.forEach(img => {
-              const wrapper = document.createElement('div');
-              wrapper.className = 'image-wrapper';
-
-              const image = document.createElement('img');
-              image.src = img.src || img;
-              image.alt = c.name;
-              image.onerror = () => {
-                showError(`Brakujący obraz: ${image.src}`);
-                image.style.border = '2px solid red';
-                image.title = "Nie udało się załadować obrazka";
-              };
-
-              if (img.link) {
-                const a = document.createElement('a');
-                a.href = img.link;
-                a.target = "_blank";
-                a.appendChild(image);
-
-                const star = document.createElement('span');
-                star.className = 'image-link-indicator';
-                star.textContent = '⭐';
-
-                wrapper.appendChild(a);
-                wrapper.appendChild(star);
-              } else {
-                wrapper.appendChild(image);
-              }
-
-              galleryDiv.appendChild(wrapper);
-            });
-          });
-
-          groupDiv.appendChild(galleryDiv);
-          container.appendChild(groupDiv);
-        });
-      }
-
-      select.addEventListener('change', () => render(select.value, letterFilter.value));
-      letterFilter.addEventListener('change', () => render(select.value, letterFilter.value));
-
-      render();
+    if (selectedLetter !== 'all') {
+      filtered = filtered.filter(
+        c => getGroupLetter(c.name) === selectedLetter
+      );
     }
 
-    loadCaps();
-  </script>
+    counter.textContent = `Łącznie kapsli: ${filtered.length}`;
+
+    const groups = {};
+    filtered.forEach(c => {
+      if (!groups[c.name]) groups[c.name] = [];
+      groups[c.name].push(c);
+    });
+
+    Object.keys(groups)
+      .sort((a, b) =>
+        normalizeBreweryName(a).localeCompare(
+          normalizeBreweryName(b),
+          'pl'
+        )
+      )
+      .forEach(group => {
+        const div = document.createElement('div');
+        div.className = 'cap';
+
+        const h3 = document.createElement('h3');
+        h3.textContent = `${group} (${groups[group].length})`;
+        div.appendChild(h3);
+
+        const gallery = document.createElement('div');
+        gallery.className = 'gallery';
+
+        groups[group].forEach(c => {
+          c.images.forEach(img => {
+            const image = document.createElement('img');
+            image.src = img.src || img;
+            image.alt = group;
+            gallery.appendChild(image);
+          });
+        });
+
+        div.appendChild(gallery);
+        container.appendChild(div);
+      });
+  }
+
+  countrySelect.addEventListener('change', () =>
+    render(countrySelect.value, letterFilter.value)
+  );
+
+  letterFilter.addEventListener('change', () =>
+    render(countrySelect.value, letterFilter.value)
+  );
+
+  render();
+}
+
+loadCaps();
+</script>
+
 </body>
 </html>
