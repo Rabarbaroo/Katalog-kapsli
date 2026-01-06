@@ -1976,6 +1976,20 @@
   "date": "2025-06-23"
 },
   {
+  "name": "Browar Cornelius",
+  "country": "Polska",
+  "images": [{ "src": "images/Cornelius4.jpeg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+   {
+  "name": "Browar Cornelius",
+  "country": "Polska",
+  "images": [{ "src": "images/Rebel.jpeg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
     "name": "Okocim",
     "country": "Polska",
     "images": [{ "src": "images/Harnaś1.jpg" }],
@@ -2816,6 +2830,26 @@
   {
     "name": "Van Pur",
     "country": "Polska",
+    "images": [{ "src": "images/VanPur2.jpeg" }]
+  },
+   {
+    "name": "Van Pur",
+    "country": "Polska",
+    "images": [{ "src": "images/VanPur3.jpeg" }]
+  },
+   {
+    "name": "Van Pur",
+    "country": "Polska",
+    "images": [{ "src": "images/VanPur4.jpeg" }]
+  },
+   {
+    "name": "Van Pur",
+    "country": "Polska",
+    "images": [{ "src": "images/VanPur5.jpeg" }]
+  },
+  {
+    "name": "Van Pur",
+    "country": "Polska",
     "images": [{ "src": "images/Strzelec1.jpeg" }]
   },
    {
@@ -3064,6 +3098,26 @@
     "images": [{ "src": "images/Somersby3.jpeg" }]
   },
   {
+    "name": "Carlsberg",
+    "country": "Polska",
+    "images": [{ "src": "images/Somersby4.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Polska",
+    "images": [{ "src": "images/Somersby5.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Polska",
+    "images": [{ "src": "images/Somersby6.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Polska",
+    "images": [{ "src": "images/Somersby7.jpeg" }]
+  },
+  {
     "name": "Browar Kaszubski (Bytów)",
     "country": "Polska",
     "images": [{ "src": "images/Bytów1.jpeg" }]
@@ -3167,6 +3221,11 @@
   "name": "Bernard (Humpolec)",
   "country": "Czechy",
   "images": [{ "src": "images/Bernard5.jpg" }]
+},
+  {
+  "name": "Bernard (Humpolec)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Bernard6.jpeg" }]
 },
   {
   "name": "Breznak (Velké Březno)",
@@ -3363,6 +3422,11 @@
   "country": "Ukraina",
   "images": [{ "src": "images/Lwowskie3.jpeg" }]
 },
+   {
+  "name": "Browar Lwowski",
+  "country": "Ukraina",
+  "images": [{ "src": "images/Lwowskie4.jpeg" }]
+},
   {
     "name": "Smädný Mních",
     "country": "Słowacja",
@@ -3517,6 +3581,31 @@
     "name": "Browar Plzeňský Prazdroj",
     "country": "Czechy",
     "images": [{ "src": "images/Gambrinus2.jpeg" }]
+  },
+  {
+    "name": "Browar Plzeňský Prazdroj",
+    "country": "Czechy",
+    "images": [{ "src": "images/Gambrinus3.jpeg" }]
+  },
+  {
+    "name": "Browar Plzeňský Prazdroj",
+    "country": "Czechy",
+    "images": [{ "src": "images/Gambrinus4.jpeg" }]
+  },
+  {
+    "name": "Browar Plzeňský Prazdroj",
+    "country": "Czechy",
+    "images": [{ "src": "images/Gambrinus5.jpeg" }]
+  },
+  {
+    "name": "Browar Plzeňský Prazdroj",
+    "country": "Czechy",
+    "images": [{ "src": "images/Gambrinus6.jpeg" }]
+  },
+  {
+    "name": "Browar Plzeňský Prazdroj",
+    "country": "Czechy",
+    "images": [{ "src": "images/Gambrinus7.jpeg" }]
   },
    {
     "name": "Grimbergen",
@@ -3959,6 +4048,11 @@
   "images": [{ "src": "images/Amber24.jpeg" }]
 },
   {
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber25.jpeg" }]
+},
+  {
   "name": "Browar Artezan",
   "country": "Polska",
   "images": [{ "src": "images/Artezan.jpeg" }]
@@ -3982,6 +4076,21 @@
   "name": "Żywiec",
   "country": "Polska",
   "images": [{ "src": "images/Desperados1.jpeg" }]
+},
+  {
+  "name": "Żywiec",
+  "country": "Polska",
+  "images": [{ "src": "images/Desperados2.jpeg" }]
+},
+  {
+  "name": "Żywiec",
+  "country": "Polska",
+  "images": [{ "src": "images/Desperados3.jpeg" }]
+},
+  {
+  "name": "Żywiec",
+  "country": "Polska",
+  "images": [{ "src": "images/Desperados4.jpeg" }]
 },
    {
   "name": "Kompania Piwowarska",
@@ -4127,5 +4236,287 @@
   "name": "Browar Błonie",
   "country": "Polska",
   "images": [{ "src": "images/innebeczki2.jpeg" }]
-} 
+},
+   {
+  "name": "Browar Dreher",
+  "country": "Węgry",
+  "images": [{ "src": "images/Arani.jpeg" }]
+}, 
+  {
+  "name": "Browar Brasserie du Bocq",
+  "country": "Belgia",
+  "images": [{ "src": "images/Bocq.jpeg" }]
+}, 
+   {
+  "name": "Browar Bojanowo",
+  "country": "Polska",
+  "images": [{ "src": "images/Bojan1.jpeg" }]
+}, 
+  {
+  "name": "Browar Branik (Praga)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Branik1.jpeg" }]
+}, 
+  {
+  "name": "Browar Branik (Praga)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Branik2.jpeg" }]
+}, 
+  {
+  "name": "Browar Branik (Praga)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Branik3.jpeg" }]
+}, 
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga1.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga2.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga3.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga4.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga5.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga6.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga7.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga8.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga9.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga10.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga11.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga12.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga13.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga14.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga15.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga16.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga17.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga18.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga19.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga20.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga21.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga22.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga23.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga24.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga25.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga26.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga27.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga28.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga29.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga30.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga31.jpeg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Dania",
+    "images": [{ "src": "images/Flaga32.jpeg" }]
+  },
+  {
+    "name": "Browar Krombacher",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Krombacher1.jpeg" }]
+  },
+  {
+    "name": "Browar Krombacher",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Krombacher2.jpeg" }]
+  },
+  {
+    "name": "Browar Krombacher",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Krombacher3.jpeg" }]
+  },
+  {
+    "name": "Browar Krombacher",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Krombacher4.jpeg" }]
+  },
+  {
+    "name": "Browar Krombacher",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Krombacher5.jpeg" }]
+  },
+  {
+    "name": "Browar Krombacher",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Krombacher6.jpeg" }]
+  },
+  {
+    "name": "Browar Krombacher",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Krombacher7.jpeg" }]
+  },
+  {
+    "name": "Browar Krombacher",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Krombacher8.jpeg" }]
+  },
+  {
+    "name": "Browar Krombacher",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Krombacher9.jpeg" }]
+  },
+  {
+    "name": "The Wychwood Brewery",
+    "country": "Anglia",
+    "images": [{ "src": "images/no2.jpeg" }]
+  },
+  {
+    "name": "Browar Paulaner",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Paulaner1.jpeg" }]
+  },
+  {
+    "name": "Browar Rohozec",
+    "country": "Czechy",
+    "images": [{ "src": "images/Rohozec1.jpeg" }]
+  },
+    {
+    "name": "Browar Rohozec",
+    "country": "Czechy",
+    "images": [{ "src": "images/Rohozec2.jpeg" }]
+  },
+  {
+    "name": "Browar Soproni",
+    "country": "Węgry",
+    "images": [{ "src": "images/Soproni1.jpeg" }]
+  },
+   {
+    "name": "Browar Soproni",
+    "country": "Węgry",
+    "images": [{ "src": "images/Soproni2.jpeg" }]
+  },
+   {
+    "name": "Browar Steenberge",
+    "country": "Belgia",
+    "images": [{ "src": "images/Stenberge.jpeg" }]
+  },
+   {
+    "name": "Browar Szymbark",
+    "country": "Polska",
+    "images": [{ "src": "images/Szymbark.jpeg" }]
+  },
+  {
+    "name": "Bosman"
+    "country": "Polska",
+    "images": [{ "src": "images/Volt.jpeg" }]
+  }
+  
+    
 ]
