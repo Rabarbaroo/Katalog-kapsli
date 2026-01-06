@@ -1175,6 +1175,20 @@
     "description": "Napisy",
     "date": "2025-06-23"
   },
+   {
+    "name": "Lech",
+    "country": "Polska",
+    "images": [{ "src": "images/Lech36.jpeg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+   {
+    "name": "Lech",
+    "country": "Polska",
+    "images": [{ "src": "images/Lech37.jpeg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
   {
   "name": "Tatra",
   "country": "Polska",
@@ -1519,6 +1533,20 @@
     "description": "warka",
     "date": "2025-06-23"
   },
+  {
+  "name": "Łomża",
+  "country": "Polska",
+  "images": [{ "src": "images/Łomża25.jpeg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
+  "name": "Łomża",
+  "country": "Polska",
+  "images": [{ "src": "images/Łomża26.jpeg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
   {
   "name": "Fortuna",
   "country": "Polska",
@@ -1899,6 +1927,13 @@
   "date": "2025-06-23"
 },
   {
+  "name": "Browar Ciechan",
+  "country": "Polska",
+  "images": [{ "src": "images/Ciechan4.jpeg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
   "name": "Browar Cornelius",
   "country": "Polska",
   "images": [{ "src": "images/Cornelius.jpg" }],
@@ -1909,6 +1944,13 @@
   "name": "Browar Cornelius",
   "country": "Polska",
   "images": [{ "src": "images/Cornelius2.jpeg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
+  "name": "Browar Cornelius",
+  "country": "Polska",
+  "images": [{ "src": "images/Cornelius3.jpeg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
@@ -2060,6 +2102,13 @@
     "date": "2025-06-23"
   },
   {
+    "name": "Browar Jabłonowo",
+    "country": "Polska",
+    "images": [{ "src": "images/Jabłonowo9.jpeg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
     "name": "Browar Jagiełło",
     "country": "Polska",
     "images": [{ "src": "images/Jagiełło1.jpg" }],
@@ -2203,6 +2252,20 @@
     "name": "Browar Kormoran",
     "country": "Polska",
     "images": [{ "src": "images/Kormoran8.jpeg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
+    "name": "Browar Kormoran",
+    "country": "Polska",
+    "images": [{ "src": "images/Kormoran9.jpeg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
+    "name": "Browar Kormoran",
+    "country": "Polska",
+    "images": [{ "src": "images/Kormoran10.jpeg" }],
     "description": "Napisy",
     "date": "2025-06-23"
   },
@@ -2585,6 +2648,11 @@
     "images": [{ "src": "images/Lwówek2.jpg" }]
   },
   {
+    "name": "Browar Lwówek",
+    "country": "Polska",
+    "images": [{ "src": "images/Lwówek3.jpeg" }]
+  },
+  {
     "name": "Browar Niechanowo",
     "country": "Polska",
     "images": [{ "src": "images/Niechanowo1.jpg" }]
@@ -2754,6 +2822,21 @@
     "country": "Polska",
     "images": [{ "src": "images/Celtyckie1.jpeg" }]
   },
+  {
+    "name": "Browar JAKO",
+    "country": "Polska",
+    "images": [{ "src": "images/Jako1.jpeg" }]
+  },
+  {
+    "name": "Browar JAKO",
+    "country": "Polska",
+    "images": [{ "src": "images/Jako2.jpeg" }]
+  },
+  {
+    "name": "Browar JAKO",
+    "country": "Polska",
+    "images": [{ "src": "images/Jako3.jpeg" }]
+  },
    {
     "name": "Browar Zwierzyniec",
     "country": "Polska",
@@ -2793,6 +2876,11 @@
   "name": "Argus",
   "country": "Polska",
   "images": [{ "src": "images/Argus7.jpeg" }]
+},
+  {
+  "name": "Argus",
+  "country": "Polska",
+  "images": [{ "src": "images/Argus8.jpeg" }]
 },
   {
   "name": "Czarny kot (Radom)",
@@ -3213,6 +3301,21 @@
   "name": "Browar Lwowski",
   "country": "Ukraina",
   "images": [{ "src": "images/Lwów1.jpg" }]
+},
+   {
+  "name": "Browar Lwowski",
+  "country": "Ukraina",
+  "images": [{ "src": "images/Lwowskie1.jpg" }]
+},
+  {
+  "name": "Browar Lwowski",
+  "country": "Ukraina",
+  "images": [{ "src": "images/Lwowskie2.jpg" }]
+},
+  {
+  "name": "Browar Lwowski",
+  "country": "Ukraina",
+  "images": [{ "src": "images/Lwowskie3.jpg" }]
 },
   {
     "name": "Smädný Mních",
@@ -3748,5 +3851,117 @@
   "name": "Okocim",
   "country": "Polska",
   "images": [{ "src": "images/Zatecky1.jpeg" }]
-}   
+},
+   {
+  "name": "Browar Stu Mostów",
+  "country": "Polska",
+  "images": [{ "src": "images/100mosty1.jpeg" }]
+},
+   {
+  "name": "AleBrowar",
+  "country": "Polska",
+  "images": [{ "src": "images/Alebrowar1.jpeg" }]
+},
+  {
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber15.jpeg" }]
+},
+{
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber16.jpeg" }]
+},
+{
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber17.jpeg" }]
+},
+{
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber18.jpeg" }]
+},
+{
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber19.jpeg" }]
+},
+{
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber20.jpeg" }]
+},
+{
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber21.jpeg" }]
+},
+{
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber22.jpeg" }]
+},
+{
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber23.jpeg" }]
+},
+{
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber24.jpeg" }]
+},
+  {
+  "name": "Browar Artezan",
+  "country": "Polska",
+  "images": [{ "src": "images/Artezan.jpeg" }]
+},
+   {
+  "name": "Browar Baltika",
+  "country": "Rosja",
+  "images": [{ "src": "images/Baltika1.jpeg" }]
+},
+  {
+  "name": "Browar Baltika",
+  "country": "Rosja",
+  "images": [{ "src": "images/Baltika2.jpeg" }]
+},
+  {
+  "name": "Browar Błonie",
+  "country": "Polska",
+  "images": [{ "src": "images/Błonie.jpeg" }]
+},
+  {
+  "name": "Żywiec",
+  "country": "Polska",
+  "images": [{ "src": "images/Desperados1.jpeg" }],
+},
+   {
+  "name": "Kompania Piwowarska",
+  "country": "Polska",
+  "images": [{ "src": "images/Dog1.jpeg" }],
+},
+   {
+  "name": "Browar Royal Unibrew",
+  "country": "Dania",
+  "images": [{ "src": "images/Faxe1.jpeg" }],
+},
+  {
+  "name": "Browar Royal Unibrew",
+  "country": "Dania",
+  "images": [{ "src": "images/Faxe2.jpeg" }],
+},
+  {
+  "name": "Browar Jedlinka",
+  "country": "Polska",
+  "images": [{ "src": "images/Jedlinka.jpeg" }],
+},
+   {
+  "name": "Miller Brewing",
+  "country": "USA",
+  "images": [{ "src": "images/Miller.jpeg" }],
+}
+
+  
 ]
