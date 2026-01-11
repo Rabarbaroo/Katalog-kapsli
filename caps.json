@@ -4516,5 +4516,10 @@
     "name": "Bosman",
     "country": "Polska",
     "images": [{ "src": "images/Volt.jpeg" }]
+  },
+  {
+    "name": "Amstel",
+    "country": "Holandia",
+    "images": [{ "src": "images/Amstel.png" }]
   }  
 ]
