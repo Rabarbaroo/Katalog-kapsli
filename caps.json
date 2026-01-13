@@ -1323,65 +1323,86 @@
   "date": "2025-06-23"
 },
   {
-  "name": "Perła",
+  "name": "Zakłady Piwowarskie w Lublinie",
   "country": "Polska",
   "images": [{ "src": "images/Perła1.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
 {
-  "name": "Perła",
+  "name": "Zakłady Piwowarskie w Lublinie",
   "country": "Polska",
   "images": [{ "src": "images/Perła2.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
 {
-  "name": "Perła",
+  "name": "Zakłady Piwowarskie w Lublinie",
   "country": "Polska",
   "images": [{ "src": "images/Perła3.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
 {
-  "name": "Perła",
+  "name": "Zakłady Piwowarskie w Lublinie",
   "country": "Polska",
   "images": [{ "src": "images/Perła4.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
 {
-  "name": "Perła",
+  "name": "Zakłady Piwowarskie w Lublinie",
   "country": "Polska",
   "images": [{ "src": "images/Perła5.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
 {
-  "name": "Perła",
+  "name": "Zakłady Piwowarskie w Lublinie",
   "country": "Polska",
   "images": [{ "src": "images/Perła6.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
 {
-  "name": "Perła",
+  "name": "Zakłady Piwowarskie w Lublinie",
   "country": "Polska",
   "images": [{ "src": "images/Perła7.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
 {
-  "name": "Perła",
+  "name": "Zakłady Piwowarskie w Lublinie",
   "country": "Polska",
   "images": [{ "src": "images/Perła8.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
   {
-  "name": "Perła",
+  "name": "Zakłady Piwowarskie w Lublinie",
   "country": "Polska",
   "images": [{ "src": "images/Fox1.jpg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
+  "name": "Zakłady Piwowarskie w Lublinie",
+  "country": "Polska",
+  "images": [{ "src": "images/Goolman1.png" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
+  "name": "Zakłady Piwowarskie w Lublinie",
+  "country": "Polska",
+  "images": [{ "src": "images/Goolman2.png" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
+  "name": "Zakłady Piwowarskie w Lublinie",
+  "country": "Polska",
+  "images": [{ "src": "images/Goolman3.png" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
@@ -1927,6 +1948,11 @@
   "images": [{ "src": "images/Braniewo6.jpeg" }]
 },
   {
+  "name": "Braniewo",
+  "country": "Polska",
+  "images": [{ "src": "images/Barkas.png" }]
+},
+  {
   "name": "Browar Ciechan",
   "country": "Polska",
   "images": [{ "src": "images/Ciechan1.jpg" }],
@@ -1986,6 +2012,13 @@
   "name": "Browar Cornelius",
   "country": "Polska",
   "images": [{ "src": "images/Rebel.jpeg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+   {
+  "name": "Browar Cornelius",
+  "country": "Polska",
+  "images": [{ "src": "images/Frumalt.png" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
@@ -2616,6 +2649,11 @@
     "name": "Elbląg",
     "country": "Polska",
     "images": [{ "src": "images/EB5.jpg" }]
+  },
+  {
+    "name": "Elbląg",
+    "country": "Polska",
+    "images": [{ "src": "images/Kaper.png" }]
   },
   {
     "name": "Browar Konstancin",
@@ -3343,6 +3381,11 @@
     "images": [{ "src": "images/Redds5.jpg" }]
   },
   {
+    "name": "Kompania Piwowarska",
+    "country": "Polska",
+    "images": [{ "src": "images/Jack1.png" }]
+  },
+  {
   "name": "Ilgezeem",
   "country": "Łotwa",
   "images": [{ "src": "images/Ilgezeem1.jpg" }]
@@ -3376,6 +3419,21 @@
     "name": "Carlsberg Polska",
     "country": "Polska",
     "images": [{ "src": "images/Karmi6.jpg" }]
+  },
+  {
+    "name": "Carlsberg Polska",
+    "country": "Polska",
+    "images": [{ "src": "images/Karmi7.png" }]
+  },
+  {
+    "name": "Carlsberg Polska",
+    "country": "Polska",
+    "images": [{ "src": "images/Karmi8.png" }]
+  },
+  {
+    "name": "Carlsberg Polska",
+    "country": "Polska",
+    "images": [{ "src": "images/Karmi9.png" }]
   },
   {
     "name": "Berliner Kindl",
@@ -3448,6 +3506,11 @@
   "images": [{ "src": "images/Perlenbacher1.jpg" }]
 },
   {
+  "name": "Frankfurter Brauhaus",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Falkenfelser.png" }]
+},
+  {
     "name": "Browar Zubr (Přerov)",
     "country": "Czechy",
     "images": [{ "src": "images/Zubr1.jpg" }]
@@ -3486,6 +3549,16 @@
     "name": "Browar Bavaria",
     "country": "Holandia",
     "images": [{ "src": "images/Bavaria1.jpeg" }]
+  },
+  {
+    "name": "Browar Bavaria",
+    "country": "Holandia",
+    "images": [{ "src": "images/Bavaria2.png" }]
+  },
+  {
+    "name": "Browar Bavaria",
+    "country": "Holandia",
+    "images": [{ "src": "images/Hollandia.png" }]
   },
   {
     "name": "Browar Bayreuther Brauhaus",
@@ -3643,6 +3716,16 @@
   "images": [{ "src": "images/Heineken4.jpeg" }]
 },
   {
+  "name": "Heineken",
+  "country": "Holandia",
+  "images": [{ "src": "images/Heineken5.png" }]
+},
+   {
+  "name": "Heineken",
+  "country": "Holandia",
+  "images": [{ "src": "images/Heineken6.png" }]
+},
+  {
   "name": "Browar Holba",
   "country": "Czechy",
   "images": [{ "src": "images/Holba1.jpeg" }]
@@ -3651,6 +3734,11 @@
   "name": "Browar Holba",
   "country": "Czechy",
   "images": [{ "src": "images/Holba2.jpeg" }]
+},
+  {
+  "name": "Browar Holba",
+  "country": "Czechy",
+  "images": [{ "src": "images/Holba3.png" }]
 },
   {
   "name": "Browar Friesisches Brauhaus",
@@ -4092,6 +4180,21 @@
   "country": "Polska",
   "images": [{ "src": "images/Desperados4.jpeg" }]
 },
+  {
+  "name": "Żywiec",
+  "country": "Polska",
+  "images": [{ "src": "images/Desperados5.png" }]
+},
+  {
+  "name": "Żywiec",
+  "country": "Polska",
+  "images": [{ "src": "images/Desperados6.png" }]
+},
+  {
+  "name": "Żywiec",
+  "country": "Polska",
+  "images": [{ "src": "images/Desperados7.png" }]
+},
    {
   "name": "Kompania Piwowarska",
   "country": "Polska",
@@ -4181,6 +4284,11 @@
   "name": "Browar Binding-Brauerei",
   "country": "Niemcy",
   "images": [{ "src": "images/Schofferhofer3.jpeg" }]
+},
+  {
+  "name": "Browar Binding-Brauerei",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Clausthaler.png" }]
 },
   {
   "name": "Browar Starobrno",
@@ -4472,6 +4580,11 @@
     "country": "Niemcy",
     "images": [{ "src": "images/Krombacher9.jpeg" }]
   },
+   {
+    "name": "Browar Krombacher",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Kellerbier.png" }]
+  },
   {
     "name": "The Wychwood Brewery",
     "country": "Anglia",
@@ -4521,5 +4634,197 @@
     "name": "Amstel",
     "country": "Holandia",
     "images": [{ "src": "images/Amstel.png" }]
-  }  
+  },
+  {
+    "name": "Browar Angelo Poretti",
+    "country": "Włochy",
+    "images": [{ "src": "images/Angelo.png" }]
+  },
+  {
+    "name": "Anheuser-Busch Inc.",
+    "country": "USA",
+    "images": [{ "src": "images/Anheuser.png" }]
+  },
+  {
+    "name": "BABO Beverages",o
+    
+    "country": "Niemcy",
+    "images": [{ "src": "images/Babo.png" }]
+  },
+  {
+    "name": "Klosterbrauerei Ettal",
+    "country": "Nemcy",
+    "images": [{ "src": "images/Beneditkiner.png" }]
+  },
+  {
+    "name": "Pivovar Bon (Valašské Meziříčí)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Bon.png" }]
+  },
+   {
+    "name": "Pivovar Opat (Broumov)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Bon.png" }]
+  },
+   {
+    "name": "Browar Brzeg",
+    "country": "Polska",
+    "images": [{ "src": "images/Brzeg.png" }]
+  },
+   {
+    "name": "Českobudějovický Pivovar Samson (České Budějovice)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Budejovice.png" }]
+  },
+  {
+    "name": "Budějovický Budvar (České Budějovice)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Budweiser1.png" }]
+  },
+  {
+    "name": "Budějovický Budvar (České Budějovice)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Budweiser2.png" }]
+  },
+  {
+    "name": "Bundaberg Brewed Drinks",
+    "country": "Australia",
+    "images": [{ "src": "images/Bundaberg.png" }]
+  },
+  {
+    "name": "Pivovar Černá Hora",
+    "country": "Czechy",
+    "images": [{ "src": "images/Cernahora.png" }]
+  },
+   {
+    "name": "ZAT Chernigovskiy Pivokombinat Desna",
+    "country": "Ukraina",
+    "images": [{ "src": "images/Chernigov.png" }]
+  },
+   {
+    "name": "Cervecería Modelo S.A.",
+    "country": "Meksyk",
+    "images": [{ "src": "images/Corona1.png" }]
+  },
+  {
+    "name": "Cervecería Modelo S.A.",
+    "country": "Meksyk",
+    "images": [{ "src": "images/Corona2.png" }]
+  },
+  {
+    "name": "Browar Veltins (Meschede)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Curuba.png" }]
+  },
+  {
+    "name": "Dortmunder Actien-Brauerei",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Dab1.png" }]
+  },
+  {
+    "name": "Dortmunder Actien-Brauerei",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Dab2.png" }]
+  },
+  {
+    "name": "Browar Diebels (Issum)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Diabels.png" }]
+  },
+  {
+    "name": "Browar Bartek (Cieśle)",
+    "country": "Polska",
+    "images": [{ "src": "images/Doctor.png" }]
+  },
+  {
+    "name": "Dreher Sörgyárak (Budapeszt)",
+    "country": "Węgry",
+    "images": [{ "src": "images/Dreher1.png" }]
+  },
+  {
+    "name": "Dreher Sörgyárak (Budapeszt)",
+    "country": "Węgry",
+    "images": [{ "src": "images/Dreher2.png" }]
+  },
+  {
+    "name": "Browar Feldschlößchen (Drezno)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Dresdner.png" }]
+  },
+  {
+    "name": "Browar Feldschlößchen (Drezno)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Dresdner.png" }]
+  },
+  {
+    "name": "Lidl",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Finkbrau.png" }]
+  },
+  {
+    "name": "Frankfurter Brauhaus",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Frankfurter1.png" }]
+  },
+  {
+    "name": "Frankfurter Brauhaus",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Frankfurter2.png" }]
+  },
+  {
+    "name": "Freiberger Brauhaus",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Freiberger1.png" }]
+  },
+  {
+    "name": "Freiberger Brauhaus",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Freiberger2.png" }]
+  },
+  {
+    "name": "Browar Göss (Leoben)",
+    "country": "Austria",
+    "images": [{ "src": "images/Gosser.png" }]
+  },
+  {
+    "name": "St. James's Gate Brewery (Dublin)",
+    "country": "Irlandia",
+    "images": [{ "src": "images/Guinness1.png" }]
+  },
+   {
+    "name": "St. James's Gate Brewery (Dublin)",
+    "country": "Irlandia",
+    "images": [{ "src": "images/Guinness2.png" }]
+  },
+   {
+    "name": "Getränke Hoffmann GmbH",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Hoffman1.png" }]
+  },
+  {
+    "name": "Getränke Hoffmann GmbH",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Hoffman2.png" }]
+  },
+  {
+    "name": "Holsten-Brauerei AG (Hamburg)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Holsten.png" }]
+  },
+  {
+    "name": "Apatinska Pivara",
+    "country": "Serbia",
+    "images": [{ "src": "images/Jelen.png" }]
+  },
+   {
+    "name": "Browar Kalnapilis",
+    "country": "Litwa",
+    "images": [{ "src": "images/Kalnapilis.png" }]
+  },
+  {
+    "name": "Karlsberg Brauerei (Homburg)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Karlsberg.png" }]
+  }
+  
 ]
