@@ -4646,8 +4646,7 @@
     "images": [{ "src": "images/Anheuser.png" }]
   },
   {
-    "name": "BABO Beverages",o
-    
+    "name": "BABO Beverages",
     "country": "Niemcy",
     "images": [{ "src": "images/Babo.png" }]
   },
@@ -4825,6 +4824,5 @@
     "name": "Karlsberg Brauerei (Homburg)",
     "country": "Niemcy",
     "images": [{ "src": "images/Karlsberg.png" }]
-  }
-  
+  } 
 ]
