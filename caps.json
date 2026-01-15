@@ -2888,6 +2888,11 @@
   {
     "name": "Van Pur",
     "country": "Polska",
+    "images": [{ "src": "images/VanPur6.png" }]
+  },
+  {
+    "name": "Van Pur",
+    "country": "Polska",
     "images": [{ "src": "images/Strzelec1.jpeg" }]
   },
    {
@@ -3100,6 +3105,11 @@
     "country": "Polska",
     "images": [{ "src": "images/Mocarz1.jpeg" }]
   },
+  {
+    "name": "Browar Kielce",
+    "country": "Polska",
+    "images": [{ "src": "images/Kielce.png" }]
+  },
    {
     "name": "Browar Mazurski (Ełk)",
     "country": "Polska",
@@ -3182,8 +3192,18 @@
   },
   {
     "name": "Niepiwne",
-    "country": "Polska",
+    "country": "Niepiwne",
     "images": [{ "src": "images/Cydrowski1.jpeg" }]
+  },
+  {
+    "name": "Niepiwne",
+    "country": "Niepiwne",
+    "images": [{ "src": "images/Kingswood.png" }]
+  },
+  {
+    "name": "Niepiwne",
+    "country": "Niepiwne",
+    "images": [{ "src": "images/Kofola.png" }]
   },
   {
   "name": "Beck's (Brema)",
@@ -3484,6 +3504,21 @@
   "name": "Browar Lwowski",
   "country": "Ukraina",
   "images": [{ "src": "images/Lwowskie4.jpeg" }]
+},
+  {
+  "name": "Browar Lwowski",
+  "country": "Ukraina",
+  "images": [{ "src": "images/Lwowskie5.png" }]
+},
+  {
+  "name": "Browar Lwowski",
+  "country": "Ukraina",
+  "images": [{ "src": "images/Lwowskie6.png" }]
+},
+  {
+  "name": "Browar Lwowski",
+  "country": "Ukraina",
+  "images": [{ "src": "images/Lwowskie7.png" }]
 },
   {
     "name": "Smädný Mních",
@@ -3815,6 +3850,11 @@
   "country": "Czechy",
   "images": [{ "src": "images/Krusovice2.jpeg" }]
 },
+  {
+  "name": "Browar Královský pivovar Krušovice",
+  "country": "Czechy",
+  "images": [{ "src": "images/Krusovice2.png" }]
+},
 {
   "name": "Browar Landskron Brauerei",
   "country": "Niemcy",
@@ -3824,6 +3864,11 @@
   "name": "Browar Bergquell Brauerei Löbau",
   "country": "Niemcy",
   "images": [{ "src": "images/Lausizter.jpeg" }]
+},
+  {
+  "name": "Browar Bergquell Brauerei Löbau",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Lobau.png" }]
 },
   {
   "name": "Browar Litovel",
@@ -3844,6 +3889,11 @@
   "name": "Browar Litovel",
   "country": "Czechy",
   "images": [{ "src": "images/Litovel4.jpeg" }]
+},
+  {
+  "name": "Browar Litovel",
+  "country": "Czechy",
+  "images": [{ "src": "images/Sanktjaro.png" }]
 },
 {
   "name": "Browar Lübzer",
@@ -3886,9 +3936,14 @@
   "images": [{ "src": "images/Perlenbacher2.jpeg" }]
 },
   {
-  "name": "Peroni",
+  "name": "Birra Peroni",
   "country": "Włochy",
   "images": [{ "src": "images/Peroni1.jpeg" }]
+},
+  {
+  "name": "Birra Peroni",
+  "country": "Włochy",
+  "images": [{ "src": "images/Peroni1.png" }]
 },
    {
   "name": "Browar Persha",
@@ -3984,6 +4039,11 @@
   "name": "Browar w Leuven",
   "country": "Belgia",
   "images": [{ "src": "images/Stella1.jpeg" }]
+},
+  {
+  "name": "Browar w Leuven",
+  "country": "Belgia",
+  "images": [{ "src": "images/Stella2.png" }]
 },
   {
   "name": "Browar Svijany",
@@ -4221,6 +4281,11 @@
   "images": [{ "src": "images/Miller.jpeg" }]
 },
   {
+  "name": "Miller Brewing",
+  "country": "USA",
+  "images": [{ "src": "images/Miller2.png" }]
+},
+  {
   "name": "Browar Moczybroda (Sady)",
   "country": "Polska",
   "images": [{ "src": "images/Moczybroda.jpeg" }]
@@ -4270,6 +4335,11 @@
   "country": "Czechy",
   "images": [{ "src": "images/Rychtar.jpeg" }]
 },
+  {
+  "name": "Browar Rychtář",
+  "country": "Czechy",
+  "images": [{ "src": "images/Rychtar2.png" }]
+},
    {
   "name": "Browar Binding-Brauerei",
   "country": "Niemcy",
@@ -4299,6 +4369,11 @@
   "name": "Browar Starobrno",
   "country": "Czechy",
   "images": [{ "src": "images/Starobrno2.jpeg" }]
+},
+  {
+  "name": "Browar Starobrno",
+  "country": "Czechy",
+  "images": [{ "src": "images/Starobrno3.png" }]
 },
   {
   "name": "Browar Warsteiner",
@@ -4580,6 +4655,11 @@
     "country": "Niemcy",
     "images": [{ "src": "images/Krombacher9.jpeg" }]
   },
+  {
+    "name": "Browar Krombacher",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Krombacher10.png" }]
+  },
    {
     "name": "Browar Krombacher",
     "country": "Niemcy",
@@ -4824,5 +4904,220 @@
     "name": "Karlsberg Brauerei (Homburg)",
     "country": "Niemcy",
     "images": [{ "src": "images/Karlsberg.png" }]
-  } 
+  },
+  {
+    "name": "Pivovar Klášter",
+    "country": "Czechy",
+    "images": [{ "src": "images/Klaster.png" }]
+  },
+  {
+    "name": "Kirin Brewery Company",
+    "country": "Japonia",
+    "images": [{ "src": "images/Kirin.png" }]
+  },
+  {
+    "name": "Pivovar Liberec-Vratislavice",
+    "country": "Czechy",
+    "images": [{ "src": "images/Konrad.png" }]
+  }, 
+  {
+    "name": "Köstritzer Schwarzbierbrauerei",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Kostritzer.png" }]
+  }, 
+  {
+    "name": "Pivovar Krakonoš",
+    "country": "Czechy",
+    "images": [{ "src": "images/Krakonos1.png" }]
+  }, 
+  {
+    "name": "Pivovar Krakonoš",
+    "country": "Czechy",
+    "images": [{ "src": "images/Krakonos2.png" }]
+  },
+  {
+    "name": "Browar Krinitsa",
+    "country": "Białoruś",
+    "images": [{ "src": "images/Krinitsa.png" }]
+  },
+   {
+    "name": "Lapin Panimo",
+    "country": "Finlandia",
+    "images": [{ "src": "images/Lapland.png" }]
+  },
+   {
+    "name": "Browar Löwenbräu",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Lowenbrau.png" }]
+  },
+  {
+    "name": "Browar Weiss Rössl Bräu Elisabeth Wagner",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Meister.png" }]
+  },
+  {
+    "name": "Birra Messina (Sycylia)",
+    "country": "Włochy",
+    "images": [{ "src": "images/Messina1.png" }]
+  },
+  {
+    "name": "Birra Messina (Sycylia)",
+    "country": "Włochy",
+    "images": [{ "src": "images/Messina2.png" }]
+  },
+  {
+    "name": "Pivovar Moravský Žižkov",
+    "country": "Czechy",
+    "images": [{ "src": "images/Moravsky1.png" }]
+  },
+  {
+    "name": "Augustiner-Bräu (Monachium)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Munchnerbier.png" }]
+  },
+   {
+    "name": "Klosterbrauerei Neuzelle",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Neuzeller.png" }]
+  },
+  {
+    "name": "Městský pivovar a.s. (Nová Paka)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Nová Paka.png" }]
+  },
+  {
+    "name": "Browar Obołoń (Kijów)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Obołoń1.png" }]
+  },
+  {
+    "name": "Browar Obołoń (Kijów)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Obołoń2.png" }]
+  },
+  {
+    "name": "Oderland-Brauerei (Frankfurt)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Oderland.png" }]
+  },
+  {
+    "name": "Ottakringer Brauerei (Wiedeń)",
+    "country": "Austria",
+    "images": [{ "src": "images/Ottakringer1.png" }]
+  },
+   {
+    "name": "Eichbaum Brauerei AG (Mannheim)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Patrones.png" }]
+  },
+  {
+    "name": "Pivovar Poutník (Pelhřimov)",
+    "country": "Czechy",
+    "images": [{ "src": "images/Poutnik.png" }]
+  },
+  {
+    "name": "Plzeňský Prazdroj",
+    "country": "Czechy",
+    "images": [{ "src": "images/Prazdroj.png" }]
+  },
+  {
+    "name": "Plzeňský Prazdroj",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primus.png" }]
+  },
+  {
+    "name": "Browar w Ratyzbonie",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Ratskrone.png" }]
+  },
+  {
+    "name": "Sociedade Central de Cervejas e Bebidas",
+    "country": "Portugalia",
+    "images": [{ "src": "images/Sagres.png" }]
+  },
+  {
+    "name": "San Miguel Brewery Inc.",
+    "country": "Filipiny",
+    "images": [{ "src": "images/Sanmiguel.png" }]
+  },
+   {
+    "name": "Brauerei Schwechat",
+    "country": "Austria",
+    "images": [{ "src": "images/Schlossgold.png" }]
+  },
+  {
+    "name": "Schultheiss Brauerei AG (Berlin)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Schultheis.png" }]
+  },
+  {
+    "name": "Schultheiss Brauerei AG (Berlin)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Schultheis2.png" }]
+  },
+  {
+    "name": "Schultheiss Brauerei AG (Berlin)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Schultheis3.png" }]
+  },
+  {
+    "name": "Spaten-Franziskaner-Bräu GmbH (Monachium)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Spaten.png" }]
+  },
+  {
+    "name": "Darguner Brauerei GmbH",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Stier.png" }]
+  },
+   {
+    "name": "Uniao Cervejeira (Leça do Balio)",
+    "country": "Portugalia",
+    "images": [{ "src": "images/Super bock1.png" }]
+  },
+  {
+    "name": "Cosmos Brewery Co. Ltd",
+    "country": "Tajlandia",
+    "images": [{ "src": "images/Thailand.png" }]
+  },
+  {
+    "name": "Singapore Brewery",
+    "country": "Singapur",
+    "images": [{ "src": "images/Tiger.png" }]
+  },
+  {
+    "name": "Frankenthaler Brauerei",
+    "country": "Singapur",
+    "images": [{ "src": "images/Valentins.png" }]
+  },
+  {
+    "name": "Brauerei C. & A. Veltins GmbH & Co. (Grevenstein)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Veltins.png" }]
+  },
+  {
+    "name": "AB Volfas Engelman (Kaunas)",
+    "country": "Litwa",
+    "images": [{ "src": "images/Volfas.png" }]
+  },
+  {
+    "name": "Wickuler Brauerei (Dortmund)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Wickuler.png" }]
+  },
+  {
+    "name": "Wittichenauer Stadtbrauerei",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Witichnauer.png" }]
+  },
+  {
+    "name": "Brauerei Zipf",
+    "country": "Austria",
+    "images": [{ "src": "images/Zipfer1.png" }]
+  },
+  {
+    "name": "Brauerei Zipf",
+    "country": "Austria",
+    "images": [{ "src": "images/Zipfer.png" }]
+  }
 ]
