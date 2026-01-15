@@ -3853,7 +3853,7 @@
   {
   "name": "Browar Královský pivovar Krušovice",
   "country": "Czechy",
-  "images": [{ "src": "images/Krusovice2.png" }]
+  "images": [{ "src": "images/Krusovice3.png" }]
 },
 {
   "name": "Browar Landskron Brauerei",
@@ -4733,7 +4733,7 @@
   {
     "name": "Klosterbrauerei Ettal",
     "country": "Niemcy",
-    "images": [{ "src": "images/Beneditkiner.png" }]
+    "images": [{ "src": "images/Benediktiner.png" }]
   },
   {
     "name": "Pivovar Bon (Valašské Meziříčí)",
@@ -5118,6 +5118,6 @@
   {
     "name": "Brauerei Zipf",
     "country": "Austria",
-    "images": [{ "src": "images/Zipfer.png" }]
+    "images": [{ "src": "images/Zipfer2.png" }]
   }
 ]
