@@ -2,8 +2,8 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>10 najnowszych kapsli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O kolekcji</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -18,39 +18,52 @@
       padding: 20px;
       background: #f0f0f0;
       margin: 0;
-      text-align: center;
     }
 
     h1 {
       font-family: 'Pacifico', cursive;
-      font-size: 2.5em;
-      background: linear-gradient(to right, #ffffffcc, #ffffffcc);
+      text-align: center;
+      font-size: 2.6em;
+      margin: 60px auto 30px;
+      background: #ffffffcc;
       padding: 30px 20px;
       border-radius: 25px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-      color: #2e2e2e;
-      margin: 60px auto 30px;
       max-width: 600px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-      max-width: 900px;
+    .content {
+      background: white;
+      max-width: 800px;
       margin: 0 auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      line-height: 1.6;
+      font-size: 1.05em;
     }
 
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      object-fit: contain;
+    .content p {
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      margin-top: 25px;
+      font-weight: 600;
+    }
+
+    .contact a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
     }
 
     .back-link {
-      display: inline-block;
+      display: block;
+      text-align: center;
       margin: 40px auto 0;
       text-decoration: none;
       font-weight: bold;
@@ -65,42 +78,35 @@
 </head>
 <body>
 
-  <h1>10 najnowszych kapsli</h1>
+  <h1>O kolekcji</h1>
 
-  <div class="gallery" id="gallery"></div>
+  <div class="content">
+    <p>
+      Kolekcja kapsli powstała w <strong>2006 roku</strong> i od tego czasu
+      systematycznie się rozrasta.
+    </p>
+
+    <p>
+      Zawiera kapsle piwne z <strong>różnych zakątków świata</strong> – zarówno
+      z małych, lokalnych browarów, jak i z bardziej znanych marek.
+    </p>
+
+    <p>
+      Każdy kapsel to mała historia i pamiątka związana z miejscem,
+      kulturą oraz browarnictwem danego regionu.
+    </p>
+
+    <p>
+      Kolekcja jest nadal rozwijana i regularnie uzupełniana o nowe egzemplarze.
+    </p>
+
+    <div class="contact">
+      Kontakt:  
+      <a href="mailto:rafal.drozdz5@wp.pl">rafal.drozdz5@wp.pl</a>
+    </div>
+  </div>
 
   <a class="back-link" href="index.html">← Powrót do strony głównej</a>
-
-  <script>
-    async function loadLatestCaps() {
-      try {
-        const response = await fetch('caps.json');
-        if (!response.ok) throw new Error(`Błąd ładowania: ${response.status}`);
-        const caps = await response.json();
-
-        const lastTen = caps.slice(-10);
-        const gallery = document.getElementById('gallery');
-        gallery.innerHTML = '';
-
-        lastTen.forEach(cap => {
-          if (cap.images && cap.images.length > 0) {
-            const img = document.createElement('img');
-            img.src = cap.images[0].src || cap.images[0];
-            img.alt = cap.name;
-            img.onerror = () => {
-              img.style.border = '2px solid red';
-              img.title = 'Nie udało się załadować obrazka';
-            };
-            gallery.appendChild(img);
-          }
-        });
-      } catch (error) {
-        document.body.innerHTML = `<p style="color:red; font-weight:bold;">Błąd: ${error.message}</p>`;
-      }
-    }
-
-    loadLatestCaps();
-  </script>
 
 </body>
 </html>
