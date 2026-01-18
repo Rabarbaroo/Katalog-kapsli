@@ -139,7 +139,7 @@ function getGroupLetter(name) {
   return normalized[0]?.toUpperCase() || '?';
 }
 
-/* ===== IGNOROWANIE ROZSZERZEŃ OBRAZÓW + DWIE LOKALIZACJE ===== */
+/* ===== IGNOROWANIE ROZSZERZEŃ OBRAZÓW + DWIE LOKALIZACJE + LAZY ===== */
 function getBaseName(path) {
   return path.replace(/\.[^/.]+$/, '');
 }
@@ -152,6 +152,8 @@ function createImageIgnoreExtension(path) {
   const folders = ['images_2', 'images'];
 
   const img = document.createElement('img');
+  img.loading = 'lazy'; // <<< dodany lazy loading
+
   let folderIndex = 0;
   let extIndex = 0;
 
