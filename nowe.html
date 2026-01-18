@@ -85,12 +85,18 @@
         lastTen.forEach(cap => {
           if (cap.images && cap.images.length > 0) {
             const img = document.createElement('img');
-            img.src = cap.images[0].src || cap.images[0];
+
+            const src = cap.images[0].src || cap.images[0];
+            const baseName = src.replace(/\.[^/.]+$/, '');
+
+            img.src = baseName + '.jpg';
             img.alt = cap.name;
+
             img.onerror = () => {
               img.style.border = '2px solid red';
               img.title = 'Nie udało się załadować obrazka';
             };
+
             gallery.appendChild(img);
           }
         });
