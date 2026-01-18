@@ -139,42 +139,6 @@ function getGroupLetter(name) {
   return normalized[0]?.toUpperCase() || '?';
 }
 
-/* ===== IGNOROWANIE ROZSZERZEŃ OBRAZÓW + DWIE LOKALIZACJE + LAZY ===== */
-function getBaseName(path) {
-  return path.replace(/\.[^/.]+$/, '');
-}
-
-function createImageIgnoreExtension(path) {
-  const baseName = getBaseName(path);
-  const extensions = ['jpg', 'jpeg', 'png', 'webp'];
-
-  // KOLEJNOŚĆ MA ZNACZENIE – images_2 ma pierwszeństwo
-  const folders = ['images_2', 'images'];
-
-  const img = document.createElement('img');
-  img.loading = 'lazy'; // <<< dodany lazy loading
-
-  let folderIndex = 0;
-  let extIndex = 0;
-
-  const tryNext = () => {
-    if (folderIndex >= folders.length) return;
-
-    img.src = `${folders[folderIndex]}/${baseName}.${extensions[extIndex]}`;
-
-    extIndex++;
-    if (extIndex >= extensions.length) {
-      extIndex = 0;
-      folderIndex++;
-    }
-  };
-
-  img.onerror = tryNext;
-  tryNext();
-
-  return img;
-}
-
 async function loadCaps() {
   const container = document.getElementById('caps-container');
   const countrySelect = document.getElementById('country-select');
@@ -259,7 +223,8 @@ async function loadCaps() {
 
         groups[group].forEach(c => {
           c.images.forEach(img => {
-            const image = createImageIgnoreExtension(img.src || img);
+            const image = document.createElement('img');
+            image.src = img.src || img;
             image.alt = group;
             gallery.appendChild(image);
           });
