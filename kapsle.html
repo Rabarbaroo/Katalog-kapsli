@@ -139,6 +139,28 @@ function getGroupLetter(name) {
   return normalized[0]?.toUpperCase() || '?';
 }
 
+/* ===== IGNOROWANIE ROZSZERZEŃ OBRAZÓW ===== */
+function getBaseName(path) {
+  return path.replace(/\.[^/.]+$/, '');
+}
+
+function createImageIgnoreExtension(path) {
+  const base = getBaseName(path);
+  const extensions = ['jpg', 'jpeg', 'png', 'webp'];
+  const img = document.createElement('img');
+
+  let i = 0;
+  const tryNext = () => {
+    if (i >= extensions.length) return;
+    img.src = `${base}.${extensions[i++]}`;
+  };
+
+  img.onerror = tryNext;
+  tryNext();
+
+  return img;
+}
+
 async function loadCaps() {
   const container = document.getElementById('caps-container');
   const countrySelect = document.getElementById('country-select');
@@ -223,8 +245,7 @@ async function loadCaps() {
 
         groups[group].forEach(c => {
           c.images.forEach(img => {
-            const image = document.createElement('img');
-            image.src = img.src || img;
+            const image = createImageIgnoreExtension(img.src || img);
             image.alt = group;
             gallery.appendChild(image);
           });
