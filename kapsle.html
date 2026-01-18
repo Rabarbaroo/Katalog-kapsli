@@ -139,20 +139,32 @@ function getGroupLetter(name) {
   return normalized[0]?.toUpperCase() || '?';
 }
 
-/* ===== IGNOROWANIE ROZSZERZEŃ OBRAZÓW ===== */
+/* ===== IGNOROWANIE ROZSZERZEŃ OBRAZÓW + DWIE LOKALIZACJE ===== */
 function getBaseName(path) {
   return path.replace(/\.[^/.]+$/, '');
 }
 
 function createImageIgnoreExtension(path) {
-  const base = getBaseName(path);
+  const baseName = getBaseName(path);
   const extensions = ['jpg', 'jpeg', 'png', 'webp'];
-  const img = document.createElement('img');
 
-  let i = 0;
+  // KOLEJNOŚĆ MA ZNACZENIE – images_2 ma pierwszeństwo
+  const folders = ['images_2', 'images'];
+
+  const img = document.createElement('img');
+  let folderIndex = 0;
+  let extIndex = 0;
+
   const tryNext = () => {
-    if (i >= extensions.length) return;
-    img.src = `${base}.${extensions[i++]}`;
+    if (folderIndex >= folders.length) return;
+
+    img.src = `${folders[folderIndex]}/${baseName}.${extensions[extIndex]}`;
+
+    extIndex++;
+    if (extIndex >= extensions.length) {
+      extIndex = 0;
+      folderIndex++;
+    }
   };
 
   img.onerror = tryNext;
