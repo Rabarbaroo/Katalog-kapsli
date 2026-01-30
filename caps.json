@@ -2006,6 +2006,11 @@
     "country": "Polska",
     "images": [{ "src": "images/Amber10.jpeg" }]
   },
+   {
+    "name": "Browar Amber",
+    "country": "Polska",
+    "images": [{ "src": "images/Browarne.jpg" }]
+  },
 {
   "name": "Braniewo",
   "country": "Polska",
