@@ -28,7 +28,7 @@ h1 { font-family: 'Pacifico', cursive; text-align: center; font-size: 2.2em; pad
 @media(max-width: 767px) { .grid { grid-template-columns: repeat(2, 1fr); max-width: 500px; } }
 .card { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: white; border-radius: 12px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.15); transition: 0.2s; }
 .card:hover { background: #f0f0f0; }
-.flag-emoji { font-size:1.3em; }
+.flag-img { width: 24px; height: 16px; object-fit: cover; border-radius: 3px; }
 .count { font-weight: bold; margin-left:auto; }
 .letters { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 30px; }
 .letter { background: white; padding: 10px 14px; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 2px 6px rgba(0,0,0,.2); }
@@ -105,15 +105,9 @@ async function loadCaps(){
   const counter=document.getElementById('counter');
   const countryHeader=document.getElementById('country-header');
 
-  const flags = {
-    'all':'🎆','Polska':'🇵🇱','Niemcy':'🇩🇪','Czechy':'🇨🇿','Słowacja':'🇸🇰',
-    'Belgia':'🇧🇪','Holandia':'🇳🇱','Wielka Brytania':'🇬🇧','USA':'🇺🇸','Austria':'🇦🇹',
-    'Szwecja':'🇸🇪','Francja':'🇫🇷','Hiszpania':'🇪🇸','Węgry':'🇭🇺','Szwajcaria':'🇨🇭',
-    'Litwa':'🇱🇹','Łotwa':'🇱🇻','Estonia':'🇪🇪','Irlandia':'🇮🇪'
-  };
-
   if(selectedCountry && selectedCountry!=='all'){
-    countryHeader.innerHTML=`<span class="flag-emoji">${flags[selectedCountry]||''}</span> ${selectedCountry}`;
+    const code = selectedCountryCode(selectedCountry);
+    countryHeader.innerHTML=`<img src="flagi/${code}.png" class="flag-img" /> ${selectedCountry}`;
   }
 
   let filtered = selectedCountry==='all'?caps:caps.filter(c=>c.country===selectedCountry);
@@ -157,12 +151,6 @@ function showCountryScreen(caps){
 
   const countriesDiv=document.getElementById('countries');
   countriesDiv.innerHTML='';
-  const flags = {
-    'all':'🎆','Polska':'🇵🇱','Niemcy':'🇩🇪','Czechy':'🇨🇿','Słowacja':'🇸🇰',
-    'Belgia':'🇧🇪','Holandia':'🇳🇱','Wielka Brytania':'🇬🇧','USA':'🇺🇸','Austria':'🇦🇹',
-    'Szwecja':'🇸🇪','Francja':'🇫🇷','Hiszpania':'🇪🇸','Węgry':'🇭🇺','Szwajcaria':'🇨🇭',
-    'Litwa':'🇱🇹','Łotwa':'🇱🇻','Estonia':'🇪🇪','Irlandia':'🇮🇪'
-  };
 
   const byCountry={};
   caps.forEach(c=>{ if(!byCountry[c.country]) byCountry[c.country]=[]; byCountry[c.country].push(c); });
@@ -170,9 +158,20 @@ function showCountryScreen(caps){
   createCard('all','WSZYSTKIE',caps.length);
   Object.keys(byCountry).sort((a,b)=>a.localeCompare(b,'pl')).forEach(c=>createCard(c,c,byCountry[c].length));
 
+  function selectedCountryCode(country){
+    const codes = {
+      'Polska':'pl','Niemcy':'de','Czechy':'cz','Słowacja':'sk','Belgia':'be','Holandia':'nl',
+      'Wielka Brytania':'gb','USA':'us','Austria':'at','Szwecja':'se','Francja':'fr','Hiszpania':'es',
+      'Węgry':'hu','Szwajcaria':'ch','Litwa':'lt','Łotwa':'lv','Estonia':'ee','Irlandia':'ie'
+    };
+    return codes[country]||'';
+  }
+
   function createCard(key,label,count){
     const d=document.createElement('div'); d.className='card';
-    d.innerHTML=`<span class="flag-emoji">${flags[key]||''}</span> <div>${label}</div> <div class="count">${count}</div>`;
+    const code = selectedCountryCode(key);
+    const imgTag = code ? `<img src="flagi/${code}.png" class="flag-img" />` : '';
+    d.innerHTML=`${imgTag} <div>${label}</div> <div class="count">${count}</div>`;
     d.onclick=()=>handleCountry(key);
     countriesDiv.appendChild(d);
   }
