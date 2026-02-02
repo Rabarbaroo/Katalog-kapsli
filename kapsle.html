@@ -78,17 +78,24 @@ h1 {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
-  justify-content: center;
   gap: 10px;
-  max-width: 780px;
+  justify-content: center;
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+  .gallery { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media(max-width: 767px) {
+  .gallery { grid-template-columns: repeat(3, 1fr); }
 }
 
 .img-wrapper {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   cursor: pointer;
 }
 
@@ -98,7 +105,6 @@ h1 {
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid #ccc;
-  background: white;
   display: block;
 }
 
@@ -112,7 +118,7 @@ h1 {
   pointer-events: none;
 }
 
-/* === EKRAN KRAJÓW === */
+/* EKRAN KRAJÓW */
 #country-screen, #letters-screen { display:none; }
 
 .grid {
@@ -121,13 +127,8 @@ h1 {
   margin: 30px auto;
 }
 
-@media(min-width: 768px) {
-  .grid { grid-template-columns: repeat(3, 1fr); max-width: 900px; }
-}
-
-@media(max-width: 767px) {
-  .grid { grid-template-columns: repeat(2, 1fr); max-width: 500px; }
-}
+@media(min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); max-width: 900px; } }
+@media(max-width: 767px) { .grid { grid-template-columns: repeat(2, 1fr); max-width: 500px; } }
 
 .card {
   display: flex;
@@ -143,10 +144,9 @@ h1 {
 
 .card:hover { background: #f0f0f0; }
 
-.flag { font-size: 1.8em; min-width: 30px; text-align: center; }
+.flag-img { width:28px; height:20px; object-fit:cover; }
 .count { font-weight: bold; margin-left:auto; }
 
-/* EKRAN LITER */
 .letters {
   display: flex;
   flex-wrap: wrap;
@@ -181,19 +181,16 @@ h1 {
 
 <a href="index.html" class="home-icon">🏠</a>
 
-<!-- EKRAN KRAJÓW -->
 <div id="country-screen">
   <h1>Wybierz kraj</h1>
   <div id="countries" class="grid"></div>
 </div>
 
-<!-- EKRAN WYBORU LITER (>100 kapsli) -->
 <div id="letters-screen">
   <div class="back-btn" id="back-to-country">← Wróć do wyboru kraju</div>
   <div id="letters" class="letters"></div>
 </div>
 
-<!-- EKRAN KATALOGU -->
 <h1 id="catalog-title">Kolekcja kapsli</h1>
 <div class="country-header" id="country-header"></div>
 
@@ -227,30 +224,25 @@ function getGroupLetter(name) {
   return normalizeBreweryName(name)[0]?.toUpperCase() || '?';
 }
 
-function loadImageWithFallback(img, originalSrc) {
+function loadImageWithFallback(img, originalSrc){
   const base = originalSrc.replace(/\.[^/.]+$/, '');
   const paths = [
-    `${base}.jpg`, `${base}.jpeg`, `${base}.png`,
+    `${base}.jpg`,`${base}.jpeg`,`${base}.png`,
     base.replace(/^images\//,'images2/')+'.jpg',
     base.replace(/^images\//,'images2/')+'.jpeg',
     base.replace(/^images\//,'images2/')+'.png'
   ];
-  let i = 0;
+  let i=0;
   img.onerror = ()=>{ if(i<paths.length) img.src=paths[i++]; };
   img.src = paths[i++];
 }
 
-async function loadCaps() {
+async function loadCaps(){
   let caps;
-  try {
-    const res = await fetch('caps.json');
-    caps = await res.json();
-  } catch(e){ alert('Nie udało się wczytać caps.json'); return; }
+  try { caps = await (await fetch('caps.json')).json(); }
+  catch(e){ alert('Nie udało się wczytać caps.json'); return; }
 
-  if(!selectedCountry){
-    showCountryScreen(caps);
-    return;
-  }
+  if(!selectedCountry){ showCountryScreen(caps); return; }
 
   document.getElementById('country-screen').style.display='none';
   document.getElementById('letters-screen').style.display='none';
@@ -262,14 +254,29 @@ async function loadCaps() {
   const countryHeader=document.getElementById('country-header');
 
   const flags = {
-    'all':'🎆','Polska':'🇵🇱','Niemcy':'🇩🇪','Czechy':'🇨🇿','Słowacja':'🇸🇰',
-    'Belgia':'🇧🇪','Holandia':'🇳🇱','Wielka Brytania':'🇬🇧','USA':'🇺🇸',
-    'Austria':'🇦🇹','Szwecja':'🇸🇪','Francja':'🇫🇷','Hiszpania':'🇪🇸','Węgry':'🇭🇺',
-    'Szwajcaria':'🇨🇭','Litwa':'🇱🇹','Łotwa':'🇱🇻','Estonia':'🇪🇪','Irlandia':'🇮🇪'
+    'all':'https://twemoji.maxcdn.com/v/latest/svg/fireworks.svg',
+    'Polska':'https://twemoji.maxcdn.com/v/latest/svg/pl.svg',
+    'Niemcy':'https://twemoji.maxcdn.com/v/latest/svg/de.svg',
+    'Czechy':'https://twemoji.maxcdn.com/v/latest/svg/cz.svg',
+    'Słowacja':'https://twemoji.maxcdn.com/v/latest/svg/sk.svg',
+    'Belgia':'https://twemoji.maxcdn.com/v/latest/svg/be.svg',
+    'Holandia':'https://twemoji.maxcdn.com/v/latest/svg/nl.svg',
+    'Wielka Brytania':'https://twemoji.maxcdn.com/v/latest/svg/gb.svg',
+    'USA':'https://twemoji.maxcdn.com/v/latest/svg/us.svg',
+    'Austria':'https://twemoji.maxcdn.com/v/latest/svg/at.svg',
+    'Szwecja':'https://twemoji.maxcdn.com/v/latest/svg/se.svg',
+    'Francja':'https://twemoji.maxcdn.com/v/latest/svg/fr.svg',
+    'Hiszpania':'https://twemoji.maxcdn.com/v/latest/svg/es.svg',
+    'Węgry':'https://twemoji.maxcdn.com/v/latest/svg/hu.svg',
+    'Szwajcaria':'https://twemoji.maxcdn.com/v/latest/svg/ch.svg',
+    'Litwa':'https://twemoji.maxcdn.com/v/latest/svg/lt.svg',
+    'Łotwa':'https://twemoji.maxcdn.com/v/latest/svg/lv.svg',
+    'Estonia':'https://twemoji.maxcdn.com/v/latest/svg/ee.svg',
+    'Irlandia':'https://twemoji.maxcdn.com/v/latest/svg/ie.svg'
   };
 
   if(selectedCountry && selectedCountry!=='all'){
-    countryHeader.textContent=`${flags[selectedCountry]||'🏳️'} ${selectedCountry}`;
+    countryHeader.innerHTML=`<img src="${flags[selectedCountry]||''}" class="flag-img"> ${selectedCountry}`;
   }
 
   let filtered = selectedCountry==='all'?caps:caps.filter(c=>c.country===selectedCountry);
@@ -290,10 +297,8 @@ async function loadCaps() {
         c.images.forEach(imgData=>{
           const src=imgData.src||imgData;
           const link=imgData.link;
-
           const wrap=document.createElement('div'); wrap.className='img-wrapper';
           const img=document.createElement('img'); loadImageWithFallback(img,src);
-
           if(link){ wrap.onclick=()=>window.open(link,'_blank'); const star=document.createElement('div'); star.className='star'; star.textContent='⭐'; wrap.appendChild(star); }
           wrap.appendChild(img); gallery.appendChild(wrap);
         });
@@ -313,10 +318,25 @@ function showCountryScreen(caps){
   const countriesDiv=document.getElementById('countries');
   countriesDiv.innerHTML='';
   const flags = {
-    'all':'🎆','Polska':'🇵🇱','Niemcy':'🇩🇪','Czechy':'🇨🇿','Słowacja':'🇸🇰',
-    'Belgia':'🇧🇪','Holandia':'🇳🇱','Wielka Brytania':'🇬🇧','USA':'🇺🇸',
-    'Austria':'🇦🇹','Szwecja':'🇸🇪','Francja':'🇫🇷','Hiszpania':'🇪🇸','Węgry':'🇭🇺',
-    'Szwajcaria':'🇨🇭','Litwa':'🇱🇹','Łotwa':'🇱🇻','Estonia':'🇪🇪','Irlandia':'🇮🇪'
+    'all':'https://twemoji.maxcdn.com/v/latest/svg/fireworks.svg',
+    'Polska':'https://twemoji.maxcdn.com/v/latest/svg/pl.svg',
+    'Niemcy':'https://twemoji.maxcdn.com/v/latest/svg/de.svg',
+    'Czechy':'https://twemoji.maxcdn.com/v/latest/svg/cz.svg',
+    'Słowacja':'https://twemoji.maxcdn.com/v/latest/svg/sk.svg',
+    'Belgia':'https://twemoji.maxcdn.com/v/latest/svg/be.svg',
+    'Holandia':'https://twemoji.maxcdn.com/v/latest/svg/nl.svg',
+    'Wielka Brytania':'https://twemoji.maxcdn.com/v/latest/svg/gb.svg',
+    'USA':'https://twemoji.maxcdn.com/v/latest/svg/us.svg',
+    'Austria':'https://twemoji.maxcdn.com/v/latest/svg/at.svg',
+    'Szwecja':'https://twemoji.maxcdn.com/v/latest/svg/se.svg',
+    'Francja':'https://twemoji.maxcdn.com/v/latest/svg/fr.svg',
+    'Hiszpania':'https://twemoji.maxcdn.com/v/latest/svg/es.svg',
+    'Węgry':'https://twemoji.maxcdn.com/v/latest/svg/hu.svg',
+    'Szwajcaria':'https://twemoji.maxcdn.com/v/latest/svg/ch.svg',
+    'Litwa':'https://twemoji.maxcdn.com/v/latest/svg/lt.svg',
+    'Łotwa':'https://twemoji.maxcdn.com/v/latest/svg/lv.svg',
+    'Estonia':'https://twemoji.maxcdn.com/v/latest/svg/ee.svg',
+    'Irlandia':'https://twemoji.maxcdn.com/v/latest/svg/ie.svg'
   };
 
   const byCountry={};
@@ -327,7 +347,7 @@ function showCountryScreen(caps){
 
   function createCard(key,label,count){
     const d=document.createElement('div'); d.className='card';
-    d.innerHTML=`<div class="flag">${flags[key]||'🏳️'}</div><div>${label}</div><div class="count">${count}</div>`;
+    d.innerHTML=`<img src="${flags[key]||''}" class="flag-img"> <div>${label}</div> <div class="count">${count}</div>`;
     d.onclick=()=>handleCountry(key);
     countriesDiv.appendChild(d);
   }
@@ -349,7 +369,6 @@ function showCountryScreen(caps){
   }
 }
 
-// Cofanie z liter do wyboru krajów
 document.getElementById('back-to-country').onclick = ()=>{
   document.getElementById('letters-screen').style.display='none';
   document.getElementById('country-screen').style.display='block';
