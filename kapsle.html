@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Katalog Kapsli</title>
 
-  <!-- Czcionki Google -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -79,11 +78,27 @@
       margin: 0 auto;
     }
 
-    .gallery img {
+    .img-wrapper {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .img-wrapper img {
       width: 100%;
       border-radius: 6px;
       border: 1px solid #ccc;
       background: white;
+      display: block;
+    }
+
+    .star {
+      position: absolute;
+      top: 4px;
+      right: 6px;
+      font-size: 1.2em;
+      color: gold;
+      text-shadow: 0 0 3px black;
+      pointer-events: none;
     }
 
     #error-log {
@@ -121,20 +136,23 @@
 <script>
 function normalizeBreweryName(name) {
   const words = name.trim().split(/\s+/);
-
-  if (
-    words[0].toLowerCase() === 'browar' ||
-    words[0].toLowerCase() === 'browary'
-  ) {
+  if (['browar', 'browary'].includes(words[0].toLowerCase())) {
     words.shift();
   }
-
   return words.join(' ');
 }
 
 function getGroupLetter(name) {
   const normalized = normalizeBreweryName(name);
   return normalized[0]?.toUpperCase() || '?';
+}
+
+function loadImageWithFallback(img, src) {
+  img.src = src;
+  img.onerror = () => {
+    img.onerror = null;
+    img.src = src.replace('images/', 'images2/');
+  };
 }
 
 async function loadCaps() {
@@ -158,27 +176,23 @@ async function loadCaps() {
     return;
   }
 
-  const countries = [...new Set(caps.map(c => c.country))]
-    .sort((a, b) => a.localeCompare(b, 'pl'));
+  [...new Set(caps.map(c => c.country))]
+    .sort((a,b)=>a.localeCompare(b,'pl'))
+    .forEach(c => {
+      const o = document.createElement('option');
+      o.value = o.textContent = c;
+      countrySelect.appendChild(o);
+    });
 
-  countries.forEach(c => {
-    const opt = document.createElement('option');
-    opt.value = c;
-    opt.textContent = c;
-    countrySelect.appendChild(opt);
-  });
+  [...new Set(caps.map(c => getGroupLetter(c.name)))]
+    .sort((a,b)=>a.localeCompare(b,'pl'))
+    .forEach(l => {
+      const o = document.createElement('option');
+      o.value = o.textContent = l;
+      letterFilter.appendChild(o);
+    });
 
-  const letters = [...new Set(caps.map(c => getGroupLetter(c.name)))]
-    .sort((a, b) => a.localeCompare(b, 'pl'));
-
-  letters.forEach(l => {
-    const opt = document.createElement('option');
-    opt.value = l;
-    opt.textContent = l;
-    letterFilter.appendChild(opt);
-  });
-
-  function render(selectedCountry = 'all', selectedLetter = 'all') {
+  function render(selectedCountry='all', selectedLetter='all') {
     container.innerHTML = '';
 
     let filtered = selectedCountry === 'all'
@@ -186,9 +200,7 @@ async function loadCaps() {
       : caps.filter(c => c.country === selectedCountry);
 
     if (selectedLetter !== 'all') {
-      filtered = filtered.filter(
-        c => getGroupLetter(c.name) === selectedLetter
-      );
+      filtered = filtered.filter(c => getGroupLetter(c.name) === selectedLetter);
     }
 
     counter.textContent = `Łącznie kapsli: ${filtered.length}`;
@@ -200,12 +212,7 @@ async function loadCaps() {
     });
 
     Object.keys(groups)
-      .sort((a, b) =>
-        normalizeBreweryName(a).localeCompare(
-          normalizeBreweryName(b),
-          'pl'
-        )
-      )
+      .sort((a,b)=>normalizeBreweryName(a).localeCompare(normalizeBreweryName(b),'pl'))
       .forEach(group => {
         const div = document.createElement('div');
         div.className = 'cap';
@@ -218,16 +225,30 @@ async function loadCaps() {
         gallery.className = 'gallery';
 
         groups[group].forEach(c => {
-          c.images.forEach(img => {
-            const image = document.createElement('img');
+          c.images.forEach(imgData => {
+            const src = imgData.src || imgData;
+            const link = imgData.link;
 
-            const src = img.src || img;
-            const baseName = src.replace(/\.[^/.]+$/, '');
+            const wrap = document.createElement('div');
+            wrap.className = 'img-wrapper';
 
-            image.src = baseName + '.jpg';
-            image.alt = group;
+            const img = document.createElement('img');
+            loadImageWithFallback(img, src);
+            img.alt = group;
 
-            gallery.appendChild(image);
+            if (link) {
+              wrap.addEventListener('click', () => {
+                window.open(link, '_blank');
+              });
+
+              const star = document.createElement('div');
+              star.className = 'star';
+              star.textContent = '⭐';
+              wrap.appendChild(star);
+            }
+
+            wrap.appendChild(img);
+            gallery.appendChild(wrap);
           });
         });
 
