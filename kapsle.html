@@ -67,7 +67,13 @@ function normalizeBreweryName(name) {
 }
 
 function getGroupLetter(name) {
-  return normalizeBreweryName(name).replace(/\s*\(y\)$/,'')[0]?.toUpperCase() || '?';
+  const cleaned = normalizeBreweryName(name).replace(/\(y\)/gi,'').trim();
+  const match = cleaned.match(/[A-Za-zÀ-žŁłČčŚśŻżŹźĆćŃńÖäÜüÉé]/);
+  return match ? match[0].toUpperCase() : '?';
+}
+
+function compareLetters(a, b) {
+  return a.localeCompare(b, 'pl', {sensitivity:'base'});
 }
 
 function loadImageWithFallback(img, originalSrc){
@@ -182,7 +188,7 @@ function showCountryScreen(caps){
     lettersDiv.innerHTML='';
 
     const lettersSet = new Set(selected.map(c=>getGroupLetter(c.name)));
-    const lettersArray = [...lettersSet].sort();
+    const lettersArray = [...lettersSet].sort(compareLetters);
 
     const allLetter = document.createElement('div');
     allLetter.className='letter';
