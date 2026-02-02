@@ -101,24 +101,60 @@
       pointer-events: none;
     }
 
-    #error-log {
-      background: #ffdada;
-      border: 1px solid red;
-      padding: 10px;
-      border-radius: 5px;
-      display: none;
-      margin-bottom: 20px;
+    /* === EKRAN KRAJÓW === */
+    #country-screen { display:none; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    }
+
+    .flag { font-size: 2.5em; }
+    .count { font-weight: bold; margin-top: 6px; }
+
+    .letters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .letter {
+      background: white;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,.2);
     }
   </style>
 </head>
 <body>
 
 <a href="index.html" class="home-icon">🏠</a>
-<h1>Kolekcja kapsli</h1>
 
-<div id="error-log"></div>
+<div id="country-screen">
+  <h1>Wybierz kraj</h1>
+  <div id="countries" class="grid"></div>
+  <div id="letters" class="letters"></div>
+</div>
 
-<div class="filter">
+<h1 id="catalog-title">Kolekcja kapsli</h1>
+
+<div class="filter" id="filters">
   <label>Kraj:</label>
   <select id="country-select">
     <option value="all">Wszystkie</option>
@@ -134,23 +170,23 @@
 <div class="caps" id="caps-container"></div>
 
 <script>
+const params = new URLSearchParams(location.search);
+const selectedCountry = params.get('country');
+const selectedLetter = params.get('letter');
+
 function normalizeBreweryName(name) {
   const words = name.trim().split(/\s+/);
-  if (['browar', 'browary'].includes(words[0].toLowerCase())) {
-    words.shift();
-  }
+  if (['browar', 'browary'].includes(words[0].toLowerCase())) words.shift();
   return words.join(' ');
 }
 
 function getGroupLetter(name) {
-  const normalized = normalizeBreweryName(name);
-  return normalized[0]?.toUpperCase() || '?';
+  return normalizeBreweryName(name)[0]?.toUpperCase() || '?';
 }
 
-/* === JEDYNA ZMIANA JEST TUTAJ === */
+/* === ŁADOWANIE OBRAZÓW (bez zmian) === */
 function loadImageWithFallback(img, originalSrc) {
   const base = originalSrc.replace(/\.[^/.]+$/, '');
-
   const paths = [
     `${base}.jpg`,
     `${base}.jpeg`,
@@ -159,130 +195,132 @@ function loadImageWithFallback(img, originalSrc) {
     base.replace(/^images\//, 'images2/') + '.jpeg',
     base.replace(/^images\//, 'images2/') + '.png'
   ];
-
-  let index = 0;
-
-  function tryNext() {
-    if (index >= paths.length) return;
-    img.src = paths[index++];
-  }
-
-  img.onerror = tryNext;
-  tryNext();
+  let i = 0;
+  img.onerror = () => { if (i < paths.length) img.src = paths[i++]; };
+  img.src = paths[i++];
 }
-/* === KONIEC ZMIANY === */
 
 async function loadCaps() {
-  const container = document.getElementById('caps-container');
-  const countrySelect = document.getElementById('country-select');
-  const letterFilter = document.getElementById('letter-filter');
-  const counter = document.getElementById('counter');
-  const errorLog = document.getElementById('error-log');
+  const res = await fetch('caps.json');
+  const caps = await res.json();
 
-  const showError = msg => {
-    errorLog.style.display = 'block';
-    errorLog.innerHTML += `<div>⚠️ ${msg}</div>`;
-  };
-
-  let caps;
-  try {
-    const response = await fetch('caps.json');
-    caps = await response.json();
-  } catch {
-    showError('Nie udało się wczytać caps.json');
+  if (!selectedCountry) {
+    showCountryScreen(caps);
     return;
   }
 
-  [...new Set(caps.map(c => c.country))]
-    .sort((a,b)=>a.localeCompare(b,'pl'))
-    .forEach(c => {
-      const o = document.createElement('option');
-      o.value = o.textContent = c;
-      countrySelect.appendChild(o);
-    });
+  document.getElementById('country-screen').style.display = 'none';
+  document.getElementById('catalog-title').style.display = 'block';
+  document.getElementById('filters').style.display = 'block';
 
-  [...new Set(caps.map(c => getGroupLetter(c.name)))]
-    .sort((a,b)=>a.localeCompare(b,'pl'))
-    .forEach(l => {
-      const o = document.createElement('option');
-      o.value = o.textContent = l;
-      letterFilter.appendChild(o);
-    });
+  const container = document.getElementById('caps-container');
+  const counter = document.getElementById('counter');
 
-  function render(selectedCountry='all', selectedLetter='all') {
-    container.innerHTML = '';
+  let filtered = selectedCountry === 'all'
+    ? caps
+    : caps.filter(c => c.country === selectedCountry);
 
-    let filtered = selectedCountry === 'all'
-      ? caps
-      : caps.filter(c => c.country === selectedCountry);
-
-    if (selectedLetter !== 'all') {
-      filtered = filtered.filter(c => getGroupLetter(c.name) === selectedLetter);
-    }
-
-    counter.textContent = `Łącznie kapsli: ${filtered.length}`;
-
-    const groups = {};
-    filtered.forEach(c => {
-      if (!groups[c.name]) groups[c.name] = [];
-      groups[c.name].push(c);
-    });
-
-    Object.keys(groups)
-      .sort((a,b)=>normalizeBreweryName(a).localeCompare(normalizeBreweryName(b),'pl'))
-      .forEach(group => {
-        const div = document.createElement('div');
-        div.className = 'cap';
-
-        const h3 = document.createElement('h3');
-        h3.textContent = `${group} (${groups[group].length})`;
-        div.appendChild(h3);
-
-        const gallery = document.createElement('div');
-        gallery.className = 'gallery';
-
-        groups[group].forEach(c => {
-          c.images.forEach(imgData => {
-            const src = imgData.src || imgData;
-            const link = imgData.link;
-
-            const wrap = document.createElement('div');
-            wrap.className = 'img-wrapper';
-
-            const img = document.createElement('img');
-            loadImageWithFallback(img, src);
-            img.alt = group;
-
-            if (link) {
-              wrap.addEventListener('click', () => {
-                window.open(link, '_blank');
-              });
-
-              const star = document.createElement('div');
-              star.className = 'star';
-              star.textContent = '⭐';
-              wrap.appendChild(star);
-            }
-
-            wrap.appendChild(img);
-            gallery.appendChild(wrap);
-          });
-        });
-
-        div.appendChild(gallery);
-        container.appendChild(div);
-      });
+  if (selectedLetter) {
+    filtered = filtered.filter(c => getGroupLetter(c.name) === selectedLetter);
   }
 
-  countrySelect.addEventListener('change', () =>
-    render(countrySelect.value, letterFilter.value)
-  );
+  counter.textContent = `Łącznie kapsli: ${filtered.length}`;
 
-  letterFilter.addEventListener('change', () =>
-    render(countrySelect.value, letterFilter.value)
-  );
+  const groups = {};
+  filtered.forEach(c => {
+    if (!groups[c.name]) groups[c.name] = [];
+    groups[c.name].push(c);
+  });
 
-  render();
+  Object.keys(groups)
+    .sort((a,b)=>normalizeBreweryName(a).localeCompare(normalizeBreweryName(b),'pl'))
+    .forEach(group => {
+      const div = document.createElement('div');
+      div.className = 'cap';
+
+      const h3 = document.createElement('h3');
+      h3.textContent = `${group} (${groups[group].length})`;
+      div.appendChild(h3);
+
+      const gallery = document.createElement('div');
+      gallery.className = 'gallery';
+
+      groups[group].forEach(c => {
+        c.images.forEach(imgData => {
+          const src = imgData.src || imgData;
+          const link = imgData.link;
+
+          const wrap = document.createElement('div');
+          wrap.className = 'img-wrapper';
+
+          const img = document.createElement('img');
+          loadImageWithFallback(img, src);
+
+          if (link) {
+            wrap.onclick = () => window.open(link, '_blank');
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.textContent = '⭐';
+            wrap.appendChild(star);
+          }
+
+          wrap.appendChild(img);
+          gallery.appendChild(wrap);
+        });
+      });
+
+      div.appendChild(gallery);
+      container.appendChild(div);
+    });
+}
+
+function showCountryScreen(caps) {
+  document.getElementById('country-screen').style.display = 'block';
+  document.getElementById('catalog-title').style.display = 'none';
+  document.getElementById('filters').style.display = 'none';
+
+  const countriesDiv = document.getElementById('countries');
+  const lettersDiv = document.getElementById('letters');
+
+  const flags = { Polska:'🇵🇱', Niemcy:'🇩🇪', Czechy:'🇨🇿', all:'🎆' };
+  const byCountry = {};
+
+  caps.forEach(c => {
+    if (!byCountry[c.country]) byCountry[c.country] = [];
+    byCountry[c.country].push(c);
+  });
+
+  createCard('all','WSZYSTKIE',caps.length);
+
+  Object.keys(byCountry).sort((a,b)=>a.localeCompare(b,'pl')).forEach(c=>{
+    createCard(c,c,byCountry[c].length);
+  });
+
+  function createCard(key,label,count){
+    const d=document.createElement('div');
+    d.className='card';
+    d.innerHTML=`<div class="flag">${flags[key]||'🏳️'}</div><div>${label}</div><div class="count">${count}</div>`;
+    d.onclick=()=>handleCountry(key);
+    countriesDiv.appendChild(d);
+  }
+
+  function handleCountry(country){
+    lettersDiv.innerHTML='';
+    const selected = country==='all'?caps:byCountry[country];
+    if (selected.length<=100){
+      location.href=`kapsle.html?country=${country}`;
+      return;
+    }
+    [...new Set(selected.map(c=>getGroupLetter(c.name)))]
+      .sort()
+      .forEach(l=>{
+        const el=document.createElement('div');
+        el.className='letter';
+        el.textContent=l;
+        el.onclick=()=>location.href=`kapsle.html?country=${country}&letter=${l}`;
+        lettersDiv.appendChild(el);
+      });
+  }
 }
 
 loadCaps();
