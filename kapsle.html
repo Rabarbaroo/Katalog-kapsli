@@ -147,13 +147,33 @@ function getGroupLetter(name) {
   return normalized[0]?.toUpperCase() || '?';
 }
 
-function loadImageWithFallback(img, src) {
-  img.src = src;
+/* === JEDYNA ZMIANA JEST TUTAJ === */
+function loadImageWithFallback(img, originalSrc) {
+  const tried = [];
+
+  function tryLoad(src) {
+    if (tried.includes(src)) return;
+    tried.push(src);
+    img.src = src;
+  }
+
+  const srcImages = originalSrc.startsWith('images2/')
+    ? originalSrc.replace('images2/', 'images/')
+    : originalSrc;
+
+  const srcImages2 = originalSrc.startsWith('images/')
+    ? originalSrc.replace('images/', 'images2/')
+    : originalSrc;
+
   img.onerror = () => {
-    img.onerror = null;
-    img.src = src.replace('images/', 'images2/');
+    if (tried.length === 1) {
+      tryLoad(srcImages2);
+    }
   };
+
+  tryLoad(srcImages);
 }
+/* === KONIEC ZMIANY === */
 
 async function loadCaps() {
   const container = document.getElementById('caps-container');
