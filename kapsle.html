@@ -90,9 +90,13 @@ function loadImageWithFallback(img, originalSrc){
 
 function selectedCountryCode(country){
   const codes = {
-    'Polska':'pl','Niemcy':'de','Czechy':'cz','Słowacja':'sk','Belgia':'be','Holandia':'nl',
-    'Wielka Brytania':'gb','USA':'us','Austria':'at','Szwecja':'se','Francja':'fr','Hiszpania':'es',
-    'Węgry':'hu','Szwajcaria':'ch','Litwa':'lt','Łotwa':'lv','Estonia':'ee','Irlandia':'ie'
+    'Anglia':'gb','Armenia':'am','Australia':'au','Austria':'at',
+    'Belgia':'be','Białoruś':'by','Bułgaria':'bg','Chiny':'cn','Czarnogóra':'me',
+    'Czechy':'cz','Dania':'dk','Filipiny':'ph','Finlandia':'fi','Holandia':'nl',
+    'Irlandia':'ie','Japonia':'jp','Litwa':'lt','Łotwa':'lv','Meksyk':'mx',
+    'Niemcy':'de','Niepiwne':'np','Polska':'pl','Portugalia':'pt','Rosja':'ru',
+    'Serbia':'rs','Singapur':'sg','Słowacja':'sk','Tajlandia':'th','Ukraina':'ua',
+    'USA':'us','Węgry':'hu','Włochy':'it'
   };
   return codes[country]||'';
 }
