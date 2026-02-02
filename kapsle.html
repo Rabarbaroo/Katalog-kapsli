@@ -35,7 +35,7 @@ body {
 h1 {
   font-family: 'Pacifico', cursive;
   text-align: center;
-  font-size: 2.8em;
+  font-size: 2.2em;
   padding: 20px;
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
@@ -78,7 +78,7 @@ h1 {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 10px;
   max-width: 780px;
   margin: 0 auto;
@@ -111,25 +111,31 @@ h1 {
 #country-screen, #letters-screen { display:none; }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 20px;
-  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
   margin: 30px auto;
 }
 
 .card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
   background: white;
-  border-radius: 14px;
-  padding: 20px;
-  text-align: center;
+  border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  transition: 0.2s;
 }
 
-.flag { font-size: 2.5em; }
-.count { font-weight: bold; margin-top: 6px; }
+.card:hover { background: #f0f0f0; }
 
+.flag { font-size: 1.8em; min-width: 30px; text-align: center; }
+.count { font-weight: bold; margin-left:auto; }
+
+/* EKRAN LITER */
 .letters {
   display: flex;
   flex-wrap: wrap;
@@ -244,10 +250,14 @@ async function loadCaps() {
   const counter=document.getElementById('counter');
   const countryHeader=document.getElementById('country-header');
 
-  // Pokaż nazwę kraju i flagę
+  // Flagi dla wszystkich krajów
   const flags = {
-    'Polska':'🇵🇱','Niemcy':'🇩🇪','Czechy':'🇨🇿','Słowacja':'🇸🇰','Belgia':'🇧🇪','Holandia':'🇳🇱','Wielka Brytania':'🇬🇧','USA':'🇺🇸'
+    'all':'🎆','Polska':'🇵🇱','Niemcy':'🇩🇪','Czechy':'🇨🇿','Słowacja':'🇸🇰',
+    'Belgia':'🇧🇪','Holandia':'🇳🇱','Wielka Brytania':'🇬🇧','USA':'🇺🇸',
+    'Austria':'🇦🇹','Szwecja':'🇸🇪','Francja':'🇫🇷','Hiszpania':'🇪🇸','Węgry':'🇭🇺',
+    'Szwajcaria':'🇨🇭','Litwa':'🇱🇹','Łotwa':'🇱🇻','Estonia':'🇪🇪','Irlandia':'🇮🇪'
   };
+
   if(selectedCountry && selectedCountry!=='all'){
     countryHeader.textContent=`${flags[selectedCountry]||'🏳️'} ${selectedCountry}`;
   }
@@ -293,7 +303,10 @@ function showCountryScreen(caps){
   const countriesDiv=document.getElementById('countries');
   countriesDiv.innerHTML='';
   const flags = {
-    'Polska':'🇵🇱','Niemcy':'🇩🇪','Czechy':'🇨🇿','Słowacja':'🇸🇰','Belgia':'🇧🇪','Holandia':'🇳🇱','Wielka Brytania':'🇬🇧','USA':'🇺🇸','all':'🎆'
+    'all':'🎆','Polska':'🇵🇱','Niemcy':'🇩🇪','Czechy':'🇨🇿','Słowacja':'🇸🇰',
+    'Belgia':'🇧🇪','Holandia':'🇳🇱','Wielka Brytania':'🇬🇧','USA':'🇺🇸',
+    'Austria':'🇦🇹','Szwecja':'🇸🇪','Francja':'🇫🇷','Hiszpania':'🇪🇸','Węgry':'🇭🇺',
+    'Szwajcaria':'🇨🇭','Litwa':'🇱🇹','Łotwa':'🇱🇻','Estonia':'🇪🇪','Irlandia':'🇮🇪'
   };
 
   const byCountry={};
@@ -314,7 +327,6 @@ function showCountryScreen(caps){
     const selected=country==='all'?caps:byCountry[country];
     if(selected.length<=100){ location.href=`kapsle.html?country=${country}`; return; }
 
-    // >100 kapsli → pokaż pełnoekranowy wybór liter
     document.getElementById('country-screen').style.display='none';
     lettersScreen.style.display='block';
     const lettersDiv=document.getElementById('letters');
