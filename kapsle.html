@@ -12,7 +12,7 @@
 body { font-family: 'Poppins', sans-serif; padding: 20px; background: #d2f5d2; margin: 0; position: relative; }
 .home-icon { position: absolute; top: 55px; left: 25px; font-size: 1.6em; text-decoration: none; color: #333; background: white; padding: 6px 10px; border-radius: 8px; box-shadow: 0 0 6px rgba(0,0,0,0.2); z-index: 10; }
 h1 { font-family: 'Pacifico', cursive; text-align: center; font-size: 2.2em; padding: 20px; border-radius: 25px; box-shadow: 0 0 15px rgba(0,0,0,0.15); margin: 40px 0 30px; }
-.country-header { text-align: center; font-size: 1.6em; margin-bottom: 20px; }
+.country-header { text-align: center; font-size: 1.6em; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; }
 .caps { display: flex; flex-direction: column; gap: 30px; }
 .cap { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
 .cap h3 { margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
@@ -68,8 +68,7 @@ function normalizeBreweryName(name) {
 
 function getGroupLetter(name) {
   const cleaned = normalizeBreweryName(name).replace(/\(y\)/gi,'').trim();
-  const match = cleaned.match(/[A-Za-zÀ-žŁłČčŚśŻżŹźĆćŃńÖäÜüÉé]/);
-  return match ? match[0].toUpperCase() : '?';
+  return cleaned[0]?.toUpperCase() || '?';
 }
 
 function compareLetters(a, b) {
@@ -89,6 +88,15 @@ function loadImageWithFallback(img, originalSrc){
   img.src = paths[i++];
 }
 
+function selectedCountryCode(country){
+  const codes = {
+    'Polska':'pl','Niemcy':'de','Czechy':'cz','Słowacja':'sk','Belgia':'be','Holandia':'nl',
+    'Wielka Brytania':'gb','USA':'us','Austria':'at','Szwecja':'se','Francja':'fr','Hiszpania':'es',
+    'Węgry':'hu','Szwajcaria':'ch','Litwa':'lt','Łotwa':'lv','Estonia':'ee','Irlandia':'ie'
+  };
+  return codes[country]||'';
+}
+
 async function loadCaps(){
   let caps;
   try { caps = await (await fetch('caps.json')).json(); }
@@ -105,9 +113,17 @@ async function loadCaps(){
   const counter=document.getElementById('counter');
   const countryHeader=document.getElementById('country-header');
 
+  // flaga w nagłówku
   if(selectedCountry && selectedCountry!=='all'){
     const code = selectedCountryCode(selectedCountry);
-    countryHeader.innerHTML=`<img src="flagi/${code}.png" class="flag-img" /> ${selectedCountry}`;
+    if(code) {
+      const img = document.createElement('img');
+      img.src = `flagi/${code}.png`;
+      img.className = 'flag-img';
+      countryHeader.appendChild(img);
+    }
+    const textNode = document.createTextNode(' ' + selectedCountry);
+    countryHeader.appendChild(textNode);
   }
 
   let filtered = selectedCountry==='all'?caps:caps.filter(c=>c.country===selectedCountry);
@@ -158,48 +174,13 @@ function showCountryScreen(caps){
   createCard('all','WSZYSTKIE',caps.length);
   Object.keys(byCountry).sort((a,b)=>a.localeCompare(b,'pl')).forEach(c=>createCard(c,c,byCountry[c].length));
 
-  function selectedCountryCode(country){
-    const codes = {
-      'Polska':'pl','Niemcy':'de','Czechy':'cz','Słowacja':'sk','Belgia':'be','Holandia':'nl',
-      'Wielka Brytania':'gb','USA':'us','Austria':'at','Szwecja':'se','Francja':'fr','Hiszpania':'es',
-      'Węgry':'hu','Szwajcaria':'ch','Litwa':'lt','Łotwa':'lv','Estonia':'ee','Irlandia':'ie'
-    };
-    return codes[country]||'';
-  }
-
   function createCard(key,label,count){
     const d=document.createElement('div'); d.className='card';
     const code = selectedCountryCode(key);
-    const imgTag = code ? `<img src="flagi/${code}.png" class="flag-img" />` : '';
-    d.innerHTML=`${imgTag} <div>${label}</div> <div class="count">${count}</div>`;
-    d.onclick=()=>handleCountry(key);
+    const imgTag = code ? `<img src="flagi/${code}.png" class="flag-img" /> ` : '';
+    d.innerHTML=`${imgTag}<div>${label}</div> <div class="count">${count}</div>`;
+    d.onclick=()=>location.href=`kapsle.html?country=${key}`;
     countriesDiv.appendChild(d);
-  }
-
-  function handleCountry(country){
-    const lettersScreen=document.getElementById('letters-screen');
-    const selected=country==='all'?caps:byCountry[country];
-    if(selected.length<=100){ location.href=`kapsle.html?country=${country}`; return; }
-
-    document.getElementById('country-screen').style.display='none';
-    lettersScreen.style.display='block';
-    const lettersDiv=document.getElementById('letters');
-    lettersDiv.innerHTML='';
-
-    const lettersSet = new Set(selected.map(c=>getGroupLetter(c.name)));
-    const lettersArray = [...lettersSet].sort(compareLetters);
-
-    const allLetter = document.createElement('div');
-    allLetter.className='letter';
-    allLetter.textContent='Wszystkie';
-    allLetter.onclick=()=>location.href=`kapsle.html?country=${country}`;
-    lettersDiv.appendChild(allLetter);
-
-    lettersArray.forEach(l=>{
-      const el=document.createElement('div'); el.className='letter'; el.textContent=l;
-      el.onclick=()=>location.href=`kapsle.html?country=${country}&letter=${l}`;
-      lettersDiv.appendChild(el);
-    });
   }
 }
 
