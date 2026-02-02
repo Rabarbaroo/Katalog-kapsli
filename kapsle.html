@@ -78,7 +78,8 @@ h1 {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fill, 100px);
+  justify-content: center;
   gap: 10px;
   max-width: 780px;
   margin: 0 auto;
@@ -86,11 +87,15 @@ h1 {
 
 .img-wrapper {
   position: relative;
+  width: 100px;
+  height: 100px;
   cursor: pointer;
 }
 
 .img-wrapper img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 6px;
   border: 1px solid #ccc;
   background: white;
@@ -111,11 +116,17 @@ h1 {
 #country-screen, #letters-screen { display:none; }
 
 .grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 10px;
-  max-width: 500px;
   margin: 30px auto;
+}
+
+@media(min-width: 768px) {
+  .grid { grid-template-columns: repeat(3, 1fr); max-width: 900px; }
+}
+
+@media(max-width: 767px) {
+  .grid { grid-template-columns: repeat(2, 1fr); max-width: 500px; }
 }
 
 .card {
@@ -250,7 +261,6 @@ async function loadCaps() {
   const counter=document.getElementById('counter');
   const countryHeader=document.getElementById('country-header');
 
-  // Flagi dla wszystkich krajów
   const flags = {
     'all':'🎆','Polska':'🇵🇱','Niemcy':'🇩🇪','Czechy':'🇨🇿','Słowacja':'🇸🇰',
     'Belgia':'🇧🇪','Holandia':'🇳🇱','Wielka Brytania':'🇬🇧','USA':'🇺🇸',
