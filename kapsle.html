@@ -1,154 +1,160 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Katalog Kapsli</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Katalog Kapsli</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <style>
-    * { box-sizing: border-box; }
+<style>
+* { box-sizing: border-box; }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      padding: 20px;
-      background: #d2f5d2;
-      margin: 0;
-      position: relative;
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  background: #d2f5d2;
+  margin: 0;
+  position: relative;
+}
 
-    .home-icon {
-      position: absolute;
-      top: 55px;
-      left: 25px;
-      font-size: 1.6em;
-      text-decoration: none;
-      color: #333;
-      background: white;
-      padding: 6px 10px;
-      border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.2);
-      z-index: 10;
-    }
+.home-icon {
+  position: absolute;
+  top: 55px;
+  left: 25px;
+  font-size: 1.6em;
+  text-decoration: none;
+  color: #333;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  z-index: 10;
+}
 
-    h1 {
-      font-family: 'Pacifico', cursive;
-      text-align: center;
-      font-size: 2.8em;
-      padding: 40px 20px;
-      border-radius: 25px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
-      margin: 40px 0 30px;
-    }
+h1 {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  font-size: 2.8em;
+  padding: 40px 20px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  margin: 40px 0 30px;
+}
 
-    .filter {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-      margin-bottom: 20px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
-    }
+.filter {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
 
-    .caps {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
+.caps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
-    .cap {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+.cap {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
-    .cap h3 {
-      margin-bottom: 10px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
-    }
+.cap h3 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-      max-width: 780px;
-      margin: 0 auto;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  max-width: 780px;
+  margin: 0 auto;
+}
 
-    .img-wrapper {
-      position: relative;
-      cursor: pointer;
-    }
+.img-wrapper {
+  position: relative;
+  cursor: pointer;
+}
 
-    .img-wrapper img {
-      width: 100%;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      background: white;
-      display: block;
-    }
+.img-wrapper img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  display: block;
+}
 
-    .star {
-      position: absolute;
-      top: 4px;
-      right: 6px;
-      font-size: 1.2em;
-      color: gold;
-      text-shadow: 0 0 3px black;
-      pointer-events: none;
-    }
+.star {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 1.2em;
+  color: gold;
+  text-shadow: 0 0 3px black;
+  pointer-events: none;
+}
 
-    /* === EKRAN KRAJÓW === */
-    #country-screen { display:none; }
+/* === EKRAN KRAJÓW === */
+#country-screen, #letters-screen { display:none; }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      margin: 30px auto;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+}
 
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 20px;
-      text-align: center;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,.15);
-    }
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
 
-    .flag { font-size: 2.5em; }
-    .count { font-weight: bold; margin-top: 6px; }
+.flag { font-size: 2.5em; }
+.count { font-weight: bold; margin-top: 6px; }
 
-    .letters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 30px;
-    }
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+}
 
-    .letter {
-      background: white;
-      padding: 10px 14px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0,0,0,.2);
-    }
-  </style>
+.letter {
+  background: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+</style>
 </head>
 <body>
 
 <a href="index.html" class="home-icon">🏠</a>
 
+<!-- EKRAN KRAJÓW -->
 <div id="country-screen">
   <h1>Wybierz kraj</h1>
   <div id="countries" class="grid"></div>
+</div>
+
+<!-- EKRAN WYBORU LITER (PO >100 KAPSLI) -->
+<div id="letters-screen">
+  <h1>Wybierz literę</h1>
   <div id="letters" class="letters"></div>
 </div>
 
@@ -176,7 +182,7 @@ const selectedLetter = params.get('letter');
 
 function normalizeBreweryName(name) {
   const words = name.trim().split(/\s+/);
-  if (['browar', 'browary'].includes(words[0].toLowerCase())) words.shift();
+  if (['browar','browary'].includes(words[0].toLowerCase())) words.shift();
   return words.join(' ');
 }
 
@@ -184,142 +190,110 @@ function getGroupLetter(name) {
   return normalizeBreweryName(name)[0]?.toUpperCase() || '?';
 }
 
-/* === ŁADOWANIE OBRAZÓW (bez zmian) === */
 function loadImageWithFallback(img, originalSrc) {
   const base = originalSrc.replace(/\.[^/.]+$/, '');
   const paths = [
-    `${base}.jpg`,
-    `${base}.jpeg`,
-    `${base}.png`,
-    base.replace(/^images\//, 'images2/') + '.jpg',
-    base.replace(/^images\//, 'images2/') + '.jpeg',
-    base.replace(/^images\//, 'images2/') + '.png'
+    `${base}.jpg`, `${base}.jpeg`, `${base}.png`,
+    base.replace(/^images\//,'images2/')+'.jpg',
+    base.replace(/^images\//,'images2/')+'.jpeg',
+    base.replace(/^images\//,'images2/')+'.png'
   ];
   let i = 0;
-  img.onerror = () => { if (i < paths.length) img.src = paths[i++]; };
+  img.onerror = ()=>{ if(i<paths.length) img.src=paths[i++]; };
   img.src = paths[i++];
 }
 
 async function loadCaps() {
-  const res = await fetch('caps.json');
-  const caps = await res.json();
+  let caps;
+  try {
+    const res = await fetch('caps.json');
+    caps = await res.json();
+  } catch(e){ alert('Nie udało się wczytać caps.json'); return; }
 
-  if (!selectedCountry) {
+  if(!selectedCountry){
     showCountryScreen(caps);
     return;
   }
 
-  document.getElementById('country-screen').style.display = 'none';
-  document.getElementById('catalog-title').style.display = 'block';
-  document.getElementById('filters').style.display = 'block';
+  document.getElementById('country-screen').style.display='none';
+  document.getElementById('letters-screen').style.display='none';
+  document.getElementById('catalog-title').style.display='block';
+  document.getElementById('filters').style.display='block';
 
-  const container = document.getElementById('caps-container');
-  const counter = document.getElementById('counter');
+  const container=document.getElementById('caps-container');
+  const counter=document.getElementById('counter');
 
-  let filtered = selectedCountry === 'all'
-    ? caps
-    : caps.filter(c => c.country === selectedCountry);
+  let filtered = selectedCountry==='all'?caps:caps.filter(c=>c.country===selectedCountry);
+  if(selectedLetter) filtered = filtered.filter(c=>getGroupLetter(c.name)===selectedLetter);
+  counter.textContent=`Łącznie kapsli: ${filtered.length}`;
 
-  if (selectedLetter) {
-    filtered = filtered.filter(c => getGroupLetter(c.name) === selectedLetter);
-  }
-
-  counter.textContent = `Łącznie kapsli: ${filtered.length}`;
-
-  const groups = {};
-  filtered.forEach(c => {
-    if (!groups[c.name]) groups[c.name] = [];
-    groups[c.name].push(c);
-  });
+  const groups={};
+  filtered.forEach(c=>{ if(!groups[c.name]) groups[c.name]=[]; groups[c.name].push(c); });
 
   Object.keys(groups)
     .sort((a,b)=>normalizeBreweryName(a).localeCompare(normalizeBreweryName(b),'pl'))
-    .forEach(group => {
-      const div = document.createElement('div');
-      div.className = 'cap';
+    .forEach(group=>{
+      const div=document.createElement('div'); div.className='cap';
+      const h3=document.createElement('h3'); h3.textContent=`${group} (${groups[group].length})`; div.appendChild(h3);
 
-      const h3 = document.createElement('h3');
-      h3.textContent = `${group} (${groups[group].length})`;
-      div.appendChild(h3);
+      const gallery=document.createElement('div'); gallery.className='gallery';
+      groups[group].forEach(c=>{
+        c.images.forEach(imgData=>{
+          const src=imgData.src||imgData;
+          const link=imgData.link;
 
-      const gallery = document.createElement('div');
-      gallery.className = 'gallery';
+          const wrap=document.createElement('div'); wrap.className='img-wrapper';
+          const img=document.createElement('img'); loadImageWithFallback(img,src);
 
-      groups[group].forEach(c => {
-        c.images.forEach(imgData => {
-          const src = imgData.src || imgData;
-          const link = imgData.link;
-
-          const wrap = document.createElement('div');
-          wrap.className = 'img-wrapper';
-
-          const img = document.createElement('img');
-          loadImageWithFallback(img, src);
-
-          if (link) {
-            wrap.onclick = () => window.open(link, '_blank');
-            const star = document.createElement('div');
-            star.className = 'star';
-            star.textContent = '⭐';
-            wrap.appendChild(star);
-          }
-
-          wrap.appendChild(img);
-          gallery.appendChild(wrap);
+          if(link){ wrap.onclick=()=>window.open(link,'_blank'); const star=document.createElement('div'); star.className='star'; star.textContent='⭐'; wrap.appendChild(star); }
+          wrap.appendChild(img); gallery.appendChild(wrap);
         });
       });
 
-      div.appendChild(gallery);
-      container.appendChild(div);
+      div.appendChild(gallery); container.appendChild(div);
     });
 }
 
-function showCountryScreen(caps) {
-  document.getElementById('country-screen').style.display = 'block';
-  document.getElementById('catalog-title').style.display = 'none';
-  document.getElementById('filters').style.display = 'none';
+function showCountryScreen(caps){
+  document.getElementById('country-screen').style.display='block';
+  document.getElementById('letters-screen').style.display='none';
+  document.getElementById('catalog-title').style.display='none';
+  document.getElementById('filters').style.display='none';
 
-  const countriesDiv = document.getElementById('countries');
-  const lettersDiv = document.getElementById('letters');
+  const countriesDiv=document.getElementById('countries');
+  countriesDiv.innerHTML='';
+  const flags = {
+    'Polska':'🇵🇱','Niemcy':'🇩🇪','Czechy':'🇨🇿','Słowacja':'🇸🇰','Belgia':'🇧🇪','Holandia':'🇳🇱','Wielka Brytania':'🇬🇧','USA':'🇺🇸','all':'🎆'
+  };
 
-  const flags = { Polska:'🇵🇱', Niemcy:'🇩🇪', Czechy:'🇨🇿', all:'🎆' };
-  const byCountry = {};
-
-  caps.forEach(c => {
-    if (!byCountry[c.country]) byCountry[c.country] = [];
-    byCountry[c.country].push(c);
-  });
+  const byCountry={};
+  caps.forEach(c=>{ if(!byCountry[c.country]) byCountry[c.country]=[]; byCountry[c.country].push(c); });
 
   createCard('all','WSZYSTKIE',caps.length);
-
-  Object.keys(byCountry).sort((a,b)=>a.localeCompare(b,'pl')).forEach(c=>{
-    createCard(c,c,byCountry[c].length);
-  });
+  Object.keys(byCountry).sort((a,b)=>a.localeCompare(b,'pl')).forEach(c=>createCard(c,c,byCountry[c].length));
 
   function createCard(key,label,count){
-    const d=document.createElement('div');
-    d.className='card';
+    const d=document.createElement('div'); d.className='card';
     d.innerHTML=`<div class="flag">${flags[key]||'🏳️'}</div><div>${label}</div><div class="count">${count}</div>`;
     d.onclick=()=>handleCountry(key);
     countriesDiv.appendChild(d);
   }
 
   function handleCountry(country){
+    const lettersScreen=document.getElementById('letters-screen');
+    const selected=country==='all'?caps:byCountry[country];
+    if(selected.length<=100){ location.href=`kapsle.html?country=${country}`; return; }
+
+    // >100 kapsli → pokaż pełnoekranowy wybór liter
+    document.getElementById('country-screen').style.display='none';
+    lettersScreen.style.display='block';
+    const lettersDiv=document.getElementById('letters');
     lettersDiv.innerHTML='';
-    const selected = country==='all'?caps:byCountry[country];
-    if (selected.length<=100){
-      location.href=`kapsle.html?country=${country}`;
-      return;
-    }
-    [...new Set(selected.map(c=>getGroupLetter(c.name)))]
-      .sort()
-      .forEach(l=>{
-        const el=document.createElement('div');
-        el.className='letter';
-        el.textContent=l;
-        el.onclick=()=>location.href=`kapsle.html?country=${country}&letter=${l}`;
-        lettersDiv.appendChild(el);
-      });
+    [...new Set(selected.map(c=>getGroupLetter(c.name)))].sort().forEach(l=>{
+      const el=document.createElement('div'); el.className='letter'; el.textContent=l;
+      el.onclick=()=>location.href=`kapsle.html?country=${country}&letter=${l}`;
+      lettersDiv.appendChild(el);
+    });
   }
 }
 
