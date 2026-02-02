@@ -108,6 +108,16 @@ async function loadCaps(){
 
   if(!selectedCountry){ showCountryScreen(caps); return; }
 
+  // filtrujemy kapsle dla danego kraju
+  let filtered = selectedCountry==='all'?caps:caps.filter(c=>c.country===selectedCountry);
+
+  // jeśli kraj ma >100 kapsli lub "all" -> pokaż ekran liter
+  if((filtered.length>100 || selectedCountry==='all') && !selectedLetter){
+    showLettersScreen(filtered);
+    return;
+  }
+
+  // pokazujemy normalny ekran kapsli
   document.getElementById('country-screen').style.display='none';
   document.getElementById('letters-screen').style.display='none';
   document.getElementById('catalog-title').style.display='block';
@@ -117,7 +127,6 @@ async function loadCaps(){
   const counter=document.getElementById('counter');
   const countryHeader=document.getElementById('country-header');
 
-  // flaga w nagłówku
   if(selectedCountry && selectedCountry!=='all'){
     const code = selectedCountryCode(selectedCountry);
     if(code) {
@@ -130,7 +139,6 @@ async function loadCaps(){
     countryHeader.appendChild(textNode);
   }
 
-  let filtered = selectedCountry==='all'?caps:caps.filter(c=>c.country===selectedCountry);
   if(selectedLetter && selectedLetter!=='all') filtered = filtered.filter(c=>getGroupLetter(c.name)===selectedLetter);
   counter.textContent=`Łącznie kapsli: ${filtered.length}`;
 
@@ -163,6 +171,28 @@ async function loadCaps(){
     });
 }
 
+// ekran liter
+function showLettersScreen(filtered){
+  document.getElementById('letters-screen').style.display='block';
+  document.getElementById('country-screen').style.display='none';
+  document.getElementById('catalog-title').style.display='none';
+  document.getElementById('caps-container').innerHTML='';
+  document.getElementById('counter').style.display='none';
+  document.getElementById('country-header').textContent='';
+
+  const lettersDiv = document.getElementById('letters');
+  lettersDiv.innerHTML='';
+
+  const letters = new Set(filtered.map(c=>getGroupLetter(c.name)));
+  Array.from(letters).sort(compareLetters).forEach(l=>{
+    const div = document.createElement('div');
+    div.className='letter';
+    div.textContent = l;
+    div.onclick = ()=>location.href=`kapsle.html?country=${selectedCountry}&letter=${l}`;
+    lettersDiv.appendChild(div);
+  });
+}
+
 function showCountryScreen(caps){
   document.getElementById('country-screen').style.display='block';
   document.getElementById('letters-screen').style.display='none';
@@ -183,7 +213,10 @@ function showCountryScreen(caps){
     const code = selectedCountryCode(key);
     const imgTag = code ? `<img src="flagi/${code}.png" class="flag-img" /> ` : '';
     d.innerHTML=`${imgTag}<div>${label}</div> <div class="count">${count}</div>`;
-    d.onclick=()=>location.href=`kapsle.html?country=${key}`;
+    d.onclick=()=>{
+      if(count>100 || key==='all') location.href=`kapsle.html?country=${key}`;
+      else location.href=`kapsle.html?country=${key}`;
+    };
     countriesDiv.appendChild(d);
   }
 }
