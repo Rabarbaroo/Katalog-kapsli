@@ -149,29 +149,26 @@ function getGroupLetter(name) {
 
 /* === JEDYNA ZMIANA JEST TUTAJ === */
 function loadImageWithFallback(img, originalSrc) {
-  const tried = [];
+  const base = originalSrc.replace(/\.[^/.]+$/, '');
 
-  function tryLoad(src) {
-    if (tried.includes(src)) return;
-    tried.push(src);
-    img.src = src;
+  const paths = [
+    `${base}.jpg`,
+    `${base}.jpeg`,
+    `${base}.png`,
+    base.replace(/^images\//, 'images2/') + '.jpg',
+    base.replace(/^images\//, 'images2/') + '.jpeg',
+    base.replace(/^images\//, 'images2/') + '.png'
+  ];
+
+  let index = 0;
+
+  function tryNext() {
+    if (index >= paths.length) return;
+    img.src = paths[index++];
   }
 
-  const srcImages = originalSrc.startsWith('images2/')
-    ? originalSrc.replace('images2/', 'images/')
-    : originalSrc;
-
-  const srcImages2 = originalSrc.startsWith('images/')
-    ? originalSrc.replace('images/', 'images2/')
-    : originalSrc;
-
-  img.onerror = () => {
-    if (tried.length === 1) {
-      tryLoad(srcImages2);
-    }
-  };
-
-  tryLoad(srcImages);
+  img.onerror = tryNext;
+  tryNext();
 }
 /* === KONIEC ZMIANY === */
 
