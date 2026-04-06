@@ -5753,42 +5753,42 @@
   },
   {
     "name": "Browar Rock (Jarocin)",
-    "country": "Polska,
+    "country": "Polska",
     "images": [{ "src": "images/Rockbrowar.jpg" }]
   },
   {
     "name": "Badische Staatsbrauerei Rothaus (Grafenhausen-Rothaus)",
-    "country": "Niemcy,
+    "country": "Niemcy",
     "images": [{ "src": "images/Rothaus.jpg" }]
   },
   {
     "name": "Browar Cuauhtemoc-Moctezuma (Monterrey)",
-    "country": "Meksyk,
+    "country": "Meksyk",
     "images": [{ "src": "images/Sol.jpg" }]
   },
    {
     "name": "Browar Wielka Sowa (Bielawa)",
-    "country": "Polska,
+    "country": "Polska",
     "images": [{ "src": "images/Sowa.jpg" }]
   },
   {
     "name": "Stralsunder Brauerei (Stralsund)",
-    "country": "Niemcy,
+    "country": "Niemcy",
     "images": [{ "src": "images/Strotebeker.jpg" }]
   },
   {
     "name": "Krostitzer Brauerei",
-    "country": "Niemcy,
+    "country": "Niemcy",
     "images": [{ "src": "images/Ur-Krostitzer.jpg" }]
   },
   {
     "name": "Browar Waszczukowe (Czarna Białostocka) ",
-    "country": "Polska,
+    "country": "Polska",
     "images": [{ "src": "images/Waszczukowe.jpg" }]
   },
    {
     "name": "Browar Zakładowy (Poniatowa) ",
-    "country": "Polska,
+    "country": "Polska",
     "images": [{ "src": "images/Zakładowy.jpg" }]
   }
 ]
