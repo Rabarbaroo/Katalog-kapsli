@@ -89,12 +89,19 @@
             const src = cap.images[0].src || cap.images[0];
             const baseName = src.replace(/\.[^/.]+$/, '');
 
-            img.src = baseName + '.jpg';
+            const jpgPath1 = baseName + '.jpg';
+            const jpgPath2 = jpgPath1.replace('images/', 'images2/');
+
+            img.src = jpgPath1;
             img.alt = cap.name;
 
             img.onerror = () => {
-              img.style.border = '2px solid red';
-              img.title = 'Nie udało się załadować obrazka';
+              if (img.src.includes('images2/')) {
+                img.style.border = '2px solid red';
+                img.title = 'Nie udało się załadować obrazka';
+              } else {
+                img.src = jpgPath2;
+              }
             };
 
             gallery.appendChild(img);
