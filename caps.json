@@ -261,6 +261,13 @@
     "date": "2025-06-23"
   },
   {
+    "name": "Miłosław",
+    "country": "Polska",
+    "images": [{ "src": "images/Miłosław9.jpg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
     "name": "Browar Gontyniec",
     "country": "Polska",
     "images": [{ "src": "images/Gontyniec1.jpg" }],
@@ -449,6 +456,13 @@
     "name": "Tychy",
     "country": "Polska",
     "images": [{ "src": "images/Tyskie23.jpg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
+    "name": "Tychy",
+    "country": "Polska",
+    "images": [{ "src": "images/Tyskie24.jpg" }],
     "description": "Napisy",
     "date": "2025-06-23"
   },
@@ -763,6 +777,20 @@
     "date": "2025-06-23"
   },
   {
+    "name": "Warka",
+    "country": "Polska",
+    "images": [{ "src": "images/Warka32.jpg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
+    "name": "Warka",
+    "country": "Polska",
+    "images": [{ "src": "images/Warka33.jpg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
     "name": "Żywiec",
     "country": "Polska",
     "images": [{ "src": "images/Żywiec1.jpg" }],
@@ -916,6 +944,20 @@
     "description": "Napisy",
     "date": "2025-06-23"
   },
+  {
+    "name": "Żywiec",
+    "country": "Polska",
+    "images": [{ "src": "images/Żywiec23.jpg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
+    "name": "Żywiec",
+    "country": "Polska",
+    "images": [{ "src": "images/Żywiec24.jpg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
    {
     "name": "Okocim",
     "country": "Polska",
@@ -1032,6 +1074,13 @@
     "name": "Okocim",
     "country": "Polska",
     "images": [{ "src": "images/Okocim16.jpg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
+    "name": "Okocim",
+    "country": "Polska",
+    "images": [{ "src": "images/Brooklyn.jpg" }],
     "description": "Napisy",
     "date": "2025-06-23"
   },
@@ -1288,6 +1337,20 @@
     "date": "2025-06-23"
   },
   {
+    "name": "Lech",
+    "country": "Polska",
+    "images": [{ "src": "images/Lech38.jpg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
+    "name": "Lech",
+    "country": "Polska",
+    "images": [{ "src": "images/Lech39.jpg" }],
+    "description": "Napisy",
+    "date": "2025-06-23"
+  },
+  {
   "name": "Tatra",
   "country": "Polska",
   "images": [{ "src": "images/Tatra1.jpg" }],
@@ -1452,6 +1515,20 @@
   "name": "Zakłady Piwowarskie w Lublinie",
   "country": "Polska",
   "images": [{ "src": "images/Perła8.jpg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
+  "name": "Zakłady Piwowarskie w Lublinie",
+  "country": "Polska",
+  "images": [{ "src": "images/Perła9.jpg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
+  "name": "Zakłady Piwowarskie w Lublinie",
+  "country": "Polska",
+  "images": [{ "src": "images/Perła10.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
@@ -1737,6 +1814,20 @@
   "date": "2025-06-23"
 },
   {
+  "name": "Fortuna",
+  "country": "Polska",
+  "images": [{ "src": "images/Fortuna11.jpg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
+  "name": "Fortuna",
+  "country": "Polska",
+  "images": [{ "src": "images/Fortuna12.jpg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
   "name": "Bosman",
   "country": "Polska",
   "images": [{ "src": "images/Bosman1.jpg" }],
@@ -1908,6 +1999,13 @@
   "name": "Prost",
   "country": "Polska",
   "images": [{ "src": "images/Prost1.jpg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+  {
+  "name": "Prost",
+  "country": "Polska",
+  "images": [{ "src": "images/Prost2.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
@@ -2101,6 +2199,13 @@
   "name": "Browar Cornelius",
   "country": "Polska",
   "images": [{ "src": "images/Cornelius4.jpeg" }],
+  "description": "Napisy",
+  "date": "2025-06-23"
+},
+   {
+  "name": "Browar Cornelius",
+  "country": "Polska",
+  "images": [{ "src": "images/Cornelius5.jpg" }],
   "description": "Napisy",
   "date": "2025-06-23"
 },
@@ -2704,6 +2809,16 @@
   {
   "name": "Namysłów",
   "country": "Polska",
+  "images": [{ "src": "images/Namysłów6.jpg" }]
+},
+  {
+  "name": "Namysłów",
+  "country": "Polska",
+  "images": [{ "src": "images/Namysłów7.jpg" }]
+},
+  {
+  "name": "Namysłów",
+  "country": "Polska",
   "images": [{ "src": "images/Zamkowe1.jpeg" }]
 },
    {
@@ -2882,6 +2997,11 @@
     "images": [{ "src": "images/Piast10.jpg", "link": "images/Piast10_1.jpg" }]
   },
   {
+    "name": "Browar Piast (kiedyś Wrocław)",
+    "country": "Polska",
+    "images": [{ "src": "images/Piast11.jpg" }]
+  },
+  {
     "name": "Browar Sierpc",
     "country": "Polska",
     "images": [{ "src": "images/Sierpc1.jpg" }]
@@ -2985,6 +3105,21 @@
     "name": "Van Pur",
     "country": "Polska",
     "images": [{ "src": "images/VanPur6.png" }]
+  },
+  {
+    "name": "Van Pur",
+    "country": "Polska",
+    "images": [{ "src": "images/VanPur7.jpg" }]
+  },
+  {
+    "name": "Van Pur",
+    "country": "Polska",
+    "images": [{ "src": "images/VanPur8.jpg" }]
+  },
+  {
+    "name": "Van Pur",
+    "country": "Polska",
+    "images": [{ "src": "images/VanPur9.jpg" }]
   },
   {
     "name": "Van Pur",
@@ -3222,6 +3357,11 @@
     "images": [{ "src": "images/Raciborskie1.jpeg" }]
   },
   {
+    "name": "Browar Racibórz",
+    "country": "Polska",
+    "images": [{ "src": "images/Raciborskie2.jpg" }]
+  },
+  {
     "name": "Browar Pilsweizer (Grybów)",
     "country": "Polska",
     "images": [{ "src": "images/Grybów1.jpeg" }]
@@ -3297,6 +3437,16 @@
     "images": [{ "src": "images/Somersby8.jpg" }]
   },
   {
+    "name": "Carlsberg",
+    "country": "Polska",
+    "images": [{ "src": "images/Somersby9.jpg" }]
+  },
+  {
+    "name": "Carlsberg",
+    "country": "Polska",
+    "images": [{ "src": "images/Somersby10.jpg" }]
+  },
+  {
     "name": "Browar Kaszubski (Bytów)",
     "country": "Polska",
     "images": [{ "src": "images/Bytów1.jpeg" }]
@@ -3337,6 +3487,26 @@
     "images": [{ "src": "images/Kofola.png" }]
   },
   {
+    "name": "Niepiwne",
+    "country": "Niepiwne",
+    "images": [{ "src": "images/cydr.jpg" }]
+  },
+  {
+    "name": "Niepiwne",
+    "country": "Niepiwne",
+    "images": [{ "src": "images/Kinnie.jpg" }]
+  },
+  {
+    "name": "Niepiwne",
+    "country": "Niepiwne",
+    "images": [{ "src": "images/Lecoo.jpg" }]
+  },
+  {
+    "name": "Niepiwne",
+    "country": "Niepiwne",
+    "images": [{ "src": "images/Nachmielona.jpg" }]
+  },
+  {
   "name": "Beck's (Brema)",
   "country": "Niemcy",
   "images": [{ "src": "images/Becks1.jpg" }]
@@ -3375,6 +3545,16 @@
   "name": "Beck's (Brema)",
   "country": "Niemcy",
   "images": [{ "src": "images/Becks8.jpg" }]
+},
+  {
+  "name": "Beck's (Brema)",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Becks9.jpg" }]
+},
+  {
+  "name": "Beck's (Brema)",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Becks10.jpg" }]
 },
   {
   "name": "Berliner Pilsner",
@@ -3492,6 +3672,16 @@
     "images": [{ "src": "images/Primator10.jpg" }]
   },
   {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator11.jpg" }]
+  },
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator12.jpg" }]
+  },
+  {
   "name": "Kompania Piwowarska",
   "country": "Polska",
   "images": [{ "src": "images/Gingers1.jpg" }]
@@ -3535,6 +3725,26 @@
     "name": "Kompania Piwowarska",
     "country": "Polska",
     "images": [{ "src": "images/Jack1.png" }]
+  },
+  {
+    "name": "Kompania Piwowarska",
+    "country": "Polska",
+    "images": [{ "src": "images/Jack2.jpg" }]
+  },
+  {  
+  "name": "Kompania Piwowarska",
+    "country": "Polska",
+    "images": [{ "src": "images/Jack3.jpg" }]
+  },
+  {
+    "name": "Kompania Piwowarska",
+    "country": "Polska",
+    "images": [{ "src": "images/Jack4.jpg" }]
+  },
+  {
+    "name": "Kompania Piwowarska",
+    "country": "Polska",
+    "images": [{ "src": "images/Jack5.jpg" }]
   },
   {
   "name": "Ilgezeem",
@@ -3674,6 +3884,11 @@
   {
   "name": "Frankfurter Brauhaus",
   "country": "Niemcy",
+  "images": [{ "src": "images/Perlenbacher3.jpg" }]
+},
+  {
+  "name": "Frankfurter Brauhaus",
+  "country": "Niemcy",
   "images": [{ "src": "images/Falkenfelser.png" }]
 },
   {
@@ -3806,6 +4021,11 @@
     "country": "Niemcy",
     "images": [{ "src": "images/Franziskaner1.jpeg" }]
   },
+   {
+    "name": "Browar Spaten-Franziskaner-Bräu",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Franziskaner2.jpg" }]
+  },
   {
     "name": "Browar Kielce",
     "country": "Polska",
@@ -3846,10 +4066,20 @@
     "country": "Czechy",
     "images": [{ "src": "images/Gambrinus7.jpeg" }]
   },
+  {
+    "name": "Browar Plzeňský Prazdroj",
+    "country": "Czechy",
+    "images": [{ "src": "images/Urquel.jpeg" }]
+  },
    {
     "name": "Grimbergen",
     "country": "Belgia",
     "images": [{ "src": "images/Grimbergen2.jpeg" }]
+  },
+  {
+    "name": "Grimbergen",
+    "country": "Belgia",
+    "images": [{ "src": "images/Grimbergen3.jpg" }]
   },
    {
     "name": "Hasseröder",
@@ -4015,6 +4245,11 @@
   "name": "Browar Bergquell Brauerei Löbau",
   "country": "Niemcy",
   "images": [{ "src": "images/Lobau.png" }]
+},
+   {
+  "name": "Browar Bergquell Brauerei Löbau",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Lobau2.png" }]
 },
   {
   "name": "Browar Litovel",
@@ -4237,6 +4472,31 @@
   "images": [{ "src": "images/Svijany9.jpg" }]
 },
   {
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany10.jpg" }]
+},
+  {
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany11.jpg" }]
+},
+  {
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany12.jpg" }]
+},
+  {
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany13.jpg" }]
+},
+  {
+  "name": "Browar Svijany",
+  "country": "Czechy",
+  "images": [{ "src": "images/Svijany14.jpg" }]
+},
+  {
   "name": "Browar Tsingtao",
   "country": "Chiny",
   "images": [{ "src": "images/Tsingtao.jpeg" }]
@@ -4271,6 +4531,11 @@
   "country": "Niemcy",
   "images": [{ "src": "images/Warsteiner2.jpeg" }]
 },
+  {
+  "name": "Browar Warsteiner",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Warsteiner3.jpg" }]
+},
    {
   "name": "Browar  Wernesgrüner",
   "country": "Niemcy",
@@ -4300,6 +4565,11 @@
   "name": "Okocim",
   "country": "Polska",
   "images": [{ "src": "images/Zatecky3.jpg" }]
+},
+  {
+  "name": "Okocim",
+  "country": "Polska",
+  "images": [{ "src": "images/Zatecky4.jpg" }]
 },
    {
   "name": "Browar Stu Mostów",
@@ -4372,6 +4642,11 @@
   "images": [{ "src": "images/Amber25.jpeg" }]
 },
   {
+  "name": "Browar Amber",
+  "country": "Polska",
+  "images": [{ "src": "images/Amber26.jpg" }]
+},
+  {
   "name": "Browar Artezan",
   "country": "Polska",
   "images": [{ "src": "images/Artezan.jpeg" }]
@@ -4425,6 +4700,11 @@
   "name": "Żywiec",
   "country": "Polska",
   "images": [{ "src": "images/Desperados7.png" }]
+},
+  {
+  "name": "Żywiec",
+  "country": "Polska",
+  "images": [{ "src": "images/Desperados8.jpg" }]
 },
    {
   "name": "Kompania Piwowarska",
@@ -4505,6 +4785,16 @@
   "name": "Browar Radegast",
   "country": "Czechy",
   "images": [{ "src": "images/Radegast3.jpeg" }]
+},
+  {
+  "name": "Browar Radegast",
+  "country": "Czechy",
+  "images": [{ "src": "images/Radegast4.jpg" }]
+},
+  {
+  "name": "Browar Radegast",
+  "country": "Czechy",
+  "images": [{ "src": "images/Radegast5.jpg" }]
 },
   {
   "name": "Browar Raduga",
@@ -4590,6 +4880,11 @@
   "name": "Browar Herrnbrau",
   "country": "Niemcy",
   "images": [{ "src": "images/Herrnbrau.jpeg" }]
+},
+  {
+  "name": "Browar Herrnbrau",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Herrnbrau2.jpg" }]
 },
   {
   "name": "Browar Błonie",
@@ -4857,6 +5152,11 @@
     "images": [{ "src": "images/Paulaner1.jpeg" }]
   },
   {
+    "name": "Browar Paulaner",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Paulaner2.jpg" }]
+  },
+  {
     "name": "Browar Rohozec",
     "country": "Czechy",
     "images": [{ "src": "images/Rohozec1.jpeg" }]
@@ -4865,6 +5165,11 @@
     "name": "Browar Rohozec",
     "country": "Czechy",
     "images": [{ "src": "images/Rohozec2.jpeg" }]
+  },
+  {
+    "name": "Browar Rohozec",
+    "country": "Czechy",
+    "images": [{ "src": "images/Rohozec3.jpg" }]
   },
   {
     "name": "Browar Soproni",
@@ -5091,6 +5396,11 @@
     "country": "Serbia",
     "images": [{ "src": "images/Jelen.png" }]
   },
+{
+    "name": "Apatinska Pivara",
+    "country": "Serbia",
+    "images": [{ "src": "images/Jelen2.jpg" }]
+  },
    {
     "name": "Browar Kalnapilis",
     "country": "Litwa",
@@ -5117,6 +5427,11 @@
     "images": [{ "src": "images/Konrad.png" }]
   }, 
   {
+    "name": "Pivovar Liberec-Vratislavice",
+    "country": "Czechy",
+    "images": [{ "src": "images/Konrad2.jpg" }]
+  }, 
+  {
     "name": "Köstritzer Schwarzbierbrauerei",
     "country": "Niemcy",
     "images": [{ "src": "images/Kostritzer.png" }]
@@ -5130,6 +5445,11 @@
     "name": "Pivovar Krakonoš",
     "country": "Czechy",
     "images": [{ "src": "images/Krakonos2.png" }]
+  },
+  {
+    "name": "Pivovar Krakonoš",
+    "country": "Czechy",
+    "images": [{ "src": "images/Krakonos3.jpg" }]
   },
   {
     "name": "Browar Krinitsa",
@@ -5345,5 +5665,130 @@
     "name": "Browar Za Miastem (Rumianek)",
     "country": "Polska",
     "images": [{ "src": "images/Zamiastem.jpg" }]
+  },
+  {
+    "name": "Akademija Brewery",
+    "country": "Czarnogóra",
+    "images": [{ "src": "images/Akademija.jpg" }]
+  },
+  {
+    "name": "Browar Hurbanovo",
+    "country": "Słowacja",
+    "images": [{ "src": "images/Bazant.jpg" }]
+  },
+  {
+    "name": "Browar Bóbr (Limanowa)",
+    "country": "Polska",
+    "images": [{ "src": "images/Bóbr.jpg" }]
+  },
+  {
+    "name": "Browar Zamkowy (Cieszyn)",
+    "country": "Polska",
+    "images": [{ "src": "images/Cieszyn.jpg" }]
+  },
+  {
+    "name": "Browar Wąsosz",
+    "country": "Polska",
+    "images": [{ "src": "images/Ciupaga.jpg" }]
+  },
+  {
+    "name": "Browar Belhaven",
+    "country": "Szkocja",
+    "images": [{ "src": "images/Dunbar.jpg" }]
+  },
+  {
+    "name": "Browar Dziki Wschód",
+    "country": "Polska",
+    "images": [{ "src": "images/Dziki.jpg" }]
+  },
+  {
+    "name": "Browar Funky Fluid (Warszawa)",
+    "country": "Polska",
+    "images": [{ "src": "images/Funky.jpg" }]
+  },
+  {
+    "name": "Karlovačka Pivovara",
+    "country": "Chorwacja",
+    "images": [{ "src": "images/Karlovacko.jpg" }]
+  },
+  {
+    "name": "Kloster-Brauerei Scheyern",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Kloster.jpg" }]
+  },
+  {
+    "name": "Browar Carlsberg Srbija",
+    "country": "Serbia",
+    "images": [{ "src": "images/Lav.jpg" }]
+  },
+  {
+    "name": "Brauerei Gebrüder Maisel (Bayreuth)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Maisel.jpg" }]
+  },
+   {
+    "name": "Browar Mamut (Niksić)",
+    "country": "Czarnogóra",
+    "images": [{ "src": "images/Mamut.jpg" }]
+  },
+  {
+    "name": "Browar Maryensztadt (Zwoleń)",
+    "country": "Polska",
+    "images": [{ "src": "images/Maryen.jpg" }]
+  },
+  {
+    "name": "Allgäuer Brauhaus (Marktoberdorf)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Oberdorfer.jpg" }]
+  },
+  {
+    "name": "Browar Piwoteka (Nowe Miasto Lubawskie)",
+    "country": "Polska",
+    "images": [{ "src": "images/Piwoteka.jpg" }]
+  },
+  {
+    "name": "Pivovar Nymburk",
+    "country": "Czechy",
+    "images": [{ "src": "images/Postrizinske.jpg" }]
+  },
+  {
+    "name": "Browar Rock (Jarocin)",
+    "country": "Polska,
+    "images": [{ "src": "images/Rockbrowar.jpg" }]
+  },
+  {
+    "name": "Badische Staatsbrauerei Rothaus (Grafenhausen-Rothaus)",
+    "country": "Niemcy,
+    "images": [{ "src": "images/Rothaus.jpg" }]
+  },
+  {
+    "name": "Browar Cuauhtemoc-Moctezuma (Monterrey)",
+    "country": "Meksyk,
+    "images": [{ "src": "images/Sol.jpg" }]
+  },
+   {
+    "name": "Browar Wielka Sowa (Bielawa)",
+    "country": "Polska,
+    "images": [{ "src": "images/Sowa.jpg" }]
+  },
+  {
+    "name": "Stralsunder Brauerei (Stralsund)",
+    "country": "Niemcy,
+    "images": [{ "src": "images/Strotebeker.jpg" }]
+  },
+  {
+    "name": "Krostitzer Brauerei",
+    "country": "Niemcy,
+    "images": [{ "src": "images/Ur-Krostitzer.jpg" }]
+  },
+  {
+    "name": "Browar Waszczukowe (Czarna Białostocka) ",
+    "country": "Polska,
+    "images": [{ "src": "images/Waszczukowe.jpg" }]
+  },
+   {
+    "name": "Browar Zakładowy (Poniatowa) ",
+    "country": "Polska,
+    "images": [{ "src": "images/Zakładowy.jpg" }]
   }
 ]
