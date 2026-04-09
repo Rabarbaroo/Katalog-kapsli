@@ -3597,6 +3597,31 @@
   "images": [{ "src": "images/Bernard6.jpeg" }]
 },
   {
+  "name": "Bernard (Humpolec)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Bernard7.jpg" }]
+},
+  {
+  "name": "Bernard (Humpolec)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Bernard8.jpg" }]
+},
+  {
+  "name": "Bernard (Humpolec)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Bernard9.jpg" }]
+},
+  {
+  "name": "Bernard (Humpolec)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Bernard10.jpg" }]
+},
+  {
+  "name": "Bernard (Humpolec)",
+  "country": "Czechy",
+  "images": [{ "src": "images/Bernard11.jpg" }]
+},
+  {
   "name": "Breznak (Velké Březno)",
   "country": "Czechy",
   "images": [{ "src": "images/Breznak1.jpg" }]
@@ -3976,6 +4001,16 @@
     "country": "Niemcy",
     "images": [{ "src": "images/Bit2.jpeg" }]
   },
+  {
+    "name": "Browar Bitburger",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Bitburger3.jpg" }]
+  },
+  {
+    "name": "Browar Bitburger",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Bitburger4.jpg" }]
+  },
    {
     "name": "GVG",
     "country": "Niemcy",
@@ -4215,6 +4250,11 @@
   "name": "Browar Velké Popovice",
   "country": "Czechy",
   "images": [{ "src": "images/Kozel11.jpg" }]
+},
+  {
+  "name": "Browar Velké Popovice",
+  "country": "Czechy",
+  "images": [{ "src": "images/Kozel2.jpg" }]
 },
   {
   "name": "Browar Královský pivovar Krušovice",
@@ -5236,6 +5276,11 @@
     "country": "Polska",
     "images": [{ "src": "images/Brzeg.png" }]
   },
+  {
+    "name": "Browar Brzeg",
+    "country": "Polska",
+    "images": [{ "src": "images/Brzeg2.jpg" }]
+  },
    {
     "name": "Českobudějovický Pivovar Samson (České Budějovice)",
     "country": "Czechy",
@@ -5362,6 +5407,26 @@
     "images": [{ "src": "images/Freiberger2.png" }]
   },
   {
+    "name": "Freiberger Brauhaus",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Freiberger3.jpg" }]
+  },
+  {
+    "name": "Freiberger Brauhaus",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Freiberger4.jpg" }]
+  },
+  {
+    "name": "Freiberger Brauhaus",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Freiberger5.jpg" }]
+  },
+  {
+    "name": "Freiberger Brauhaus",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Freiberger6.jpg" }]
+  },
+  {
     "name": "Browar Göss (Leoben)",
     "country": "Austria",
     "images": [{ "src": "images/Gosser.png" }]
@@ -5432,9 +5497,29 @@
     "images": [{ "src": "images/Konrad2.jpg" }]
   }, 
   {
+    "name": "Pivovar Liberec-Vratislavice",
+    "country": "Czechy",
+    "images": [{ "src": "images/Konrad3.jpg" }]
+  }, 
+  {
+    "name": "Pivovar Liberec-Vratislavice",
+    "country": "Czechy",
+    "images": [{ "src": "images/Konrad4.jpg" }]
+  }, 
+  {
+    "name": "Pivovar Liberec-Vratislavice",
+    "country": "Czechy",
+    "images": [{ "src": "images/Konrad5.jpg" }]
+  }, 
+  {
     "name": "Köstritzer Schwarzbierbrauerei",
     "country": "Niemcy",
     "images": [{ "src": "images/Kostritzer.png" }]
+  }, 
+  {
+    "name": "Köstritzer Schwarzbierbrauerei",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Kostritzer2.jpg" }]
   }, 
   {
     "name": "Pivovar Krakonoš",
@@ -5782,13 +5867,18 @@
     "images": [{ "src": "images/Ur-Krostitzer.jpg" }]
   },
   {
-    "name": "Browar Waszczukowe (Czarna Białostocka) ",
+    "name": "Browar Waszczukowe (Czarna Białostocka)",
     "country": "Polska",
     "images": [{ "src": "images/Waszczukowe.jpg" }]
   },
    {
-    "name": "Browar Zakładowy (Poniatowa) ",
+    "name": "Browar Zakładowy (Poniatowa)",
     "country": "Polska",
     "images": [{ "src": "images/Zakładowy.jpg" }]
+  },
+  {
+    "name": "Hijos de Rivera S.A.",
+    "country": "Hiszpania",
+    "images": [{ "src": "images/Estrella.jpg" }]
   }
 ]
