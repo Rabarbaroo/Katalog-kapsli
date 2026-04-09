@@ -4626,6 +4626,11 @@
   "country": "Polska",
   "images": [{ "src": "images/Zatecky4.jpg" }]
 },
+  {
+  "name": "Okocim",
+  "country": "Polska",
+  "images": [{ "src": "images/Zatecky5.jpg" }]
+},
    {
   "name": "Browar Stu Mostów",
   "country": "Polska",
@@ -4900,11 +4905,6 @@
   "name": "Browar Starobrno",
   "country": "Czechy",
   "images": [{ "src": "images/Starobrno3.png" }]
-},
-  {
-  "name": "Browar Warsteiner",
-  "country": "Niemcy",
-  "images": [{ "src": "images/Warsteiner1.jpeg" }]
 },
   {
   "name": "Browar Ustroń",
@@ -5370,6 +5370,11 @@
     "name": "Dortmunder Actien-Brauerei",
     "country": "Niemcy",
     "images": [{ "src": "images/Dab2.png" }]
+  },
+  {
+    "name": "Dortmunder Actien-Brauerei",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Wickuler.png" }]
   },
   {
     "name": "Browar Diebels (Issum)",
@@ -5900,5 +5905,10 @@
     "name": "Hijos de Rivera S.A.",
     "country": "Hiszpania",
     "images": [{ "src": "images/Estrella.jpg" }]
+  },
+  {
+    "name": "Wychwood Brewery",
+    "country": "Anglia",
+    "images": [{ "src": "images/Wychwood.jpg" }]
   }
 ]
