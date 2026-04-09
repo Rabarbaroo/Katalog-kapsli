@@ -4271,6 +4271,11 @@
   "country": "Czechy",
   "images": [{ "src": "images/Krusovice3.png" }]
 },
+  {
+  "name": "Browar Královský pivovar Krušovice",
+  "country": "Czechy",
+  "images": [{ "src": "images/Krusovice4.jpg" }]
+},
 {
   "name": "Browar Landskron Brauerei",
   "country": "Niemcy",
@@ -4330,6 +4335,16 @@
   "name": "Browar Lübzer",
   "country": "Niemcy",
   "images": [{ "src": "images/Lubzer3.jpeg" }]
+},
+  {
+  "name": "Browar Lübzer",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Lubzer4.jpg" }]
+},
+  {
+  "name": "Browar Lübzer",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Lubzer5.jpg" }]
 },
   {
   "name": "Browar Marston's",
@@ -5197,6 +5212,11 @@
     "images": [{ "src": "images/Paulaner2.jpg" }]
   },
   {
+    "name": "Browar Paulaner",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Paulaner3.jpg" }]
+  },
+  {
     "name": "Browar Rohozec",
     "country": "Czechy",
     "images": [{ "src": "images/Rohozec1.jpeg" }]
@@ -5379,7 +5399,7 @@
   {
     "name": "Browar Feldschlößchen (Drezno)",
     "country": "Niemcy",
-    "images": [{ "src": "images/Dresdner.png" }]
+    "images": [{ "src": "images/urbock.jpg" }]
   },
   {
     "name": "Lidl",
