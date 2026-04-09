@@ -5197,9 +5197,14 @@
     "images": [{ "src": "images/Kellerbier.png" }]
   },
   {
-    "name": "The Wychwood Brewery",
+    "name": "Wychwood Brewery",
     "country": "Anglia",
     "images": [{ "src": "images/no2.jpeg" }]
+  },
+   {
+    "name": "Wychwood Brewery",
+    "country": "Anglia",
+    "images": [{ "src": "images/Wychwood.jpg" }]
   },
   {
     "name": "Browar Paulaner",
@@ -5905,10 +5910,5 @@
     "name": "Hijos de Rivera S.A.",
     "country": "Hiszpania",
     "images": [{ "src": "images/Estrella.jpg" }]
-  },
-  {
-    "name": "Wychwood Brewery",
-    "country": "Anglia",
-    "images": [{ "src": "images/Wychwood.jpg" }]
   }
 ]
