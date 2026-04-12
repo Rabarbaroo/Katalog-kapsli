@@ -3124,6 +3124,16 @@
   {
     "name": "Van Pur",
     "country": "Polska",
+    "images": [{ "src": "images/VanPur10.jpg" }]
+  },
+  {
+    "name": "Van Pur",
+    "country": "Polska",
+    "images": [{ "src": "images/VanPur11.jpg" }]
+  },
+  {
+    "name": "Van Pur",
+    "country": "Polska",
     "images": [{ "src": "images/Strzelec1.jpeg" }]
   },
    {
@@ -3507,6 +3517,21 @@
     "images": [{ "src": "images/Nachmielona.jpg" }]
   },
   {
+    "name": "Niepiwne",
+    "country": "Niepiwne",
+    "images": [{ "src": "images/Malamatina.jpg" }]
+  },
+  {
+    "name": "Niepiwne",
+    "country": "Niepiwne",
+    "images": [{ "src": "images/portugaliacydr.jpg" }]
+  },
+  {
+    "name": "Niepiwne",
+    "country": "Niepiwne",
+    "images": [{ "src": "images/Retsina.jpg" }]
+  },
+  {
   "name": "Beck's (Brema)",
   "country": "Niemcy",
   "images": [{ "src": "images/Becks1.jpg" }]
@@ -3705,6 +3730,11 @@
     "name": "Browar Náchod",
     "country": "Czechy",
     "images": [{ "src": "images/Primator12.jpg" }]
+  },
+  {
+    "name": "Browar Náchod",
+    "country": "Czechy",
+    "images": [{ "src": "images/Primator13.jpg" }]
   },
   {
   "name": "Kompania Piwowarska",
@@ -3914,6 +3944,11 @@
   {
   "name": "Frankfurter Brauhaus",
   "country": "Niemcy",
+  "images": [{ "src": "images/Perlenbacher4.jpg" }]
+},
+  {
+  "name": "Frankfurter Brauhaus",
+  "country": "Niemcy",
   "images": [{ "src": "images/Falkenfelser.png" }]
 },
   {
@@ -3964,6 +3999,11 @@
   {
     "name": "Browar Bavaria",
     "country": "Holandia",
+    "images": [{ "src": "images/Bavaria3.jpg" }]
+  },
+  {
+    "name": "Browar Bavaria",
+    "country": "Holandia",
     "images": [{ "src": "images/Hollandia.png" }]
   },
   {
@@ -3975,6 +4015,16 @@
     "name": "Browar Radegast",
     "country": "Czechy",
     "images": [{ "src": "images/Birel1.jpeg" }]
+  },
+  {
+    "name": "Browar Radegast",
+    "country": "Czechy",
+    "images": [{ "src": "images/Klasik.jpg" }]
+  },
+  {
+    "name": "Browar Radegast",
+    "country": "Czechy",
+    "images": [{ "src": "images/Ratar.jpg" }]
   },
   {
     "name": "Birra Moretti",
@@ -4125,6 +4175,11 @@
     "name": "Browar Hofbräu München",
     "country": "Niemcy",
     "images": [{ "src": "images/HB1.jpeg" }]
+  },
+  {
+    "name": "Browar Hofbräu München",
+    "country": "Niemcy",
+    "images": [{ "src": "images/HB2.jpg" }]
   },
  {
   "name": "Heineken",
@@ -4362,6 +4417,11 @@
   "images": [{ "src": "images/Maternus2.jpeg" }]
 },
   {
+  "name": "Browar Feldschlößchen (Drezno)",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Coschutzer.jpg" }]
+},
+  {
   "name": "Browar Ostravar",
   "country": "Czechy",
   "images": [{ "src": "images/Ostravar.jpeg" }]
@@ -4375,6 +4435,11 @@
   "name": "Birra Peroni",
   "country": "Włochy",
   "images": [{ "src": "images/Peroni1.jpeg" }]
+},
+  {
+  "name": "Birra Peroni",
+  "country": "Włochy",
+  "images": [{ "src": "images/Peroni2.jpg" }]
 },
    {
   "name": "Browar Persha",
@@ -4410,6 +4475,11 @@
   "name": "Browar Heller Bräu",
   "country": "Niemcy",
   "images": [{ "src": "images/Schlenkerla1.jpeg" }]
+},
+  {
+  "name": "Browar Heller Bräu",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Schlenkeria2.jpeg" }]
 },
   {
   "name": "Browar G. Schneider & Sohn",
@@ -4597,6 +4667,11 @@
   "images": [{ "src": "images/Wernesgruner2.jpeg" }]
 },
   {
+  "name": "Browar  Wernesgrüner",
+  "country": "Niemcy",
+  "images": [{ "src": "images/Warsnersgruner3.jpeg" }]
+},
+  {
   "name": "Browar  Žatec",
   "country": "Czechy",
   "images": [{ "src": "images/Zatec.jpeg" }]
@@ -4760,6 +4835,16 @@
   "name": "Żywiec",
   "country": "Polska",
   "images": [{ "src": "images/Desperados8.jpg" }]
+},
+   {
+  "name": "Żywiec",
+  "country": "Polska",
+  "images": [{ "src": "images/Desperados9.jpg" }]
+},
+   {
+  "name": "Żywiec",
+  "country": "Polska",
+  "images": [{ "src": "images/Desperados10.jpg" }]
 },
    {
   "name": "Kompania Piwowarska",
@@ -5357,7 +5442,7 @@
     "images": [{ "src": "images/Corona2.png" }]
   },
   {
-    "name": "Browar Veltins (Meschede)",
+    "name": "C. & A. Veltins Brauerei (Grevenstein)",
     "country": "Niemcy",
     "images": [{ "src": "images/Curuba.png" }]
   },
@@ -5455,6 +5540,31 @@
     "name": "Browar Göss (Leoben)",
     "country": "Austria",
     "images": [{ "src": "images/Gosser.png" }]
+  },
+  {
+    "name": "Browar Göss (Leoben)",
+    "country": "Austria",
+    "images": [{ "src": "images/Gosser2.jpg" }]
+  },
+  {
+    "name": "Browar Göss (Leoben)",
+    "country": "Austria",
+    "images": [{ "src": "images/Gosser3.jpg" }]
+  },
+  {
+    "name": "Browar Göss (Leoben)",
+    "country": "Austria",
+    "images": [{ "src": "images/Gosser4.jpg" }]
+  },
+  {
+    "name": "Browar Göss (Leoben)",
+    "country": "Austria",
+    "images": [{ "src": "images/Gosser5.jpg" }]
+  },
+  {
+    "name": "Browar Göss (Leoben)",
+    "country": "Austria",
+    "images": [{ "src": "images/Gosser6.jpg" }]
   },
   {
     "name": "St. James's Gate Brewery (Dublin)",
@@ -5562,6 +5672,11 @@
     "images": [{ "src": "images/Krakonos3.jpg" }]
   },
   {
+    "name": "Pivovar Krakonoš",
+    "country": "Czechy",
+    "images": [{ "src": "images/Krakonos4.jpg" }]
+  },
+  {
     "name": "Browar Krinitsa",
     "country": "Białoruś",
     "images": [{ "src": "images/Krinitsa.png" }]
@@ -5592,6 +5707,11 @@
     "images": [{ "src": "images/Messina2.png" }]
   },
   {
+    "name": "Birra Messina (Sycylia)",
+    "country": "Włochy",
+    "images": [{ "src": "images/Messina3.jpg" }]
+  },
+  {
     "name": "Pivovar Moravský Žižkov",
     "country": "Czechy",
     "images": [{ "src": "images/Moravsky1.png" }]
@@ -5600,6 +5720,11 @@
     "name": "Augustiner-Bräu (Monachium)",
     "country": "Niemcy",
     "images": [{ "src": "images/Munchnerbier.png" }]
+  },
+  {
+    "name": "Augustiner-Bräu (Monachium)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Munchnerbier2.jpg" }]
   },
    {
     "name": "Klosterbrauerei Neuzelle",
@@ -5717,9 +5842,14 @@
     "images": [{ "src": "images/Valentins.png" }]
   },
   {
-    "name": "Brauerei C. & A. Veltins GmbH & Co. (Grevenstein)",
+    "name": "C. & A. Veltins Brauerei (Grevenstein)",
     "country": "Niemcy",
     "images": [{ "src": "images/Veltins.png" }]
+  },
+  {
+    "name": "C. & A. Veltins Brauerei (Grevenstein)",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Veltins2.jpg" }]
   },
   {
     "name": "AB Volfas Engelman (Kaunas)",
@@ -5745,6 +5875,26 @@
     "name": "Brauerei Zipf",
     "country": "Austria",
     "images": [{ "src": "images/Zipfer2.png" }]
+  },
+  {
+    "name": "Brauerei Zipf",
+    "country": "Austria",
+    "images": [{ "src": "images/Zipfer3.jpg" }]
+  },
+  {
+    "name": "Brauerei Zipf",
+    "country": "Austria",
+    "images": [{ "src": "images/Zipfer4.jpg" }]
+  },
+  {
+    "name": "Brauerei Zipf",
+    "country": "Austria",
+    "images": [{ "src": "images/Zipfer5.jpg" }]
+  },
+  {
+    "name": "Brauerei Zipf",
+    "country": "Austria",
+    "images": [{ "src": "images/Zipfer6.jpg" }]
   },
   {
     "name": "Bobruyskiy Pivovarenniy Zavod",
@@ -5797,6 +5947,11 @@
     "images": [{ "src": "images/Cieszyn.jpg" }]
   },
   {
+    "name": "Browar Zamkowy (Cieszyn)",
+    "country": "Polska",
+    "images": [{ "src": "images/Cieszyn2.jpg" }]
+  },
+  {
     "name": "Browar Wąsosz",
     "country": "Polska",
     "images": [{ "src": "images/Ciupaga.jpg" }]
@@ -5820,6 +5975,11 @@
     "name": "Karlovačka Pivovara",
     "country": "Chorwacja",
     "images": [{ "src": "images/Karlovacko.jpg" }]
+  },
+  {
+    "name": "Karlovačka Pivovara",
+    "country": "Chorwacja",
+    "images": [{ "src": "images/Karlovacko2.jpg" }]
   },
   {
     "name": "Kloster-Brauerei Scheyern",
@@ -5891,6 +6051,11 @@
     "country": "Niemcy",
     "images": [{ "src": "images/Ur-Krostitzer.jpg" }]
   },
+   {
+    "name": "Krostitzer Brauerei",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Ur-Krostitzer2.jpg" }]
+  },
   {
     "name": "Browar Waszczukowe (Czarna Białostocka)",
     "country": "Polska",
@@ -5905,5 +6070,195 @@
     "name": "Hijos de Rivera S.A.",
     "country": "Hiszpania",
     "images": [{ "src": "images/Estrella.jpg" }]
+  },
+  {
+    "name": "Hijos de Rivera S.A.",
+    "country": "Hiszpania",
+    "images": [{ "src": "images/Estrella2.jpg" }]
+  },
+   {
+    "name": "Athenian Brewery S.A.",
+    "country": "Grecja",
+    "images": [{ "src": "images/A.jpg" }]
+  },
+  {
+    "name": "Athenian Brewery S.A.",
+    "country": "Grecja",
+    "images": [{ "src": "images/A2.jpg" }]
+  },
+  {
+    "name": "Athenian Brewery S.A.",
+    "country": "Grecja",
+    "images": [{ "src": "images/A3.jpg" }]
+  },
+   {
+    "name": "Privatbrauerei Fritz Egger GmbH",
+    "country": "Austria",
+    "images": [{ "src": "images/Berg.jpg" }]
+  },
+  {
+    "name": "Braustolz GmbH",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Braustolz.jpg" }]
+  },
+  {
+    "name": "Corfu Beer Ltd.",
+    "country": "Grecja",
+    "images": [{ "src": "images/Corfu1.jpg" }]
+  },
+  {
+    "name": "Corfu Beer Ltd.",
+    "country": "Grecja",
+    "images": [{ "src": "images/Corfu2.jpg" }]
+  },
+  {
+    "name": "Corfu Beer Ltd.",
+    "country": "Grecja",
+    "images": [{ "src": "images/Corfu3.jpg" }]
+  },
+  {
+    "name": "Corfu Beer Ltd.",
+    "country": "Grecja",
+    "images": [{ "src": "images/Corfu5.jpg" }]
+  },
+  {
+    "name": "Corfu Beer Ltd.",
+    "country": "Grecja",
+    "images": [{ "src": "images/Corfu6.jpg" }]
+  },
+  {
+    "name": "Corfu Beer Ltd.",
+    "country": "Grecja",
+    "images": [{ "src": "images/Corfu7.jpg" }]
+  },
+  {
+    "name": "Hofbräu Kaltenhausen",
+    "country": "Austria",
+    "images": [{ "src": "images/Edelweiss1.jpg" }]
+  },
+  {
+    "name": "Hofbräu Kaltenhausen",
+    "country": "Austria",
+    "images": [{ "src": "images/Edelweiss2.jpg" }]
+  },
+  {
+    "name": "Hofbräu Kaltenhausen",
+    "country": "Austria",
+    "images": [{ "src": "images/Kaltenhausen.jpg" }]
+  },
+  {
+    "name": "Einsiedler Brauhaus",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Einsiedler.jpg" }]
+  },
+  {
+    "name": "Brauerei Hirt GmbH",
+    "country": "Austria",
+    "images": [{ "src": "images/Hirt.jpg" }]
+  },
+  {
+    "name": "Erste Obermurtaler Brauereigenossenschaft",
+    "country": "Austria",
+    "images": [{ "src": "images/Murauer1.jpg" }]
+  },
+  {
+    "name": "Erste Obermurtaler Brauereigenossenschaft",
+    "country": "Austria",
+    "images": [{ "src": "images/Murauer2.jpg" }]
+  },
+  {
+    "name": "Olympic Brewery (Carlsberg)",
+    "country": "Grecja",
+    "images": [{ "src": "images/Olympic1.jpg" }]
+  },
+  {
+    "name": "Olympic Brewery (Carlsberg)",
+    "country": "Grecja",
+    "images": [{ "src": "images/Olympic2.jpg" }]
+  },
+  {
+    "name": "Zagrebačka Pivovara",
+    "country": "Chorwacja",
+    "images": [{ "src": "images/Ozujsko.jpg" }]
+  },
+  {
+    "name": "Zagrebačka Pivovara",
+    "country": "Chorwacja",
+    "images": [{ "src": "images/Tomislav.jpg" }]
+  },
+  {
+    "name": "Brauerei Puntigam",
+    "country": "Austria",
+    "images": [{ "src": "images/Puntigamer.jpg" }]
+  },
+  {
+    "name": "Radeberger Exportbierbrauerei",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Radeberger.jpg" }]
+  },
+  {
+    "name": "Brauerei Raschhofer",
+    "country": "Austria",
+    "images": [{ "src": "images/Raschhofer.jpg" }]
+  },
+  {
+    "name": "Brauerei Schwechat",
+    "country": "Austria",
+    "images": [{ "src": "images/Schwechat1.jpg" }]
+  },
+  {
+    "name": "Brauerei Schwechat",
+    "country": "Austria",
+    "images": [{ "src": "images/Schwechat2.jpg" }]
+  },
+  {
+    "name": "Staffelbergbräu A.Geldner ",
+    "country": "Niemcy",
+    "images": [{ "src": "images/Staffel.jpg" }]
+  },
+   {
+    "name": "Stieglbrauerei zu Salzburg GmbH",
+    "country": "Austria",
+    "images": [{ "src": "images/Stiegl1.jpg" }]
+  },
+  {
+    "name": "Stieglbrauerei zu Salzburg GmbH",
+    "country": "Austria",
+    "images": [{ "src": "images/Stiegl2.jpg" }]
+  },
+  {
+    "name": "Stieglbrauerei zu Salzburg GmbH",
+    "country": "Austria",
+    "images": [{ "src": "images/Stiegl3.jpg" }]
+  },
+  {
+    "name": "Stieglbrauerei zu Salzburg GmbH",
+    "country": "Austria",
+    "images": [{ "src": "images/Stiegl4.jpg" }]
+  },
+  {
+    "name": "Stieglbrauerei zu Salzburg GmbH",
+    "country": "Austria",
+    "images": [{ "src": "images/Stiegl5.jpg" }]
+  },
+  {
+    "name": "Stieglbrauerei zu Salzburg GmbH",
+    "country": "Austria",
+    "images": [{ "src": "images/Stiegl6.jpg" }]
+  },
+  {
+    "name": "Stieglbrauerei zu Salzburg GmbH",
+    "country": "Austria",
+    "images": [{ "src": "images/Stiegl7.jpg" }]
+  },
+  {
+    "name": "Privatbrauerei Franz Wurmhöringer (Altheim)",
+    "country": "Austria",
+    "images": [{ "src": "images/Wurmhoringer.jpg" }]
+  },
+  {
+    "name": "Privatbrauerei Zwettl Karl Schwarz GmbH",
+    "country": "Austria",
+    "images": [{ "src": "images/Zwettl.jpg" }]
   }
 ]
