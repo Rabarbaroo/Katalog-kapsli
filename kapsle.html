@@ -182,6 +182,12 @@ function showLettersScreen(filtered){
 
   const lettersDiv = document.getElementById('letters');
   lettersDiv.innerHTML='';
+  // opcja "WSZYSTKIE"
+const allDiv = document.createElement('div');
+allDiv.className = 'letter';
+allDiv.textContent = 'WSZYSTKIE';
+allDiv.onclick = ()=>location.href=`kapsle.html?country=${selectedCountry}&letter=all`;
+lettersDiv.appendChild(allDiv);
 
   const letters = new Set(filtered.map(c=>getGroupLetter(c.name)));
   Array.from(letters).sort(compareLetters).forEach(l=>{
